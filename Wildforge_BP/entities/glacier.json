@@ -229,26 +229,6 @@
           ]
         }
       },
-      "minecraft:entity_spawned": {
-        "randomize": [
-          {
-            "weight": 75,
-            "remove": {
-              "component_groups": [
-                "wf:glacier_baby"
-              ]
-            }
-          },
-          {
-            "weight": 25,
-            "add": {
-              "component_groups": [
-                "wf:glacier_baby"
-              ]
-            }
-          }
-        ]
-      },
       "minecraft:entity_born": {
         "add": {
           "component_groups": [

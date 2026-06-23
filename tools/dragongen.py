@@ -123,9 +123,8 @@ def bp_entity(d):
         "wf:stop_flying": {"remove": {"component_groups": [f"wf:{i}_flying"]}},
     }
     if common:
-        events["minecraft:entity_spawned"] = {"randomize": [
-            {"weight": 75, "remove": {"component_groups": [f"wf:{i}_baby"]}},
-            {"weight": 25, "add": {"component_groups": [f"wf:{i}_baby"]}}]}
+        # Spawn egg / wild spawns are always full-sized adults; babies come only
+        # from breeding (entity_born) and hatched eggs (set_baby).
         events["minecraft:entity_born"] = {
             "add": {"component_groups": [f"wf:{i}_baby", f"wf:{i}_tamed"]}}
         events["wf:set_baby"] = {"add": {"component_groups": [f"wf:{i}_baby"]}}
