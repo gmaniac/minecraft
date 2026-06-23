@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Package MotorCraft_BP + MotorCraft_RP into MotorCraft.mcaddon.
+# Package Wildforge_BP + Wildforge_RP into Wildforge.mcaddon.
 # Runs the validator first and aborts on any error.
 set -euo pipefail
 
@@ -9,11 +9,11 @@ cd "$ROOT"
 echo "==> validating"
 python3 tools/validate.py
 
-OUT="MotorCraft.mcaddon"
+OUT="Wildforge.mcaddon"
 echo "==> packaging $OUT"
 rm -f "$OUT"
 # .mcaddon is a zip with the two pack folders at the top level.
-zip -r -q -X "$OUT" MotorCraft_BP MotorCraft_RP \
+zip -r -q -X "$OUT" Wildforge_BP Wildforge_RP \
   -x '*/.DS_Store' -x '*__pycache__*' -x '*.swp'
 
 echo "==> done: $(du -h "$OUT" | cut -f1)  $OUT"

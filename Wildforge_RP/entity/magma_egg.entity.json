@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:magma_egg",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_egg_magma"
+      },
+      "geometry": {
+        "default": "geometry.wf_dragon_egg"
+      },
+      "animations": {
+        "idle": "animation.wf_egg.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#ff5a1a",
+        "overlay_color": "#7a2410"
+      }
+    }
+  }
+}

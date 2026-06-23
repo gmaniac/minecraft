@@ -6,12 +6,12 @@ from mclib.geometry import Geometry
 from mclib.texture import Tex, hex_rgba, shade
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RP = os.path.join(ROOT, "MotorCraft_RP")
+RP = os.path.join(ROOT, "Wildforge_RP")
 TW, TH = 64, 64
 
 
 def build_geo():
-    g = Geometry("geometry.motor_test_critter", TW, TH)
+    g = Geometry("geometry.wf_test_critter", TW, TH)
     root = g.bone("root", (0, 0, 0))
     body = g.bone("body", (0, 8, 0), parent="root")
     body.cube([-4, 6, -6], [8, 6, 12], [0, 20])
@@ -30,7 +30,7 @@ def build_geo():
     g.bounds = [1.6, 1.4, 1.6]
     g.bounds_offset = [0, 0.7, 0]
     os.makedirs(os.path.join(RP, "models", "entity"), exist_ok=True)
-    g.save(os.path.join(RP, "models", "entity", "motor_test_critter.geo.json"))
+    g.save(os.path.join(RP, "models", "entity", "wf_test_critter.geo.json"))
 
 
 def build_tex():
@@ -48,7 +48,7 @@ def build_tex():
     t.rect(2, 2, 1, 1, (20, 20, 20, 255))
     t.rect(8, 2, 1, 1, (20, 20, 20, 255))
     os.makedirs(os.path.join(RP, "textures", "entity"), exist_ok=True)
-    t.save(os.path.join(RP, "textures", "entity", "motor_test_critter.png"))
+    t.save(os.path.join(RP, "textures", "entity", "wf_test_critter.png"))
 
 
 if __name__ == "__main__":

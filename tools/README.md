@@ -1,4 +1,4 @@
-# MotorCraft toolchain
+# Wildforge toolchain
 
 Procedural generation + validation + packaging for the combined add-on.
 
@@ -8,7 +8,7 @@ Procedural generation + validation + packaging for the combined add-on.
 - `gen_icons.py` — pack icons for BP + RP.
 - `gen_test_critter.py` — M0 reference generator (model + texture) proving the libs.
 - `validate.py` — structural + cross-reference checks (geometry/texture/lang/UUID).
-- `build.sh` — validates, then zips `MotorCraft_BP` + `MotorCraft_RP` → `MotorCraft.mcaddon`.
+- `build.sh` — validates, then zips `Wildforge_BP` + `Wildforge_RP` → `Wildforge.mcaddon`.
 
 ## Usage
 ```bash
