@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "wf:nidhoggr",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:weight": {
+          "default": 1
+        },
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 4,
+          "adjust_for_weather": false
+        },
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 1
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:spawns_underground": {}
+      }
+    ]
+  }
+}

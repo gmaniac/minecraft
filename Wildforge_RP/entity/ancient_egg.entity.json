@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:ancient_egg",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_egg_ancient"
+      },
+      "geometry": {
+        "default": "geometry.wf_dragon_egg"
+      },
+      "animations": {
+        "idle": "animation.wf_egg.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#b8a06a",
+        "overlay_color": "#8a8276"
+      }
+    }
+  }
+}

@@ -3,11 +3,12 @@
 // an init() that wires its behavior. Domains are registered here as they land.
 import { system } from "@minecraft/server";
 import { startHatchSystem } from "./lib/hatch.js";
+import { init as initDragons } from "./dragons/index.js";
 
-// Domain initializers are added milestone by milestone, e.g.:
-//   import { init as initDragons } from "./dragons/index.js";
+// Domain initializers are added milestone by milestone.
 const DOMAINS = [
-  // initDragons, initPets, initVehicles, initFurniture, initHomeBuilding, initSecurity
+  initDragons,
+  // initPets, initVehicles, initFurniture, initHomeBuilding, initSecurity
 ];
 
 system.run(() => {

@@ -23,6 +23,7 @@ class Cube:
     pivot: Optional[list] = None
     rotation: Optional[list] = None
     mirror: bool = False
+    region: Optional[str] = None  # paint hint, not serialized
 
     def to_dict(self) -> dict:
         d = {"origin": [r(v) for v in self.origin],
@@ -78,6 +79,11 @@ class Geometry:
                  binding=binding)
         self.bones.append(b)
         return b
+
+    def all_cubes(self):
+        for b in self.bones:
+            for c in b.cubes:
+                yield c
 
     def set_bounds(self, w, h, offset):
         self.bounds = [w, w, h] if isinstance(w, (int, float)) else list(w)

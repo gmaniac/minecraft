@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:fae",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_fae"
+      },
+      "geometry": {
+        "default": "geometry.wf_fae"
+      },
+      "animations": {
+        "idle": "animation.wf_dragon.idle",
+        "walk": "animation.wf_dragon.walk",
+        "fly": "animation.wf_dragon.fly"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "q.is_on_ground && q.modified_move_speed <= 0.05"
+          },
+          {
+            "walk": "q.is_on_ground && q.modified_move_speed > 0.05"
+          },
+          {
+            "fly": "!q.is_on_ground"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#7a3a8a",
+        "overlay_color": "#ff9ad6"
+      }
+    }
+  }
+}
