@@ -7,6 +7,14 @@ Script API). **No experiments required.** Packaged as a single `Wildforge.mcaddo
 > Status: **Complete — all six domains shipped** (Dragons, Pets, Vehicles, Furniture,
 > HomeBuilding, Security). See `BUILD_PLAN.md` for how it was built.
 
+## 📖 In-depth guides → [`docs/`](docs/README.md)
+Full how-to for every feature: [Controls](docs/controls.md) ·
+[Dragons](docs/dragons.md) · [Pets](docs/pets.md) · [Vehicles](docs/vehicles.md) ·
+[Furniture](docs/furniture.md) · [HomeBuilding](docs/homebuilding.md) ·
+[Security](docs/security.md) · [Recoloring](docs/recoloring.md) ·
+[Crafting reference](docs/crafting.md). The guides are generated from the pack's own data
+(`tools/gen_docs.py`), so they always match what's shipped.
+
 ## Install
 1. Open `Wildforge.mcaddon` on a device with Minecraft — it imports both packs at once.
 2. In a world: **Behavior Packs → add "Wildforge (Behavior)"**; the resource pack links
