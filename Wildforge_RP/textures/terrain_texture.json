@@ -165,6 +165,111 @@
     },
     "wf_furn_plant_medieval": {
       "textures": "textures/blocks/wf_furn_plant_medieval"
+    },
+    "wf_ashwood_planks": {
+      "textures": "textures/blocks/wf_ashwood_planks"
+    },
+    "wf_walnut_planks": {
+      "textures": "textures/blocks/wf_walnut_planks"
+    },
+    "wf_pine_planks": {
+      "textures": "textures/blocks/wf_pine_planks"
+    },
+    "wf_ebony_planks": {
+      "textures": "textures/blocks/wf_ebony_planks"
+    },
+    "wf_ashwood_beam": {
+      "textures": "textures/blocks/wf_ashwood_beam"
+    },
+    "wf_walnut_beam": {
+      "textures": "textures/blocks/wf_walnut_beam"
+    },
+    "wf_pine_beam": {
+      "textures": "textures/blocks/wf_pine_beam"
+    },
+    "wf_ebony_beam": {
+      "textures": "textures/blocks/wf_ebony_beam"
+    },
+    "wf_smooth_slate": {
+      "textures": "textures/blocks/wf_smooth_slate"
+    },
+    "wf_granite_tile": {
+      "textures": "textures/blocks/wf_granite_tile"
+    },
+    "wf_marble": {
+      "textures": "textures/blocks/wf_marble"
+    },
+    "wf_sandstone_brick": {
+      "textures": "textures/blocks/wf_sandstone_brick"
+    },
+    "wf_bluestone": {
+      "textures": "textures/blocks/wf_bluestone"
+    },
+    "wf_red_brick": {
+      "textures": "textures/blocks/wf_red_brick"
+    },
+    "wf_grey_brick": {
+      "textures": "textures/blocks/wf_grey_brick"
+    },
+    "wf_clay_brick": {
+      "textures": "textures/blocks/wf_clay_brick"
+    },
+    "wf_plaster_white": {
+      "textures": "textures/blocks/wf_plaster_white"
+    },
+    "wf_plaster_grey": {
+      "textures": "textures/blocks/wf_plaster_grey"
+    },
+    "wf_plaster_charcoal": {
+      "textures": "textures/blocks/wf_plaster_charcoal"
+    },
+    "wf_plaster_tan": {
+      "textures": "textures/blocks/wf_plaster_tan"
+    },
+    "wf_clear_glass": {
+      "textures": "textures/blocks/wf_clear_glass"
+    },
+    "wf_tinted_glass": {
+      "textures": "textures/blocks/wf_tinted_glass"
+    },
+    "wf_frosted_glass": {
+      "textures": "textures/blocks/wf_frosted_glass"
+    },
+    "wf_red_shingle": {
+      "textures": "textures/blocks/wf_red_shingle"
+    },
+    "wf_grey_shingle": {
+      "textures": "textures/blocks/wf_grey_shingle"
+    },
+    "wf_wood_shingle": {
+      "textures": "textures/blocks/wf_wood_shingle"
+    },
+    "wf_slate_shingle": {
+      "textures": "textures/blocks/wf_slate_shingle"
+    },
+    "wf_white_siding": {
+      "textures": "textures/blocks/wf_white_siding"
+    },
+    "wf_blue_siding": {
+      "textures": "textures/blocks/wf_blue_siding"
+    },
+    "wf_cedar_siding": {
+      "textures": "textures/blocks/wf_cedar_siding"
+    },
+    "wf_hardwood_floor": {
+      "textures": "textures/blocks/wf_hardwood_floor"
+    },
+    "wf_ceramic_tile": {
+      "textures": "textures/blocks/wf_ceramic_tile"
+    },
+    "wf_parquet": {
+      "textures": "textures/blocks/wf_parquet"
+    },
+    "wf_white_trim": {
+      "textures": "textures/blocks/wf_white_trim"
+    },
+    "wf_oak_trim": {
+      "textures": "textures/blocks/wf_oak_trim"
     }
   }
 }

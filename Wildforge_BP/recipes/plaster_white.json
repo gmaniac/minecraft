@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "wf:plaster_white"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:clay_ball"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      }
+    ],
+    "result": {
+      "item": "wf:plaster_white",
+      "count": 4
+    }
+  }
+}

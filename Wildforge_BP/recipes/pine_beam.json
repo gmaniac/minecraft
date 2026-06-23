@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "wf:pine_beam"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:stripped_oak_log"
+      },
+      {
+        "item": "minecraft:stripped_oak_log"
+      },
+      {
+        "item": "minecraft:stripped_oak_log"
+      },
+      {
+        "item": "minecraft:stripped_oak_log"
+      }
+    ],
+    "result": {
+      "item": "wf:pine_beam",
+      "count": 4
+    }
+  }
+}

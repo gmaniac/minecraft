@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "wf:marble"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:stone"
+      },
+      {
+        "item": "minecraft:stone"
+      },
+      {
+        "item": "minecraft:stone"
+      },
+      {
+        "item": "minecraft:stone"
+      }
+    ],
+    "result": {
+      "item": "wf:marble",
+      "count": 4
+    }
+  }
+}

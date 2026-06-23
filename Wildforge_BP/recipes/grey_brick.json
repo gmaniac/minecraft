@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "wf:grey_brick"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:brick"
+      },
+      {
+        "item": "minecraft:brick"
+      },
+      {
+        "item": "minecraft:brick"
+      },
+      {
+        "item": "minecraft:brick"
+      }
+    ],
+    "result": {
+      "item": "wf:grey_brick",
+      "count": 4
+    }
+  }
+}

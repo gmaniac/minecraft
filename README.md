@@ -4,8 +4,8 @@ A combined Minecraft **Bedrock 1.21.90+** add-on — dragons, pets, vehicles, fu
 home building and security — built from scratch (models, textures, animations, behavior,
 Script API). **No experiments required.** Packaged as a single `Wildforge.mcaddon`.
 
-> Status: **M1 Dragons + M2 Pets + M3 Vehicles + M4 Furniture shipped.** HomeBuilding and
-> Security are planned next (see `BUILD_PLAN.md`). Each milestone folds into the same combined pack.
+> Status: **M1 Dragons + M2 Pets + M3 Vehicles + M4 Furniture + M5 HomeBuilding shipped.**
+> Security is planned next (see `BUILD_PLAN.md`). Each milestone folds into the same combined pack.
 
 ## Install
 1. Open `Wildforge.mcaddon` on a device with Minecraft — it imports both packs at once.
@@ -124,6 +124,18 @@ style's material (quartz / oak / dark-oak) at a crafting table.
 
 Types: Chair, Stool, Sofa, Armchair, Dining Table, Coffee Table, Desk, Bookshelf, Drawers,
 Cabinet, Wardrobe, Fridge, Lamp, Floor Lamp, Wall Lamp, Bed, Rug, Potted Plant.
+
+---
+
+## HomeBuilding — 35 materials + 8 prefab houses
+
+**Materials (35):** full-cube building blocks you craft and build with — plank sets
+(ashwood/walnut/pine/ebony), beams, stone (slate/granite/marble/sandstone/bluestone),
+bricks, plaster, glass (clear/tinted/frosted), roofing shingles, siding, flooring and trim.
+
+**Prefab houses (8):** craft a **placer item**, hold it and **use it** — confirm the prompt
+and a complete structure (built from these materials) is placed in front of you, oriented to
+your facing. Modern House, Cozy Cottage, Cabin, Mansion, Tower, Barn, Shop, Starter Base.
 
 ---
 

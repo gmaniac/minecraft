@@ -1,0 +1,20 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "wf:shop_placer",
+      "menu_category": {
+        "category": "construction"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "wf_shop_placer"
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:display_name": {
+        "value": "Shop"
+      }
+    }
+  }
+}
