@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_slime_pet",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 6,
-        "visible_bounds_height": 8,
+        "visible_bounds_width": 12.05,
+        "visible_bounds_height": 12,
         "visible_bounds_offset": [
           0,
           3,
-          0
+          -0.02
         ]
       },
       "bones": [

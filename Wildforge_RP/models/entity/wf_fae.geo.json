@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_fae",
         "texture_width": 256,
         "texture_height": 256,
-        "visible_bounds_width": 14.0,
-        "visible_bounds_height": 22,
+        "visible_bounds_width": 64.4,
+        "visible_bounds_height": 36.2,
         "visible_bounds_offset": [
           0,
-          8,
-          0
+          14.1,
+          0.8
         ]
       },
       "bones": [

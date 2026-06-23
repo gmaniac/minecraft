@@ -14,6 +14,7 @@ def build(p):
     g.bone("root", (0, 0, 0))
     {"quad": _quad, "bird": _bird, "reptile": _reptile, "turtle": _turtle,
      "blob": _blob, "sprite": _sprite}[plan](g, p)
+    g.autobounds(pad=3)
     return g
 
 

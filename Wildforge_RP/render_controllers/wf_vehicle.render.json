@@ -32,7 +32,7 @@
         }
       },
       "textures": [
-        "Array.skins[math.clamp(q.property('wf:color'), 0, 16)]"
+        "Array.skins[q.property('wf:color')]"
       ]
     }
   }

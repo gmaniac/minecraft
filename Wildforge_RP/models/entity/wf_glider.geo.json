@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_glider",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 24,
+        "visible_bounds_width": 50,
         "visible_bounds_height": 12,
         "visible_bounds_offset": [
           0,
-          8,
-          0
+          9,
+          2
         ]
       },
       "bones": [

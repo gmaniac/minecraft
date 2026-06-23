@@ -14,6 +14,7 @@ def build(v):
      "glider": _glider, "balloon": _balloon, "boat": _boat, "jetski": _jetski, "sub": _sub,
      "pontoon": _pontoon}[v["plan"]](g, v)
     g.tex_w = g.tex_h = 128
+    g.autobounds()        # enclose the whole model so it never frustum-culls
     return g
 
 

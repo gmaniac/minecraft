@@ -51,6 +51,7 @@ def build(d) -> Geometry:
     else:
         _build_quad(g, d)
 
+    g.autobounds(pad=4)        # enclose wings/tail so the dragon never frustum-culls
     return g
 
 

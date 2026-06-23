@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_desert",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 14.0,
-        "visible_bounds_height": 23,
+        "visible_bounds_width": 67.2,
+        "visible_bounds_height": 38.6,
         "visible_bounds_offset": [
           0,
-          8.5,
-          0
+          15.3,
+          -0.6
         ]
       },
       "bones": [

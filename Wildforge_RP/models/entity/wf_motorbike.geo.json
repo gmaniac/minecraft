@@ -6,11 +6,11 @@
         "identifier": "geometry.wf_motorbike",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 9.0,
-        "visible_bounds_height": 10,
+        "visible_bounds_width": 20.0,
+        "visible_bounds_height": 14,
         "visible_bounds_offset": [
           0,
-          5,
+          4,
           0
         ]
       },

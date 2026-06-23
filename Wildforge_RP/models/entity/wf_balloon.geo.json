@@ -6,11 +6,11 @@
         "identifier": "geometry.wf_balloon",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 10,
-        "visible_bounds_height": 42,
+        "visible_bounds_width": 24,
+        "visible_bounds_height": 46,
         "visible_bounds_offset": [
           0,
-          20,
+          22,
           0
         ]
       },

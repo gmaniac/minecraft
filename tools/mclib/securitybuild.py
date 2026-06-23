@@ -13,8 +13,7 @@ def build_device(kind):
     g.bone("root", (0, 0, 0))
     {"sensor": _sensor, "tripwire": _tripwire, "turret": _turret, "laser": _laser}[kind](g)
     g.tex_w = g.tex_h = 64
-    g.bounds = [2, 2]
-    g.bounds_offset = [0, 4, 0]
+    g.autobounds(pad=2)
     return g
 
 

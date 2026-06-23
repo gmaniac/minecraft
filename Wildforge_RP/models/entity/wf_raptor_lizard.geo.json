@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_raptor_lizard",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 9.5,
-        "visible_bounds_height": 12,
+        "visible_bounds_width": 34.7,
+        "visible_bounds_height": 16.2,
         "visible_bounds_offset": [
           0,
-          4.5,
-          0
+          5.1,
+          4.35
         ]
       },
       "bones": [

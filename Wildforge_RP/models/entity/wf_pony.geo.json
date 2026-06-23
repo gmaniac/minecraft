@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_pony",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 7.5,
-        "visible_bounds_height": 13,
+        "visible_bounds_width": 24.5,
+        "visible_bounds_height": 19,
         "visible_bounds_offset": [
           0,
-          5,
-          0
+          6.5,
+          -0.75
         ]
       },
       "bones": [

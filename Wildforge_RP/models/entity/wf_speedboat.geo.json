@@ -6,11 +6,11 @@
         "identifier": "geometry.wf_speedboat",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 12.0,
-        "visible_bounds_height": 8,
+        "visible_bounds_width": 26.0,
+        "visible_bounds_height": 12.5,
         "visible_bounds_offset": [
           0,
-          3,
+          4.25,
           0
         ]
       },

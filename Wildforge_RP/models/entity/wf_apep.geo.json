@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_apep",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 10,
-        "visible_bounds_height": 10,
+        "visible_bounds_width": 65.1,
+        "visible_bounds_height": 22.1,
         "visible_bounds_offset": [
           0,
-          6,
-          0
+          9.75,
+          -8.05
         ]
       },
       "bones": [

@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_eclipse",
         "texture_width": 256,
         "texture_height": 256,
-        "visible_bounds_width": 14.0,
-        "visible_bounds_height": 23,
+        "visible_bounds_width": 67.2,
+        "visible_bounds_height": 41.6,
         "visible_bounds_offset": [
           0,
-          8.5,
-          0
+          16.8,
+          -0.6
         ]
       },
       "bones": [
