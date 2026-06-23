@@ -4,7 +4,7 @@ A combined Minecraft **Bedrock 1.21.90+** add-on — dragons, pets, vehicles, fu
 home building and security — built from scratch (models, textures, animations, behavior,
 Script API). **No experiments required.** Packaged as a single `Wildforge.mcaddon`.
 
-> Status: **M1 Dragons + M2 Pets shipped.** Vehicles, Furniture, HomeBuilding and Security
+> Status: **M1 Dragons + M2 Pets + M3 Vehicles shipped.** Furniture, HomeBuilding and Security
 > are planned next (see `BUILD_PLAN.md`). Each milestone folds into the same combined pack.
 
 ## Install
@@ -88,6 +88,24 @@ raise health (and attack, for fighters); the pet's nameplate shows its level.
 - **Medium (follow):** Dog, Fox, Iguana, Turtle, Crystal Fox
 - **Large (ride):** Capybara, Pony, Riding Lizard
 - **Fighters (defend & level by combat):** Dog, Fox, Riding Lizard, Ember/Frost Sprite, Crystal Fox
+
+---
+
+## Vehicles — 17 to drive
+
+Multi-seat, arcade-fast, **no fuel**, **no fall/collision damage** while riding.
+
+- **Get one:** craft its **spawn item** (each uses a representative material like iron +
+  redstone + leather) and **use it** to place the vehicle — or grab the creative spawn egg.
+- **Drive:** mount it, steer where you look. **Land** vehicles hug the ground; **air** and
+  **water** vehicles use **jump to rise / sneak to descend** (planes/jets/helis fly, subs dive).
+- **Passengers:** extra seats let friends ride along.
+
+| Land | Air | Water |
+|---|---|---|
+| Sports Car, Sedan, Pickup, Monster Truck, Bus, Motorbike, Quad ATV, Dune Buggy | Propeller Plane, Jet, Helicopter, Glider, Hot-Air Balloon | Speedboat, Jetski, Submarine, Pontoon Boat |
+
+Wheels, propellers and rotors animate while in motion.
 
 ---
 

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:helicopter",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_helicopter"
+      },
+      "geometry": {
+        "default": "geometry.wf_helicopter"
+      },
+      "animations": {
+        "base": "animation.wf_vehicle.base",
+        "rotor": "animation.wf_vehicle.rotor"
+      },
+      "scripts": {
+        "animate": [
+          "rotor"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#2a6a3a",
+        "overlay_color": "#ffd24a"
+      }
+    }
+  }
+}

@@ -154,6 +154,45 @@ def main():
         if ident and ident not in bp_ids:
             err(f"spawn_rule '{ident}' has no matching BP entity")
 
+    # ---- items + item textures ----
+    item_tex = {}
+    itx = load_json(os.path.join(RP, "textures", "item_texture.json"))
+    if itx:
+        for short, e in (itx.get("texture_data") or {}).items():
+            item_tex[short] = e.get("textures")
+            if not _texture_exists(e.get("textures", "")):
+                err(f"item_texture '{short}' file '{e.get('textures')}' not found")
+    item_ids = set()
+    for p in all_json(BP, "items"):
+        d = load_json(p)
+        if not d:
+            continue
+        desc = (d.get("minecraft:item") or {}).get("description", {})
+        ident = desc.get("identifier")
+        if not ident:
+            err(f"{rel(p)}: item has no identifier")
+            continue
+        item_ids.add(ident)
+        if f"item.{ident}.name" not in lang_keys:
+            warn(f"{ident}: missing lang key item.{ident}.name")
+        icon = ((d["minecraft:item"].get("components") or {}).get("minecraft:icon") or {})
+        tex = icon.get("texture") if isinstance(icon, dict) else icon
+        if tex and tex not in item_tex:
+            err(f"{ident}: icon '{tex}' not declared in item_texture.json")
+
+    # ---- recipes resolve to a real item/entity ----
+    for p in all_json(BP, "recipes"):
+        d = load_json(p)
+        if not d:
+            continue
+        for key in ("minecraft:recipe_shapeless", "minecraft:recipe_shaped"):
+            if key in d:
+                res = d[key].get("result")
+                res = res[0] if isinstance(res, list) else res
+                ritem = (res or {}).get("item", "")
+                if ritem.startswith("wf:") and ritem not in item_ids and ritem not in bp_ids:
+                    err(f"recipe {rel(p)} produces undefined '{ritem}'")
+
     return report()
 
 

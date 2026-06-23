@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:glider",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_glider"
+      },
+      "geometry": {
+        "default": "geometry.wf_glider"
+      },
+      "animations": {
+        "base": "animation.wf_vehicle.base"
+      },
+      "scripts": {
+        "animate": []
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#e8e8ee",
+        "overlay_color": "#3aa6e6"
+      }
+    }
+  }
+}

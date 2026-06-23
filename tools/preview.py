@@ -10,8 +10,10 @@ import os
 from PIL import Image, ImageDraw
 from dragons_data import DRAGONS
 from pets_data import PETS
+from vehicles_data import VEHICLES
 from mclib.dragonbuild import build as build_dragon, _col
 from mclib.petbuild import build as build_pet
+from mclib.vehiclebuild import build as build_vehicle
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CELL = 300
@@ -118,6 +120,7 @@ def montage(roster, build_fn, out_name):
 def main():
     montage(DRAGONS, build_dragon, "dragons_preview.png")
     montage(PETS, build_pet, "pets_preview.png")
+    montage(VEHICLES, build_vehicle, "vehicles_preview.png")
 
 
 if __name__ == "__main__":
