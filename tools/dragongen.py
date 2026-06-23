@@ -28,6 +28,33 @@ def dump(path, obj):
         json.dump(obj, f, indent=2)
 
 
+HEADER = ["## Wildforge", "pack.name=Wildforge",
+          "pack.description=Dragons, pets, vehicles, furniture, building & security."]
+
+
+def lang_merge(dragon_lines):
+    """Own the pack header + Dragons section; preserve every other domain's section."""
+    path = os.path.join(RP, "texts", "en_US.lang")
+    keys = {ln.split("=", 1)[0] for ln in dragon_lines if "=" in ln}
+    header_keys = {ln.split("=", 1)[0] for ln in HEADER if "=" in ln}
+    rest = []
+    if os.path.exists(path):
+        with open(path) as f:
+            for ln in f.read().splitlines():
+                s = ln.strip()
+                k = ln.split("=", 1)[0] if "=" in ln else None
+                if k in keys or k in header_keys:
+                    continue
+                if s in ("## Wildforge", "## Dragons"):
+                    continue
+                rest.append(ln)
+    top = HEADER + ["", "## Dragons"] + dragon_lines
+    body = "\n".join(top)
+    tail = "\n".join(rest).strip()
+    with open(path, "w") as f:
+        f.write(body + ("\n\n" + tail if tail else "") + "\n")
+
+
 # --------------------------------------------------------------------------- #
 def collision(scale):
     return {"width": round(1.2 * scale, 2), "height": round(1.3 * scale, 2)}
@@ -319,9 +346,7 @@ def main():
     anim_dir = ensure(RP, "animations")
     ensure(BP, "scripts", "dragons")
 
-    lang = ["## Wildforge", "pack.name=Wildforge",
-            "pack.description=Dragons, pets, vehicles, furniture, building & security.",
-            "", "## Dragons"]
+    lang = []
 
     for d in DRAGONS:
         i = d["id"]
@@ -347,9 +372,7 @@ def main():
     with open(os.path.join(BP, "scripts", "dragons", "data.js"), "w") as f:
         f.write(script_data())
 
-    # lang: keep pack + dragons; (other domains append later)
-    with open(os.path.join(RP, "texts", "en_US.lang"), "w") as f:
-        f.write("\n".join(lang) + "\n")
+    lang_merge(lang)
 
     print(f"generated {len(DRAGONS)} dragons "
           f"({sum(1 for d in DRAGONS if d['tier']=='common')} eggs)")
