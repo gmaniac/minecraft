@@ -133,13 +133,15 @@ def _neck_and_head(g, d, parent, base, neck_n, head_name, yaw):
     pivot = list(base)
     for i in range(neck_n):
         nm = f"{head_name}_neck{i+1}" if head_name != "head" else f"neck{i+1}"
+        # No baked pitch — the stepped pivots form a forward arch; rotations are
+        # left to the animations so the dragon never sits locked staring upward.
         b = g.bone(nm, tuple(pivot), parent=prev,
-                   rotation=[-28 + i * 4, yaw if i == 0 else 0, 0])
+                   rotation=[0, yaw if i == 0 else 0, 0])
         b.cube([pivot[0] - seg / 2, pivot[1] - seg / 2, pivot[2] - seg_len], [seg, seg, seg_len],
                [0, 0], region="body")
         prev = nm
         pivot = [pivot[0] + math.sin(math.radians(yaw)) * 0.5,
-                 pivot[1] + 2.2, pivot[2] - seg_len + 0.6]
+                 pivot[1] + 1.4, pivot[2] - seg_len + 0.4]
         seg = max(4, seg - 0.5)
     _head(g, d, parent=prev, pivot=tuple(pivot), name=head_name)
 
@@ -147,7 +149,7 @@ def _neck_and_head(g, d, parent, base, neck_n, head_name, yaw):
 def _head(g, d, parent, pivot, name):
     f = d["features"]
     px, py, pz = pivot
-    hb = g.bone(name, (px, py, pz), parent=parent, rotation=[18, 0, 0])
+    hb = g.bone(name, (px, py, pz), parent=parent, rotation=[0, 0, 0])
     hb.cube([px - 3, py - 2, pz - 7], [6, 6, 7], [0, 0], region="head")
     # snout
     hb.cube([px - 2, py - 1.5, pz - 11], [4, 3.5, 4], [0, 0], region="head")
