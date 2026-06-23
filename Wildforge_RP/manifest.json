@@ -4,20 +4,36 @@
     "name": "Wildforge §7(Resources)",
     "description": "Models, textures, animations & sounds for Wildforge.",
     "uuid": "a78857b2-3f5d-44a7-a535-5a46f19a156f",
-    "version": [0, 1, 0],
-    "min_engine_version": [1, 21, 90]
+    "version": [
+      0,
+      8,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      90
+    ]
   },
   "modules": [
     {
       "type": "resources",
       "uuid": "681005d9-85b7-404c-a029-dcf70b392ba1",
-      "version": [0, 1, 0]
+      "version": [
+        0,
+        8,
+        0
+      ]
     }
   ],
   "dependencies": [
     {
       "uuid": "47c78bc1-d178-4891-9271-3ae3fc06f56e",
-      "version": [0, 1, 0]
+      "version": [
+        0,
+        8,
+        0
+      ]
     }
   ]
 }

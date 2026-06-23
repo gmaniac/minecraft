@@ -66,6 +66,25 @@ def main():
             else:
                 uuids[u] = label
 
+    # ---- versions must match the VERSION file (so changes get bumped) ----
+    vpath = os.path.join(ROOT, "VERSION")
+    if os.path.exists(vpath):
+        with open(vpath) as f:
+            want = [int(x) for x in f.read().strip().split(".")]
+        for label, base in (("BP", BP), ("RP", RP)):
+            man = load_json(os.path.join(base, "manifest.json"))
+            if not man:
+                continue
+            vers = [man.get("header", {}).get("version")]
+            vers += [m.get("version") for m in man.get("modules", [])]
+            vers += [d.get("version") for d in man.get("dependencies", []) if "uuid" in d]
+            for v in vers:
+                if v != want:
+                    err(f"{label} manifest version {v} != VERSION {want} "
+                        f"(run: python tools/bump_version.py)")
+    else:
+        warn("no VERSION file at repo root")
+
     # ---- collect geometry / render controller / animation identifiers (RP) ----
     geoms = set()
     for p in all_json(RP, "models"):
