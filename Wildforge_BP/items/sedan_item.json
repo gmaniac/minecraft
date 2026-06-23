@@ -8,9 +8,7 @@
       }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "wf_sedan_item"
-      },
+      "minecraft:icon": "wf_sedan_item",
       "minecraft:max_stack_size": 16,
       "minecraft:display_name": {
         "value": "Sedan"

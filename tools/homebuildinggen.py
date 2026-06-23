@@ -70,7 +70,7 @@ def placer_item(pf):
     return {"format_version": "1.21.10", "minecraft:item": {
         "description": {"identifier": f"wf:{pf['id']}_placer",
                         "menu_category": {"category": "construction"}},
-        "components": {"minecraft:icon": {"texture": f"wf_{pf['id']}_placer"},
+        "components": {"minecraft:icon": f"wf_{pf['id']}_placer",
                        "minecraft:max_stack_size": 16,
                        "minecraft:display_name": {"value": pf["label"]}}}}
 

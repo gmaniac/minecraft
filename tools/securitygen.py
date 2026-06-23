@@ -109,7 +109,7 @@ def block_json(blk):
 def simple_item(ident, name, icon_short):
     return {"format_version": "1.21.10", "minecraft:item": {
         "description": {"identifier": ident, "menu_category": {"category": "items"}},
-        "components": {"minecraft:icon": {"texture": icon_short}, "minecraft:max_stack_size": 16,
+        "components": {"minecraft:icon": icon_short, "minecraft:max_stack_size": 16,
                        "minecraft:display_name": {"value": name}}}}
 
 

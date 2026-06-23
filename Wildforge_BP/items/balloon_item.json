@@ -8,9 +8,7 @@
       }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "wf_balloon_item"
-      },
+      "minecraft:icon": "wf_balloon_item",
       "minecraft:max_stack_size": 16,
       "minecraft:display_name": {
         "value": "Hot-Air Balloon"
