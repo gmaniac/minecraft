@@ -23,6 +23,11 @@ REGION = {
     "glass": ("glass", 1.0), "trim": ("trim", 1.0), "dark": ("dark", 1.0),
     "wheel": ("dark", 0.7), "metal": ("trim", 0.9), "light": ("accent", 1.25),
     "seat": ("dark", 1.1),
+    # furniture regions (own palette keys to avoid collisions)
+    "fwood": ("wood", 1.0), "ftrim": ("trim", 1.0), "faccent": ("accent", 1.0),
+    "fmetal": ("metal", 1.0), "ffabric": ("fabric", 1.0), "fdark": ("dark", 1.0),
+    "fglass": ("glass", 1.0), "flight": ("light", 1.0), "fleg": ("wood", 0.85),
+    "ftop": ("wood", 1.08),
 }
 
 

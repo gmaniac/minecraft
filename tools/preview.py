@@ -11,9 +11,11 @@ from PIL import Image, ImageDraw
 from dragons_data import DRAGONS
 from pets_data import PETS
 from vehicles_data import VEHICLES
+from furniture_data import TYPES as FURN_TYPES, STYLES as FURN_STYLES
 from mclib.dragonbuild import build as build_dragon, _col
 from mclib.petbuild import build as build_pet
 from mclib.vehiclebuild import build as build_vehicle
+from mclib.furniturebuild import build as build_furn
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CELL = 300
@@ -121,6 +123,13 @@ def main():
     montage(DRAGONS, build_dragon, "dragons_preview.png")
     montage(PETS, build_pet, "pets_preview.png")
     montage(VEHICLES, build_vehicle, "vehicles_preview.png")
+    # furniture: one synthetic roster of type x style
+    furn = []
+    for t in FURN_TYPES:
+        for sk, s in FURN_STYLES.items():
+            furn.append({"name": f"{s['label']} {t['label']}", "palette": s["palette"],
+                         "_key": t["key"]})
+    montage(furn, lambda d: build_furn(d["_key"]), "furniture_preview.png")
 
 
 if __name__ == "__main__":

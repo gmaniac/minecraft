@@ -6,13 +6,15 @@ import { startHatchSystem } from "./lib/hatch.js";
 import { init as initDragons } from "./dragons/index.js";
 import { init as initPets } from "./pets/index.js";
 import { init as initVehicles } from "./vehicles/index.js";
+import { init as initFurniture } from "./furniture/index.js";
 
 // Domain initializers are added milestone by milestone.
 const DOMAINS = [
   initDragons,
   initPets,
   initVehicles,
-  // initFurniture, initHomeBuilding, initSecurity
+  initFurniture,
+  // initHomeBuilding, initSecurity
 ];
 
 system.run(() => {
