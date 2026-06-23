@@ -4,7 +4,7 @@ A combined Minecraft **Bedrock 1.21.90+** add-on — dragons, pets, vehicles, fu
 home building and security — built from scratch (models, textures, animations, behavior,
 Script API). **No experiments required.** Packaged as a single `Wildforge.mcaddon`.
 
-> Status: **M1 shipped — Dragons.** Pets, Vehicles, Furniture, HomeBuilding and Security
+> Status: **M1 Dragons + M2 Pets shipped.** Vehicles, Furniture, HomeBuilding and Security
 > are planned next (see `BUILD_PLAN.md`). Each milestone folds into the same combined pack.
 
 ## Install
@@ -61,6 +61,33 @@ geometry, an idle particle aura/trail, and a **breath attack**.
 - **Breed** (commons): feed two tamed adults of the same kind — the baby is automatically yours.
 - **Eggs** (commons): a placed egg hatches after ~90 seconds; the hatchling is yours.
 - **Creative:** spawn eggs exist for every dragon and egg, including the mythic legends.
+
+---
+
+## Pets — 19 companions
+
+Realistic and fantasy pets that go well beyond vanilla cats/wolves. Tame with each
+pet's food, then they're yours.
+
+**Travel:** small pets can be **carried** (interact to pick up / put down), large pets
+can be **ridden**, and **every** pet **teleports to you** when it falls too far behind.
+
+**Commands:** sneak + interact opens a menu — **Follow / Stay**, **Do a trick**, a
+**Defend ↔ Passive** toggle (combat pets), and **Pick up / Put down** (small pets).
+
+**Leveling (both paths):** pets gain XP from **fighting** (combat pets that land kills)
+and from **care** (feeding them their food, doing tricks). Levels persist per-pet and
+raise health (and attack, for fighters); the pet's nameplate shows its level.
+
+| Realistic | Fantasy |
+|---|---|
+| Dog, Cat, Rabbit, Fox, Ferret, Hamster, Parrot, Gecko, Iguana, Turtle, Capybara, Pony, Riding Lizard | Slime Pet, Ember Sprite, Frost Sprite, Mushroom Critter, Cloud Pup, Crystal Fox |
+
+- **Small (carry):** Cat, Rabbit, Ferret, Hamster, Parrot, Gecko, Slime Pet, Ember/Frost
+  Sprite, Mushroom Critter, Cloud Pup
+- **Medium (follow):** Dog, Fox, Iguana, Turtle, Crystal Fox
+- **Large (ride):** Capybara, Pony, Riding Lizard
+- **Fighters (defend & level by combat):** Dog, Fox, Riding Lizard, Ember/Frost Sprite, Crystal Fox
 
 ---
 

@@ -1,0 +1,105 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.wf_pet.idle": {
+      "loop": true,
+      "bones": {
+        "head": {
+          "rotation": [
+            "math.sin(q.life_time*70)*4",
+            "math.cos(q.life_time*55)*5",
+            0
+          ]
+        },
+        "tail": {
+          "rotation": [
+            0,
+            "math.sin(q.life_time*120)*16",
+            0
+          ]
+        },
+        "ear_l": {
+          "rotation": [
+            "math.sin(q.life_time*90)*6",
+            0,
+            0
+          ]
+        },
+        "ear_r": {
+          "rotation": [
+            "math.sin(q.life_time*90+40)*6",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.wf_pet.walk": {
+      "loop": true,
+      "anim_time_update": "q.modified_distance_moved",
+      "bones": {
+        "leg_fl": {
+          "rotation": [
+            "math.cos(q.anim_time*42)*40",
+            0,
+            0
+          ]
+        },
+        "leg_fr": {
+          "rotation": [
+            "math.cos(q.anim_time*42+180)*40",
+            0,
+            0
+          ]
+        },
+        "leg_bl": {
+          "rotation": [
+            "math.cos(q.anim_time*42+180)*40",
+            0,
+            0
+          ]
+        },
+        "leg_br": {
+          "rotation": [
+            "math.cos(q.anim_time*42)*40",
+            0,
+            0
+          ]
+        },
+        "tail": {
+          "rotation": [
+            0,
+            "math.cos(q.anim_time*42)*10",
+            0
+          ]
+        }
+      }
+    },
+    "animation.wf_pet.fly": {
+      "loop": true,
+      "bones": {
+        "wing_l": {
+          "rotation": [
+            0,
+            0,
+            "math.sin(q.life_time*240)*48-8"
+          ]
+        },
+        "wing_r": {
+          "rotation": [
+            0,
+            0,
+            "-math.sin(q.life_time*240)*48+8"
+          ]
+        },
+        "body": {
+          "position": [
+            0,
+            "math.sin(q.life_time*240)*0.8",
+            0
+          ]
+        }
+      }
+    }
+  }
+}

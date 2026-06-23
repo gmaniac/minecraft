@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:slime_pet",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_slime_pet"
+      },
+      "geometry": {
+        "default": "geometry.wf_slime_pet"
+      },
+      "animations": {
+        "idle": "animation.wf_pet.idle",
+        "walk": "animation.wf_pet.walk"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "q.modified_move_speed <= 0.05"
+          },
+          {
+            "walk": "q.modified_move_speed > 0.05"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#5ad06a",
+        "overlay_color": "#3aa84a"
+      }
+    }
+  }
+}

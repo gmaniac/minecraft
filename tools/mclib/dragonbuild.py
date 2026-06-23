@@ -18,6 +18,7 @@ REGION = {
     "membrane": ("membrane", 1.0), "leg": ("body", 0.92), "claw": ("horn", 1.05),
     "tail": ("body", 0.98), "tip": ("accent", 1.0), "eye": ("eye", 1.0),
     "teeth": ("horn", 1.15), "extra": ("accent", 1.0),
+    "accent": ("accent", 1.0), "spot": ("extra", 1.0), "ear": ("body", 0.95),
 }
 
 

@@ -9,7 +9,9 @@ import math
 import os
 from PIL import Image, ImageDraw
 from dragons_data import DRAGONS
-from mclib.dragonbuild import build, _col
+from pets_data import PETS
+from mclib.dragonbuild import build as build_dragon, _col
+from mclib.petbuild import build as build_pet
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CELL = 300
@@ -65,8 +67,8 @@ FACES = [((0, 1, 2, 3), (0, 0, -1)), ((4, 5, 6, 7), (0, 0, 1)),
          ((1, 2, 6, 5), (1, 0, 0)), ((0, 3, 7, 4), (-1, 0, 0))]
 
 
-def render(d):
-    geo = build(d)
+def render(d, build_fn):
+    geo = build_fn(d)
     chain = bone_chain(geo)
     quads = []
     for b in geo.bones:
@@ -102,15 +104,20 @@ def render(d):
     return img
 
 
-def main():
+def montage(roster, build_fn, out_name):
     cols = 5
-    rows = (len(DRAGONS) + cols - 1) // cols
+    rows = (len(roster) + cols - 1) // cols
     sheet = Image.new("RGBA", (cols * CELL, rows * CELL), (20, 21, 28, 255))
-    for n, d in enumerate(DRAGONS):
-        sheet.paste(render(d), ((n % cols) * CELL, (n // cols) * CELL))
-    out = os.path.join(ROOT, "dragons_preview.png")
+    for n, d in enumerate(roster):
+        sheet.paste(render(d, build_fn), ((n % cols) * CELL, (n // cols) * CELL))
+    out = os.path.join(ROOT, out_name)
     sheet.convert("RGB").save(out)
     print("wrote", out)
+
+
+def main():
+    montage(DRAGONS, build_dragon, "dragons_preview.png")
+    montage(PETS, build_pet, "pets_preview.png")
 
 
 if __name__ == "__main__":
