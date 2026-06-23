@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:auto_turret",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_auto_turret"
+      },
+      "geometry": {
+        "default": "geometry.wf_turret_dev"
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#4a4f55",
+        "overlay_color": "#e0a52a"
+      }
+    }
+  }
+}

@@ -270,6 +270,27 @@
     },
     "wf_oak_trim": {
       "textures": "textures/blocks/wf_oak_trim"
+    },
+    "wf_security_camera": {
+      "textures": "textures/blocks/wf_security_camera"
+    },
+    "wf_monitor": {
+      "textures": "textures/blocks/wf_monitor"
+    },
+    "wf_owner_door": {
+      "textures": "textures/blocks/wf_owner_door"
+    },
+    "wf_keypad": {
+      "textures": "textures/blocks/wf_keypad"
+    },
+    "wf_floodlight": {
+      "textures": "textures/blocks/wf_floodlight"
+    },
+    "wf_alarm_siren": {
+      "textures": "textures/blocks/wf_alarm_siren"
+    },
+    "wf_control_hub": {
+      "textures": "textures/blocks/wf_control_hub"
     }
   }
 }

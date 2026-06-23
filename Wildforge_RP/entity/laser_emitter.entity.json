@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:laser_emitter",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_laser_emitter"
+      },
+      "geometry": {
+        "default": "geometry.wf_laser_dev"
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#3a2f44",
+        "overlay_color": "#ff2a5a"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "wf:keycard",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "wf_keycard"
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:display_name": {
+        "value": "Keycard"
+      }
+    }
+  }
+}

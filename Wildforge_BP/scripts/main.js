@@ -8,15 +8,16 @@ import { init as initPets } from "./pets/index.js";
 import { init as initVehicles } from "./vehicles/index.js";
 import { init as initFurniture } from "./furniture/index.js";
 import { init as initHomeBuilding } from "./homebuilding/index.js";
+import { init as initSecurity } from "./security/index.js";
 
-// Domain initializers are added milestone by milestone.
+// All six domains.
 const DOMAINS = [
   initDragons,
   initPets,
   initVehicles,
   initFurniture,
   initHomeBuilding,
-  // initSecurity
+  initSecurity,
 ];
 
 system.run(() => {
