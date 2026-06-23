@@ -1,0 +1,22 @@
+# Build temp (the staged pack tree before zipping)
+build/
+dist/tmp/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Scratch
+scratch/
+*.tmp
+
+# NOTE: the packaged *.mcaddon deliverables ARE committed (like Dragons/MotorDragons.mcaddon)
