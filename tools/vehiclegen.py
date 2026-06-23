@@ -142,7 +142,7 @@ def item_json(v):
     return {"format_version": "1.21.10", "minecraft:item": {
         "description": {"identifier": f"wf:{v['id']}_item",
                         "menu_category": {"category": "equipment"}},
-        "components": {"minecraft:icon": {"texture": f"wf_{v['id']}_item"},
+        "components": {"minecraft:icon": f"wf_{v['id']}_item",
                        "minecraft:max_stack_size": 16,
                        "minecraft:display_name": {"value": v["name"]}}}}
 

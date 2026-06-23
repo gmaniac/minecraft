@@ -8,9 +8,7 @@
       }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "wf_helicopter_item"
-      },
+      "minecraft:icon": "wf_helicopter_item",
       "minecraft:max_stack_size": 16,
       "minecraft:display_name": {
         "value": "Helicopter"

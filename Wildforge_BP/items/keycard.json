@@ -8,9 +8,7 @@
       }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "wf_keycard"
-      },
+      "minecraft:icon": "wf_keycard",
       "minecraft:max_stack_size": 16,
       "minecraft:display_name": {
         "value": "Keycard"

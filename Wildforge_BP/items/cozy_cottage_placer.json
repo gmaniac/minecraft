@@ -8,9 +8,7 @@
       }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "wf_cozy_cottage_placer"
-      },
+      "minecraft:icon": "wf_cozy_cottage_placer",
       "minecraft:max_stack_size": 16,
       "minecraft:display_name": {
         "value": "Cozy Cottage"

@@ -8,9 +8,7 @@
       }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "wf_dune_buggy_item"
-      },
+      "minecraft:icon": "wf_dune_buggy_item",
       "minecraft:max_stack_size": 16,
       "minecraft:display_name": {
         "value": "Dune Buggy"
