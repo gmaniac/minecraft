@@ -1,0 +1,322 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wf:mushroom_critter",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "wf:mushroom_critter_tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:persistent": {},
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 1.0
+        },
+        "minecraft:breedable": {
+          "require_tame": true,
+          "inherit_tamed": true,
+          "breed_items": [
+            "minecraft:red_mushroom",
+            "minecraft:brown_mushroom"
+          ],
+          "breeds_with": [
+            {
+              "mate_type": "wf:mushroom_critter",
+              "baby_type": "wf:mushroom_critter",
+              "breed_event": {
+                "event": "minecraft:entity_born",
+                "target": "baby"
+              }
+            }
+          ]
+        }
+      },
+      "wf:mushroom_critter_follow": {
+        "minecraft:behavior.follow_owner": {
+          "priority": 5,
+          "speed_multiplier": 1.1,
+          "start_distance": 10,
+          "stop_distance": 3
+        }
+      },
+      "wf:mushroom_critter_baby": {
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.3
+        },
+        "minecraft:ageable": {
+          "duration": 1200,
+          "feed_items": [
+            "minecraft:red_mushroom",
+            "minecraft:brown_mushroom"
+          ],
+          "grow_up": {
+            "event": "wf:grow_up",
+            "target": "self"
+          }
+        }
+      },
+      "wf:mushroom_critter_carried": {
+        "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": false
+        },
+        "minecraft:is_tamed": {}
+      },
+      "wf:mushroom_critter_lvl_2": {
+        "minecraft:health": {
+          "value": 15,
+          "max": 15
+        }
+      },
+      "wf:mushroom_critter_lvl_3": {
+        "minecraft:health": {
+          "value": 17,
+          "max": 17
+        }
+      },
+      "wf:mushroom_critter_lvl_4": {
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        }
+      },
+      "wf:mushroom_critter_lvl_5": {
+        "minecraft:health": {
+          "value": 23,
+          "max": 23
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "wf_pet",
+          "mushroom_critter",
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.56,
+        "height": 0.56
+      },
+      "minecraft:scale": {
+        "value": 0.6
+      },
+      "minecraft:health": {
+        "value": 12,
+        "max": 12
+      },
+      "minecraft:physics": {},
+      "minecraft:movement": {
+        "value": 0.24
+      },
+      "minecraft:breathable": {
+        "breathes_air": true,
+        "total_supply": 15
+      },
+      "minecraft:nameable": {},
+      "minecraft:tameable": {
+        "probability": 0.4,
+        "tame_items": [
+          "minecraft:red_mushroom",
+          "minecraft:brown_mushroom"
+        ],
+        "tame_event": {
+          "event": "wf:pet_tame",
+          "target": "self"
+        }
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 1.4
+      },
+      "minecraft:behavior.tempt": {
+        "priority": 4,
+        "items": [
+          "minecraft:red_mushroom",
+          "minecraft:brown_mushroom"
+        ],
+        "speed_multiplier": 1.1
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 0.8
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {}
+    },
+    "events": {
+      "wf:pet_tame": {
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_tamed",
+            "wf:mushroom_critter_follow"
+          ]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_baby",
+            "wf:mushroom_critter_tamed",
+            "wf:mushroom_critter_follow"
+          ]
+        }
+      },
+      "wf:set_baby": {
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_baby"
+          ]
+        }
+      },
+      "wf:grow_up": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_baby"
+          ]
+        }
+      },
+      "wf:stay": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_follow"
+          ]
+        }
+      },
+      "wf:follow": {
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_follow"
+          ]
+        }
+      },
+      "wf:carry_on": {
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_carried"
+          ]
+        }
+      },
+      "wf:carry_off": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_carried"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 80,
+            "remove": {
+              "component_groups": [
+                "wf:mushroom_critter_baby"
+              ]
+            }
+          },
+          {
+            "weight": 20,
+            "add": {
+              "component_groups": [
+                "wf:mushroom_critter_baby"
+              ]
+            }
+          }
+        ]
+      },
+      "wf:setlvl_2": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_2",
+            "wf:mushroom_critter_lvl_3",
+            "wf:mushroom_critter_lvl_4",
+            "wf:mushroom_critter_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_2"
+          ]
+        }
+      },
+      "wf:setlvl_3": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_2",
+            "wf:mushroom_critter_lvl_3",
+            "wf:mushroom_critter_lvl_4",
+            "wf:mushroom_critter_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_3"
+          ]
+        }
+      },
+      "wf:setlvl_4": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_2",
+            "wf:mushroom_critter_lvl_3",
+            "wf:mushroom_critter_lvl_4",
+            "wf:mushroom_critter_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_4"
+          ]
+        }
+      },
+      "wf:setlvl_5": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_2",
+            "wf:mushroom_critter_lvl_3",
+            "wf:mushroom_critter_lvl_4",
+            "wf:mushroom_critter_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_5"
+          ]
+        }
+      },
+      "wf:setlvl_1": {
+        "remove": {
+          "component_groups": [
+            "wf:mushroom_critter_lvl_2",
+            "wf:mushroom_critter_lvl_3",
+            "wf:mushroom_critter_lvl_4",
+            "wf:mushroom_critter_lvl_5"
+          ]
+        }
+      }
+    }
+  }
+}

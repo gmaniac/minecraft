@@ -1,0 +1,351 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wf:crystal_fox",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "wf:crystal_fox_tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:persistent": {},
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 1.0
+        },
+        "minecraft:breedable": {
+          "require_tame": true,
+          "inherit_tamed": true,
+          "breed_items": [
+            "minecraft:amethyst_shard"
+          ],
+          "breeds_with": [
+            {
+              "mate_type": "wf:crystal_fox",
+              "baby_type": "wf:crystal_fox",
+              "breed_event": {
+                "event": "minecraft:entity_born",
+                "target": "baby"
+              }
+            }
+          ]
+        }
+      },
+      "wf:crystal_fox_follow": {
+        "minecraft:behavior.follow_owner": {
+          "priority": 5,
+          "speed_multiplier": 1.1,
+          "start_distance": 10,
+          "stop_distance": 3
+        }
+      },
+      "wf:crystal_fox_combat": {
+        "minecraft:attack": {
+          "damage": 4
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 4,
+          "must_see": true,
+          "reselect_targets": true,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "monster"
+              },
+              "max_dist": 12
+            }
+          ]
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 4,
+          "speed_multiplier": 1.3
+        }
+      },
+      "wf:crystal_fox_baby": {
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.42
+        },
+        "minecraft:ageable": {
+          "duration": 1200,
+          "feed_items": [
+            "minecraft:amethyst_shard"
+          ],
+          "grow_up": {
+            "event": "wf:grow_up",
+            "target": "self"
+          }
+        }
+      },
+      "wf:crystal_fox_lvl_2": {
+        "minecraft:health": {
+          "value": 24,
+          "max": 24
+        },
+        "minecraft:attack": {
+          "damage": 5
+        }
+      },
+      "wf:crystal_fox_lvl_3": {
+        "minecraft:health": {
+          "value": 29,
+          "max": 29
+        },
+        "minecraft:attack": {
+          "damage": 6
+        }
+      },
+      "wf:crystal_fox_lvl_4": {
+        "minecraft:health": {
+          "value": 33,
+          "max": 33
+        },
+        "minecraft:attack": {
+          "damage": 7
+        }
+      },
+      "wf:crystal_fox_lvl_5": {
+        "minecraft:health": {
+          "value": 38,
+          "max": 38
+        },
+        "minecraft:attack": {
+          "damage": 8
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "wf_pet",
+          "crystal_fox",
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.71,
+        "height": 0.71
+      },
+      "minecraft:scale": {
+        "value": 0.85
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:physics": {},
+      "minecraft:movement": {
+        "value": 0.36
+      },
+      "minecraft:breathable": {
+        "breathes_air": true,
+        "total_supply": 15
+      },
+      "minecraft:nameable": {},
+      "minecraft:tameable": {
+        "probability": 0.4,
+        "tame_items": [
+          "minecraft:amethyst_shard"
+        ],
+        "tame_event": {
+          "event": "wf:pet_tame",
+          "target": "self"
+        }
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 1.4
+      },
+      "minecraft:behavior.tempt": {
+        "priority": 4,
+        "items": [
+          "minecraft:amethyst_shard"
+        ],
+        "speed_multiplier": 1.1
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 0.8
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {}
+    },
+    "events": {
+      "wf:pet_tame": {
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_tamed",
+            "wf:crystal_fox_follow",
+            "wf:crystal_fox_combat"
+          ]
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_baby",
+            "wf:crystal_fox_tamed",
+            "wf:crystal_fox_follow",
+            "wf:crystal_fox_combat"
+          ]
+        }
+      },
+      "wf:set_baby": {
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_baby"
+          ]
+        }
+      },
+      "wf:grow_up": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_baby"
+          ]
+        }
+      },
+      "wf:stay": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_follow"
+          ]
+        }
+      },
+      "wf:follow": {
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_follow"
+          ]
+        }
+      },
+      "wf:carry_on": {},
+      "wf:carry_off": {},
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 80,
+            "remove": {
+              "component_groups": [
+                "wf:crystal_fox_baby"
+              ]
+            }
+          },
+          {
+            "weight": 20,
+            "add": {
+              "component_groups": [
+                "wf:crystal_fox_baby"
+              ]
+            }
+          }
+        ]
+      },
+      "wf:mode_passive": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_combat"
+          ]
+        }
+      },
+      "wf:mode_defend": {
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_combat"
+          ]
+        }
+      },
+      "wf:setlvl_2": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_2",
+            "wf:crystal_fox_lvl_3",
+            "wf:crystal_fox_lvl_4",
+            "wf:crystal_fox_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_2"
+          ]
+        }
+      },
+      "wf:setlvl_3": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_2",
+            "wf:crystal_fox_lvl_3",
+            "wf:crystal_fox_lvl_4",
+            "wf:crystal_fox_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_3"
+          ]
+        }
+      },
+      "wf:setlvl_4": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_2",
+            "wf:crystal_fox_lvl_3",
+            "wf:crystal_fox_lvl_4",
+            "wf:crystal_fox_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_4"
+          ]
+        }
+      },
+      "wf:setlvl_5": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_2",
+            "wf:crystal_fox_lvl_3",
+            "wf:crystal_fox_lvl_4",
+            "wf:crystal_fox_lvl_5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_5"
+          ]
+        }
+      },
+      "wf:setlvl_1": {
+        "remove": {
+          "component_groups": [
+            "wf:crystal_fox_lvl_2",
+            "wf:crystal_fox_lvl_3",
+            "wf:crystal_fox_lvl_4",
+            "wf:crystal_fox_lvl_5"
+          ]
+        }
+      }
+    }
+  }
+}

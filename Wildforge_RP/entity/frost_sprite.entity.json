@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:frost_sprite",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_frost_sprite"
+      },
+      "geometry": {
+        "default": "geometry.wf_frost_sprite"
+      },
+      "animations": {
+        "idle": "animation.wf_pet.idle",
+        "walk": "animation.wf_pet.walk",
+        "fly": "animation.wf_pet.fly"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "q.is_on_ground && q.modified_move_speed <= 0.05"
+          },
+          {
+            "walk": "q.is_on_ground && q.modified_move_speed > 0.05"
+          },
+          {
+            "fly": "!q.is_on_ground"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#7ad0ff",
+        "overlay_color": "#3a8ad8"
+      }
+    }
+  }
+}
