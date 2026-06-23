@@ -1,0 +1,7 @@
+## MotorCraft
+pack.name=MotorCraft
+pack.description=Dragons, pets, vehicles, furniture, building & security.
+
+## --- M0 test entity ---
+entity.motor:test_critter.name=Test Critter
+item.spawn_egg.entity.motor:test_critter.name=Spawn Test Critter

@@ -1,0 +1,38 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "MotorCraft §7(Behavior)",
+    "description": "Dragons, pets, vehicles, furniture, building & security — one combined add-on.",
+    "uuid": "47c78bc1-d178-4891-9271-3ae3fc06f56e",
+    "version": [0, 1, 0],
+    "min_engine_version": [1, 21, 90]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "8c62c212-d64a-4606-95c2-779f8e200a42",
+      "version": [0, 1, 0]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "c1647652-b8d8-477c-a76b-d36dd6a87e8b",
+      "version": [0, 1, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "a78857b2-3f5d-44a7-a535-5a46f19a156f",
+      "version": [0, 1, 0]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ]
+}
