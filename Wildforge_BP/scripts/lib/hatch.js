@@ -5,14 +5,14 @@ import { world, system } from "@minecraft/server";
 import { nearestPlayer, setOwner, getOwnerId } from "./owner.js";
 import { getNum, setNum } from "./persist.js";
 
-const HATCH_KEY = "motor:hatch_left";
+const HATCH_KEY = "wf:hatch_left";
 const STEP = 20; // ticks between checks
 const DIMS = ["overworld", "nether", "the_end"];
 
 // registry: { [eggTypeId]: { offspring, ticks, babyEvent } }
 const registry = {};
 
-export function registerEgg(eggTypeId, offspringTypeId, hatchTicks, babyEvent = "motor:set_baby") {
+export function registerEgg(eggTypeId, offspringTypeId, hatchTicks, babyEvent = "wf:set_baby") {
   registry[eggTypeId] = { offspring: offspringTypeId, ticks: hatchTicks, babyEvent };
 }
 

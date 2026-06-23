@@ -1,8 +1,8 @@
 {
   "format_version": 2,
   "header": {
-    "name": "MotorCraft §7(Resources)",
-    "description": "Models, textures, animations & sounds for MotorCraft.",
+    "name": "Wildforge §7(Resources)",
+    "description": "Models, textures, animations & sounds for Wildforge.",
     "uuid": "a78857b2-3f5d-44a7-a535-5a46f19a156f",
     "version": [0, 1, 0],
     "min_engine_version": [1, 21, 90]

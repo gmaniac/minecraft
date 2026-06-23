@@ -2,7 +2,7 @@
   "format_version": "1.8.0",
   "minecraft:spawn_rules": {
     "description": {
-      "identifier": "motor:test_critter",
+      "identifier": "wf:test_critter",
       "population_control": "animal"
     },
     "conditions": [

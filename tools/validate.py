@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MotorCraft pack validator.
+"""Wildforge pack validator.
 
 Structural + cross-reference checks that catch the errors that actually break an
 add-on in-game, short of launching Minecraft:
@@ -18,8 +18,8 @@ import sys
 import glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BP = os.path.join(ROOT, "MotorCraft_BP")
-RP = os.path.join(ROOT, "MotorCraft_RP")
+BP = os.path.join(ROOT, "Wildforge_BP")
+RP = os.path.join(ROOT, "Wildforge_RP")
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -47,7 +47,7 @@ def all_json(base, sub):
 
 def main():
     if not os.path.isdir(BP) or not os.path.isdir(RP):
-        err("MotorCraft_BP and/or MotorCraft_RP not found")
+        err("Wildforge_BP and/or Wildforge_RP not found")
         return report()
 
     # ---- manifests / UUIDs ----

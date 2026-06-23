@@ -2,13 +2,13 @@
   "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
-      "identifier": "motor:test_critter",
+      "identifier": "wf:test_critter",
       "is_spawnable": true,
       "is_summonable": true,
       "is_experimental": false
     },
     "components": {
-      "minecraft:type_family": { "family": ["motor_critter", "mob"] },
+      "minecraft:type_family": { "family": ["wf_critter", "mob"] },
       "minecraft:collision_box": { "width": 0.7, "height": 0.7 },
       "minecraft:health": { "value": 10, "max": 10 },
       "minecraft:physics": {},

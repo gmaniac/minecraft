@@ -2,7 +2,7 @@
 import { world } from "@minecraft/server";
 import { getStr, setStr } from "./persist.js";
 
-export const OWNER_KEY = "motor:owner";
+export const OWNER_KEY = "wf:owner";
 
 // Nearest player within `radius` of an entity, same dimension. Used to attribute
 // freshly-spawned owned entities (eggs, baby mobs) to whoever was standing there.

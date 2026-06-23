@@ -1,0 +1,7 @@
+## Wildforge
+pack.name=Wildforge
+pack.description=Dragons, pets, vehicles, furniture, building & security.
+
+## --- M0 test entity ---
+entity.wf:test_critter.name=Test Critter
+item.spawn_egg.entity.wf:test_critter.name=Spawn Test Critter

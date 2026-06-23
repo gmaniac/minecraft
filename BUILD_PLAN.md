@@ -10,7 +10,7 @@ domains (Dragons + the five new ones), built to and beyond the quality bar set b
   domain is finished (models, textures, behavior, scripts, lang, packaged, validated) before the next
   folds in. Dragons goes first: it stresses the model/texture generator at maximum complexity and
   produces the shared combat libs (targeting, breath FX, projectiles) that Pets and Security reuse.
-- **Deliverable:** one combined pack. Working title `MotorCraft` (`MotorCraft.mcaddon`).
+- **Deliverable:** one combined pack. Working title `Wildforge` (`Wildforge.mcaddon`).
 
 ---
 
@@ -18,7 +18,7 @@ domains (Dragons + the five new ones), built to and beyond the quality bar set b
 
 ### Pack layout (single combined BP + RP)
 ```
-MotorCraft_BP/
+Wildforge_BP/
   manifest.json            # data + script modules, depends on RP uuid + @minecraft/server 2.0.0
   pack_icon.png
   scripts/
@@ -32,7 +32,7 @@ MotorCraft_BP/
   recipes/                 # crafting for blocks/items
   loot_tables/             # drops where relevant
   functions/  (optional)   # /function helpers for prefab placement fallback
-MotorCraft_RP/
+Wildforge_RP/
   manifest.json            # resources module, depends on BP uuid
   pack_icon.png
   entity/                  # client entity defs
@@ -48,9 +48,9 @@ MotorCraft_RP/
 ```
 
 ### Naming
-- **Single namespace `motor:`** for everything, with a **domain prefix** in the identifier so the
-  flat folders stay readable: `motor:pet_*`, `motor:veh_*`, `motor:furn_*`, `motor:build_*`,
-  `motor:sec_*`, plus shared `motor:seat` (invisible sit/ride helper).
+- **Single namespace `wf:`** for everything, with a **domain prefix** in the identifier so the
+  flat folders stay readable: `wf:pet_*`, `wf:veh_*`, `wf:furn_*`, `wf:build_*`,
+  `wf:sec_*`, plus shared `wf:seat` (invisible sit/ride helper).
 - UUIDs: a fresh fixed UUID set (5 UUIDs: BP header, data module, script module, RP header, RP
   module) so re-imports update in place — same discipline as Dragons.
 
@@ -60,14 +60,14 @@ MotorCraft_RP/
   vehicle chassis, furniture primitives) so 16 pets aren't hand-typed.
 - **Texture generator** (Python + Pillow): paints region/box-UV PNGs from a per-model palette, same
   approach the dragons used. Reviewable/perfectable in Blockbench afterward.
-- **Packager** (`tools/build.sh`): zips BP+RP into `MotorCraft.mcaddon` with deterministic paths.
+- **Packager** (`tools/build.sh`): zips BP+RP into `Wildforge.mcaddon` with deterministic paths.
 - **Validator** (`tools/validate.py`): JSON-parses every file, checks every entity↔geometry↔texture
-  reference resolves, every `motor:` identifier has a lang entry, no dangling component groups/events,
+  reference resolves, every `wf:` identifier has a lang entry, no dangling component groups/events,
   UUID uniqueness. Run before every package step. This is the "working" guarantee short of launching
   the game (which this environment can't do — see §7).
 
 ### Shared script library (`scripts/lib/`)
-- `owner.js` — set/read `motor:owner` dynamic property on tame/place; nearest-player attribution
+- `owner.js` — set/read `wf:owner` dynamic property on tame/place; nearest-player attribution
   (reused from the dragon egg pattern).
 - `persist.js` — typed get/set dynamic-property helpers (numbers, json blobs) with try/catch.
 - `menu.js` — `@minecraft/server-ui` `ActionFormData`/`ModalFormData` wrappers for interact menus
@@ -81,7 +81,7 @@ MotorCraft_RP/
 ## 2. Per-domain plans
 
 ### F. Dragons — REWORK  (build first)
-**Fresh identifiers** (`motor:drg_ember`, etc.) — clean slate; note that dragons tamed under the old
+**Fresh identifiers** (`wf:drg_ember`, etc.) — clean slate; note that dragons tamed under the old
 `MotorDragons.mcaddon` won't carry over (the old pack can be retired). **21 dragons total.**
 
 **Roster**
@@ -148,7 +148,7 @@ texture arrays to multiply visible breeds without multiplying entities.
   a one-shot animation (beg, roll, spin) via animation controller + script `triggerEvent`.
 - **Leveling = both paths:** XP from kills (combat pets engage nearby hostiles) **and** from
   care/feeding. Level/XP/health persisted per-pet via dynamic properties; level scales health & attack
-  via component groups (`motor:pet_lvlN`). Nametag shows `Name  Lv.N`.
+  via component groups (`wf:pet_lvlN`). Nametag shows `Name  Lv.N`.
 
 **Files per pet:** BP entity (+tamed/baby/level groups, events), spawn rule, RP client entity, geo,
 texture(s), lang, spawn egg. Shared: `pets/index.js` (level/xp/teleport/command loops), trick anim
@@ -195,7 +195,7 @@ TV, desk. Each as a themed material/color set.
 
 **Mechanics (custom blocks)**
 - **Sit-able** chairs/sofas/stools/toilet: custom block component (`registerCustomComponent` →
-  `onPlayerInteract`) spawns an invisible `motor:seat` entity at the seat point and mounts the player;
+  `onPlayerInteract`) spawns an invisible `wf:seat` entity at the seat point and mounts the player;
   dismount/cleanup on exit. (Stable block-custom-component API, no experiments.)
 - **Lights:** `minecraft:light_emission` on lamp blocks.
 - **Storage:** drawers/cabinets/fridge/wardrobe open an `ActionFormData`-backed **virtual inventory**
@@ -252,8 +252,8 @@ monitor block, keypad lock, keycard reader + keycard item, owner-only door, auto
 - **Cameras & monitors:** placing a camera registers a viewpoint; interacting a monitor opens a menu of
   cameras and **spectates** via short script-driven camera teleport / `camera` command from the player
   to the camera location, with an "exit" to return. (Bedrock `/camera` + script.)
-- **Locked doors / keypads:** owner-only door checks `motor:owner`; keypad opens a `ModalFormData`
-  code entry; keycard reader checks for a `motor:keycard` item (with a stored code). Allowlist of
+- **Locked doors / keypads:** owner-only door checks `wf:owner`; keypad opens a `ModalFormData`
+  code entry; keycard reader checks for a `wf:keycard` item (with a stored code). Allowlist of
   player ids via the control hub menu.
 - **Turrets + lethal lasers — owner-configurable targeting:** each device has a per-instance mode
   toggle (Hostiles only / + Intruders) stored as a dynamic property and set via interact menu.
@@ -299,10 +299,10 @@ This environment **cannot launch Minecraft**, so "working" is guaranteed by:
 5. **M4 — Furniture** (prototype sit+storage first).
 6. **M5 — HomeBuilding** (prototype prefab placement first).
 7. **M6 — Security** (prototype camera+laser first).
-8. **M7 — Combined README**, final validation, final `MotorCraft.mcaddon`.
+8. **M7 — Combined README**, final validation, final `Wildforge.mcaddon`.
 
 ## 6. Open decisions (defaults chosen, change anytime)
-- Namespace `motor:` and pack name **MotorCraft** — assumed; say the word to rename.
+- Namespace `wf:` and pack name **Wildforge** — assumed; say the word to rename.
 - **Dragons reworked into the combined pack with FRESH ids** — the old standalone `MotorDragons.mcaddon`
   is superseded/retired; dragons tamed under it won't carry into the new pack.
 - Storage furniture uses script-backed virtual inventory (vs hidden-chest fallback) — will confirm

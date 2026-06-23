@@ -1,1 +1,1 @@
-"""MotorCraft generation library: geometry + texture builders."""
+"""Wildforge generation library: geometry + texture builders."""

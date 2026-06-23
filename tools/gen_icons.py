@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate MotorCraft pack icons (BP + RP), 128x128."""
+"""Generate Wildforge pack icons (BP + RP), 128x128."""
 import os
 from PIL import Image, ImageDraw
 
@@ -20,13 +20,13 @@ def make_icon(path, accent):
               fill=accent, outline=(255, 255, 255, 200))
     d.polygon([(cx, cy - 18), (cx + 18, cy), (cx, cy + 18), (cx - 18, cy)],
               fill=(255, 255, 255, 40))
-    # "MC" monogram bar
-    d.rectangle([20, 100, 108, 116], fill=(0, 0, 0, 150))
-    d.text((44, 102), "MOTOR", fill=(255, 255, 255, 255))
+    # wordmark bar
+    d.rectangle([14, 100, 114, 116], fill=(0, 0, 0, 150))
+    d.text((30, 102), "WILDFORGE", fill=(255, 255, 255, 255))
     img.save(path)
     print("wrote", path)
 
 
 if __name__ == "__main__":
-    make_icon(os.path.join(ROOT, "MotorCraft_BP", "pack_icon.png"), (210, 90, 50, 255))
-    make_icon(os.path.join(ROOT, "MotorCraft_RP", "pack_icon.png"), (70, 130, 210, 255))
+    make_icon(os.path.join(ROOT, "Wildforge_BP", "pack_icon.png"), (210, 90, 50, 255))
+    make_icon(os.path.join(ROOT, "Wildforge_RP", "pack_icon.png"), (70, 130, 210, 255))

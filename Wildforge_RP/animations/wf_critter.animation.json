@@ -1,7 +1,7 @@
 {
   "format_version": "1.8.0",
   "animations": {
-    "animation.motor_critter.idle": {
+    "animation.wf_critter.idle": {
       "loop": true,
       "bones": {
         "head": {
@@ -16,7 +16,7 @@
         }
       }
     },
-    "animation.motor_critter.walk": {
+    "animation.wf_critter.walk": {
       "loop": true,
       "anim_time_update": "q.modified_distance_moved",
       "bones": {
