@@ -76,6 +76,21 @@
     },
     "wf_starter_base_placer": {
       "textures": "textures/items/wf_starter_base_placer"
+    },
+    "wf_motion_sensor_item": {
+      "textures": "textures/items/wf_motion_sensor_item"
+    },
+    "wf_laser_tripwire_item": {
+      "textures": "textures/items/wf_laser_tripwire_item"
+    },
+    "wf_auto_turret_item": {
+      "textures": "textures/items/wf_auto_turret_item"
+    },
+    "wf_laser_emitter_item": {
+      "textures": "textures/items/wf_laser_emitter_item"
+    },
+    "wf_keycard": {
+      "textures": "textures/items/wf_keycard"
     }
   }
 }

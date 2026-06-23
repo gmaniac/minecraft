@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:motion_sensor",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_motion_sensor"
+      },
+      "geometry": {
+        "default": "geometry.wf_sensor_dev"
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#3a3f44",
+        "overlay_color": "#46d06a"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:laser_tripwire",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_laser_tripwire"
+      },
+      "geometry": {
+        "default": "geometry.wf_tripwire_dev"
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#3a3f44",
+        "overlay_color": "#e0432a"
+      }
+    }
+  }
+}

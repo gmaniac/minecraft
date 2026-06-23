@@ -1,0 +1,52 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wf:laser_tripwire",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "wf_security",
+          "wf_security_active",
+          "laser_tripwire",
+          "kind_tripwire"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.64,
+        "height": 0.72
+      },
+      "minecraft:scale": {
+        "value": 0.8
+      },
+      "minecraft:health": {
+        "value": 30,
+        "max": 30
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:nameable": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": "no"
+        }
+      }
+    },
+    "events": {}
+  }
+}

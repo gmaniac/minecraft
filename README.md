@@ -4,8 +4,8 @@ A combined Minecraft **Bedrock 1.21.90+** add-on — dragons, pets, vehicles, fu
 home building and security — built from scratch (models, textures, animations, behavior,
 Script API). **No experiments required.** Packaged as a single `Wildforge.mcaddon`.
 
-> Status: **M1 Dragons + M2 Pets + M3 Vehicles + M4 Furniture + M5 HomeBuilding shipped.**
-> Security is planned next (see `BUILD_PLAN.md`). Each milestone folds into the same combined pack.
+> Status: **Complete — all six domains shipped** (Dragons, Pets, Vehicles, Furniture,
+> HomeBuilding, Security). See `BUILD_PLAN.md` for how it was built.
 
 ## Install
 1. Open `Wildforge.mcaddon` on a device with Minecraft — it imports both packs at once.
@@ -136,6 +136,28 @@ bricks, plaster, glass (clear/tinted/frosted), roofing shingles, siding, floorin
 **Prefab houses (8):** craft a **placer item**, hold it and **use it** — confirm the prompt
 and a complete structure (built from these materials) is placed in front of you, oriented to
 your facing. Modern House, Cozy Cottage, Cabin, Mansion, Tower, Barn, Shop, Starter Base.
+
+---
+
+## Security — 12 devices
+
+A base-defense suite. **Targeting is owner-configurable** everywhere (Hostiles only ↔
++ Intruders), and your devices never harm you, your allowlist, or your pets.
+
+- **Auto Turret** — targets and fires at intruders on a cooldown.
+- **Laser Emitter** — a continuous **lethal** beam that melts whatever crosses it.
+- **Motion Sensor** — alerts you (sound + message) when something enters its range.
+- **Laser Tripwire** — a beam that alarms and zaps anything crossing it.
+- **Security Camera + Monitor** — place cameras, then view them from a monitor.
+- **Security Door** — opens only for you, your allowlist, or a **Keycard** holder.
+- **Keypad Lock** — set a code; the right code opens a nearby security door.
+- **Alarm Siren** — a manual panic button.
+- **Floodlight** — bright always-on light.
+- **Control Hub** — arm/disarm all your devices, set global targeting, and add nearby
+  players to your allowlist.
+
+Place turrets/lasers/sensors/tripwires from their crafted items (or creative spawn eggs);
+the rest are blocks. **Sneak to exit a camera view.**
 
 ---
 
