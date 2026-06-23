@@ -7,6 +7,23 @@
         "default": "entity_alphatest"
       },
       "textures": {
+        "0": "textures/entity/wf_dune_buggy_c0",
+        "1": "textures/entity/wf_dune_buggy_c1",
+        "2": "textures/entity/wf_dune_buggy_c2",
+        "3": "textures/entity/wf_dune_buggy_c3",
+        "4": "textures/entity/wf_dune_buggy_c4",
+        "5": "textures/entity/wf_dune_buggy_c5",
+        "6": "textures/entity/wf_dune_buggy_c6",
+        "7": "textures/entity/wf_dune_buggy_c7",
+        "8": "textures/entity/wf_dune_buggy_c8",
+        "9": "textures/entity/wf_dune_buggy_c9",
+        "10": "textures/entity/wf_dune_buggy_c10",
+        "11": "textures/entity/wf_dune_buggy_c11",
+        "12": "textures/entity/wf_dune_buggy_c12",
+        "13": "textures/entity/wf_dune_buggy_c13",
+        "14": "textures/entity/wf_dune_buggy_c14",
+        "15": "textures/entity/wf_dune_buggy_c15",
+        "16": "textures/entity/wf_dune_buggy",
         "default": "textures/entity/wf_dune_buggy"
       },
       "geometry": {
@@ -22,7 +39,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.wf_default"
+        "controller.render.wf_vehicle_tint"
       ],
       "spawn_egg": {
         "base_color": "#e8b53a",

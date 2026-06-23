@@ -204,10 +204,20 @@ def main():
         geo = geo if isinstance(geo, str) else (geo or {}).get("identifier")
         if geo and geo not in geoms:
             err(f"{ident}: geometry '{geo}' not found in models/")
-        for inst in (comps.get("minecraft:material_instances") or {}).values():
-            t = inst.get("texture") if isinstance(inst, dict) else inst
-            if t and t not in terrain:
-                err(f"{ident}: material texture '{t}' not in terrain_texture.json")
+        mat_blocks = [comps.get("minecraft:material_instances") or {}]
+        for perm in (b.get("permutations") or []):
+            mat_blocks.append((perm.get("components") or {}).get("minecraft:material_instances") or {})
+        for mi in mat_blocks:
+            for inst in mi.values():
+                t = inst.get("texture") if isinstance(inst, dict) else inst
+                if t and t not in terrain:
+                    err(f"{ident}: material texture '{t}' not in terrain_texture.json")
+        # permutation geometry references
+        for perm in (b.get("permutations") or []):
+            pg = (perm.get("components") or {}).get("minecraft:geometry")
+            pg = pg if isinstance(pg, str) else (pg or {}).get("identifier") if pg else None
+            if pg and pg not in geoms:
+                err(f"{ident}: permutation geometry '{pg}' not found in models/")
         if f"tile.{ident}.name" not in lang_keys:
             err(f"{ident}: missing lang key tile.{ident}.name")
 

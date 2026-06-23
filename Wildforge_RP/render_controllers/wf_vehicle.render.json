@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.wf_vehicle_tint": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.0",
+            "Texture.1",
+            "Texture.2",
+            "Texture.3",
+            "Texture.4",
+            "Texture.5",
+            "Texture.6",
+            "Texture.7",
+            "Texture.8",
+            "Texture.9",
+            "Texture.10",
+            "Texture.11",
+            "Texture.12",
+            "Texture.13",
+            "Texture.14",
+            "Texture.15",
+            "Texture.16"
+          ]
+        }
+      },
+      "textures": [
+        "Array.skins[math.clamp(q.property('wf:color'), 0, 16)]"
+      ]
+    }
+  }
+}

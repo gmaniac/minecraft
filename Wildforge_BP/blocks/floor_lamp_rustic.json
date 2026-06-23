@@ -5,6 +5,27 @@
       "identifier": "wf:floor_lamp_rustic",
       "menu_category": {
         "category": "construction"
+      },
+      "states": {
+        "wf:color": [
+          16,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
       }
     },
     "components": {
@@ -46,6 +67,184 @@
         "explosion_resistance": 1
       },
       "minecraft:light_emission": 14
-    }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('wf:color') == 0",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c0",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c1",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c2",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c3",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 4",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c4",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 5",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c5",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 6",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c6",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 7",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c7",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 8",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c8",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 9",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c9",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 10",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c10",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 11",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c11",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 12",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c12",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 13",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c13",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 14",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c14",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('wf:color') == 15",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "wf_furn_floor_lamp_rustic_c15",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      }
+    ]
   }
 }

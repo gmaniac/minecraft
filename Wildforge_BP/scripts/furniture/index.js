@@ -1,8 +1,10 @@
 // furniture/index.js — sit-able seats and script-backed storage for custom blocks.
 import { world, system, ItemStack } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
-import { SEAT_Y } from "./data.js";
+import { SEAT_Y, FURNITURE_BLOCKS, DYE_INDEX } from "./data.js";
 import { getJson, setJson } from "../lib/persist.js";
+
+const FURN_SET = new Set(FURNITURE_BLOCKS);
 
 const DIMS = ["overworld", "nether", "the_end"];
 
@@ -103,6 +105,29 @@ function cleanupSeats() {
   }
 }
 
+// sneak + dye on any furniture block paints its upholstery/accent
+function recolorBlock(player, block) {
+  let item;
+  try { item = player.getComponent("minecraft:equippable")?.getEquipment("Mainhand"); }
+  catch (_) { return; }
+  const idx = DYE_INDEX[item?.typeId];
+  if (idx === undefined) return;
+  try { block.setPermutation(block.permutation.withState("wf:color", idx)); } catch (_) { return; }
+  playSound(player, "dig.cloth", { volume: 0.6 });
+  try {
+    if (!(player.getGameMode && player.getGameMode() === "creative")) {
+      const eq = player.getComponent("minecraft:equippable");
+      if (item.amount > 1) { item.amount -= 1; eq.setEquipment("Mainhand", item); }
+      else eq.setEquipment("Mainhand", undefined);
+    }
+  } catch (_) {}
+}
+
 export function init() {
+  world.afterEvents.playerInteractWithBlock.subscribe((ev) => {
+    try {
+      if (ev.player?.isSneaking && FURN_SET.has(ev.block?.typeId)) recolorBlock(ev.player, ev.block);
+    } catch (_) {}
+  });
   system.runInterval(cleanupSeats, 20);
 }

@@ -7,6 +7,23 @@
         "default": "entity_alphatest"
       },
       "textures": {
+        "0": "textures/entity/wf_submarine_c0",
+        "1": "textures/entity/wf_submarine_c1",
+        "2": "textures/entity/wf_submarine_c2",
+        "3": "textures/entity/wf_submarine_c3",
+        "4": "textures/entity/wf_submarine_c4",
+        "5": "textures/entity/wf_submarine_c5",
+        "6": "textures/entity/wf_submarine_c6",
+        "7": "textures/entity/wf_submarine_c7",
+        "8": "textures/entity/wf_submarine_c8",
+        "9": "textures/entity/wf_submarine_c9",
+        "10": "textures/entity/wf_submarine_c10",
+        "11": "textures/entity/wf_submarine_c11",
+        "12": "textures/entity/wf_submarine_c12",
+        "13": "textures/entity/wf_submarine_c13",
+        "14": "textures/entity/wf_submarine_c14",
+        "15": "textures/entity/wf_submarine_c15",
+        "16": "textures/entity/wf_submarine",
         "default": "textures/entity/wf_submarine"
       },
       "geometry": {
@@ -22,7 +39,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.wf_default"
+        "controller.render.wf_vehicle_tint"
       ],
       "spawn_egg": {
         "base_color": "#d8b53a",

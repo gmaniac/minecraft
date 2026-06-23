@@ -5,7 +5,18 @@
       "identifier": "wf:balloon",
       "is_spawnable": true,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": false,
+      "properties": {
+        "wf:color": {
+          "type": "int",
+          "range": [
+            0,
+            16
+          ],
+          "default": 16,
+          "client_sync": true
+        }
+      }
     },
     "component_groups": {
       "wf:balloon_drive": {
