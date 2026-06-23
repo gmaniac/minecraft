@@ -4,8 +4,8 @@ A combined Minecraft **Bedrock 1.21.90+** add-on — dragons, pets, vehicles, fu
 home building and security — built from scratch (models, textures, animations, behavior,
 Script API). **No experiments required.** Packaged as a single `Wildforge.mcaddon`.
 
-> Status: **M1 Dragons + M2 Pets + M3 Vehicles shipped.** Furniture, HomeBuilding and Security
-> are planned next (see `BUILD_PLAN.md`). Each milestone folds into the same combined pack.
+> Status: **M1 Dragons + M2 Pets + M3 Vehicles + M4 Furniture shipped.** HomeBuilding and
+> Security are planned next (see `BUILD_PLAN.md`). Each milestone folds into the same combined pack.
 
 ## Install
 1. Open `Wildforge.mcaddon` on a device with Minecraft — it imports both packs at once.
@@ -106,6 +106,24 @@ Multi-seat, arcade-fast, **no fuel**, **no fall/collision damage** while riding.
 | Sports Car, Sedan, Pickup, Monster Truck, Bus, Motorbike, Quad ATV, Dune Buggy | Propeller Plane, Jet, Helicopter, Glider, Hot-Air Balloon | Speedboat, Jetski, Submarine, Pontoon Boat |
 
 Wheels, propellers and rotors animate while in motion.
+
+---
+
+## Furniture — 54 custom blocks (3 styles)
+
+18 furniture types in **Modern**, **Rustic** and **Medieval** styles. Craft each from its
+style's material (quartz / oak / dark-oak) at a crafting table.
+
+- **Sit-able:** chairs, stools, sofas, armchairs — interact to sit (an invisible seat
+  entity carries you; it cleans itself up when you stand).
+- **Working lights:** lamps, floor lamps, wall lamps emit light.
+- **Storage:** desks, bookshelves, drawers, cabinets, wardrobes, fridges open a stash —
+  interact, then **Deposit held item** or take a stored stack back. Contents persist per block.
+- **Décor:** dining/coffee tables, beds, rugs, potted plants.
+- Directional pieces rotate to face you on placement.
+
+Types: Chair, Stool, Sofa, Armchair, Dining Table, Coffee Table, Desk, Bookshelf, Drawers,
+Cabinet, Wardrobe, Fridge, Lamp, Floor Lamp, Wall Lamp, Bed, Rug, Potted Plant.
 
 ---
 

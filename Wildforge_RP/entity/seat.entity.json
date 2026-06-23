@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:seat",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_seat"
+      },
+      "geometry": {
+        "default": "geometry.wf_seat"
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ]
+    }
+  }
+}

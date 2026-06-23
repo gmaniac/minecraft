@@ -1,0 +1,170 @@
+{
+  "resource_pack_name": "wildforge",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "wf_furn_chair_modern": {
+      "textures": "textures/blocks/wf_furn_chair_modern"
+    },
+    "wf_furn_chair_rustic": {
+      "textures": "textures/blocks/wf_furn_chair_rustic"
+    },
+    "wf_furn_chair_medieval": {
+      "textures": "textures/blocks/wf_furn_chair_medieval"
+    },
+    "wf_furn_stool_modern": {
+      "textures": "textures/blocks/wf_furn_stool_modern"
+    },
+    "wf_furn_stool_rustic": {
+      "textures": "textures/blocks/wf_furn_stool_rustic"
+    },
+    "wf_furn_stool_medieval": {
+      "textures": "textures/blocks/wf_furn_stool_medieval"
+    },
+    "wf_furn_sofa_modern": {
+      "textures": "textures/blocks/wf_furn_sofa_modern"
+    },
+    "wf_furn_sofa_rustic": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic"
+    },
+    "wf_furn_sofa_medieval": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval"
+    },
+    "wf_furn_armchair_modern": {
+      "textures": "textures/blocks/wf_furn_armchair_modern"
+    },
+    "wf_furn_armchair_rustic": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic"
+    },
+    "wf_furn_armchair_medieval": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval"
+    },
+    "wf_furn_dining_table_modern": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern"
+    },
+    "wf_furn_dining_table_rustic": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic"
+    },
+    "wf_furn_dining_table_medieval": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval"
+    },
+    "wf_furn_coffee_table_modern": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern"
+    },
+    "wf_furn_coffee_table_rustic": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic"
+    },
+    "wf_furn_coffee_table_medieval": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval"
+    },
+    "wf_furn_desk_modern": {
+      "textures": "textures/blocks/wf_furn_desk_modern"
+    },
+    "wf_furn_desk_rustic": {
+      "textures": "textures/blocks/wf_furn_desk_rustic"
+    },
+    "wf_furn_desk_medieval": {
+      "textures": "textures/blocks/wf_furn_desk_medieval"
+    },
+    "wf_furn_bookshelf_modern": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern"
+    },
+    "wf_furn_bookshelf_rustic": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic"
+    },
+    "wf_furn_bookshelf_medieval": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval"
+    },
+    "wf_furn_drawer_modern": {
+      "textures": "textures/blocks/wf_furn_drawer_modern"
+    },
+    "wf_furn_drawer_rustic": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic"
+    },
+    "wf_furn_drawer_medieval": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval"
+    },
+    "wf_furn_cabinet_modern": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern"
+    },
+    "wf_furn_cabinet_rustic": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic"
+    },
+    "wf_furn_cabinet_medieval": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval"
+    },
+    "wf_furn_wardrobe_modern": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern"
+    },
+    "wf_furn_wardrobe_rustic": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic"
+    },
+    "wf_furn_wardrobe_medieval": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval"
+    },
+    "wf_furn_fridge_modern": {
+      "textures": "textures/blocks/wf_furn_fridge_modern"
+    },
+    "wf_furn_fridge_rustic": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic"
+    },
+    "wf_furn_fridge_medieval": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval"
+    },
+    "wf_furn_lamp_modern": {
+      "textures": "textures/blocks/wf_furn_lamp_modern"
+    },
+    "wf_furn_lamp_rustic": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic"
+    },
+    "wf_furn_lamp_medieval": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval"
+    },
+    "wf_furn_floor_lamp_modern": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern"
+    },
+    "wf_furn_floor_lamp_rustic": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic"
+    },
+    "wf_furn_floor_lamp_medieval": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval"
+    },
+    "wf_furn_wall_lamp_modern": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern"
+    },
+    "wf_furn_wall_lamp_rustic": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic"
+    },
+    "wf_furn_wall_lamp_medieval": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval"
+    },
+    "wf_furn_bed_modern": {
+      "textures": "textures/blocks/wf_furn_bed_modern"
+    },
+    "wf_furn_bed_rustic": {
+      "textures": "textures/blocks/wf_furn_bed_rustic"
+    },
+    "wf_furn_bed_medieval": {
+      "textures": "textures/blocks/wf_furn_bed_medieval"
+    },
+    "wf_furn_rug_modern": {
+      "textures": "textures/blocks/wf_furn_rug_modern"
+    },
+    "wf_furn_rug_rustic": {
+      "textures": "textures/blocks/wf_furn_rug_rustic"
+    },
+    "wf_furn_rug_medieval": {
+      "textures": "textures/blocks/wf_furn_rug_medieval"
+    },
+    "wf_furn_plant_modern": {
+      "textures": "textures/blocks/wf_furn_plant_modern"
+    },
+    "wf_furn_plant_rustic": {
+      "textures": "textures/blocks/wf_furn_plant_rustic"
+    },
+    "wf_furn_plant_medieval": {
+      "textures": "textures/blocks/wf_furn_plant_medieval"
+    }
+  }
+}

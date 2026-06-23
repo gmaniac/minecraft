@@ -180,6 +180,37 @@ def main():
         if tex and tex not in item_tex:
             err(f"{ident}: icon '{tex}' not declared in item_texture.json")
 
+    # ---- blocks + terrain textures ----
+    terrain = {}
+    tt = load_json(os.path.join(RP, "textures", "terrain_texture.json"))
+    if tt:
+        for short, e in (tt.get("texture_data") or {}).items():
+            terrain[short] = e.get("textures")
+            if not _texture_exists(e.get("textures", "")):
+                err(f"terrain_texture '{short}' file '{e.get('textures')}' not found")
+    block_ids = set()
+    for p in all_json(BP, "blocks"):
+        d = load_json(p)
+        if not d:
+            continue
+        b = d.get("minecraft:block") or {}
+        ident = b.get("description", {}).get("identifier")
+        if not ident:
+            err(f"{rel(p)}: block has no identifier")
+            continue
+        block_ids.add(ident)
+        comps = b.get("components") or {}
+        geo = comps.get("minecraft:geometry")
+        geo = geo if isinstance(geo, str) else (geo or {}).get("identifier")
+        if geo and geo not in geoms:
+            err(f"{ident}: geometry '{geo}' not found in models/")
+        for inst in (comps.get("minecraft:material_instances") or {}).values():
+            t = inst.get("texture") if isinstance(inst, dict) else inst
+            if t and t not in terrain:
+                err(f"{ident}: material texture '{t}' not in terrain_texture.json")
+        if f"tile.{ident}.name" not in lang_keys:
+            err(f"{ident}: missing lang key tile.{ident}.name")
+
     # ---- recipes resolve to a real item/entity ----
     for p in all_json(BP, "recipes"):
         d = load_json(p)
@@ -190,7 +221,8 @@ def main():
                 res = d[key].get("result")
                 res = res[0] if isinstance(res, list) else res
                 ritem = (res or {}).get("item", "")
-                if ritem.startswith("wf:") and ritem not in item_ids and ritem not in bp_ids:
+                known = item_ids | bp_ids | block_ids
+                if ritem.startswith("wf:") and ritem not in known:
                     err(f"recipe {rel(p)} produces undefined '{ritem}'")
 
     return report()
