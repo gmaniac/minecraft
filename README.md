@@ -100,6 +100,8 @@ Multi-seat, arcade-fast, **no fuel**, **no fall/collision damage** while riding.
 - **Drive:** mount it, steer where you look. **Land** vehicles hug the ground; **air** and
   **water** vehicles use **jump to rise / sneak to descend** (planes/jets/helis fly, subs dive).
 - **Passengers:** extra seats let friends ride along.
+- **Paint:** hold any **dye**, **sneak + interact** with a vehicle to repaint its body in
+  that color (16 dye colors).
 
 | Land | Air | Water |
 |---|---|---|
@@ -120,6 +122,8 @@ style's material (quartz / oak / dark-oak) at a crafting table.
 - **Storage:** desks, bookshelves, drawers, cabinets, wardrobes, fridges open a stash —
   interact, then **Deposit held item** or take a stored stack back. Contents persist per block.
 - **Décor:** dining/coffee tables, beds, rugs, potted plants.
+- **Paint:** hold any **dye**, **sneak + interact** with a piece to recolor its
+  upholstery/accent (16 dye colors) while keeping the wood/frame.
 - Directional pieces rotate to face you on placement.
 
 Types: Chair, Stool, Sofa, Armchair, Dining Table, Coffee Table, Desk, Bookshelf, Drawers,

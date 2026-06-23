@@ -291,6 +291,2598 @@
     },
     "wf_control_hub": {
       "textures": "textures/blocks/wf_control_hub"
+    },
+    "wf_furn_chair_modern_c0": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c0"
+    },
+    "wf_furn_chair_modern_c1": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c1"
+    },
+    "wf_furn_chair_modern_c2": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c2"
+    },
+    "wf_furn_chair_modern_c3": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c3"
+    },
+    "wf_furn_chair_modern_c4": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c4"
+    },
+    "wf_furn_chair_modern_c5": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c5"
+    },
+    "wf_furn_chair_modern_c6": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c6"
+    },
+    "wf_furn_chair_modern_c7": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c7"
+    },
+    "wf_furn_chair_modern_c8": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c8"
+    },
+    "wf_furn_chair_modern_c9": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c9"
+    },
+    "wf_furn_chair_modern_c10": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c10"
+    },
+    "wf_furn_chair_modern_c11": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c11"
+    },
+    "wf_furn_chair_modern_c12": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c12"
+    },
+    "wf_furn_chair_modern_c13": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c13"
+    },
+    "wf_furn_chair_modern_c14": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c14"
+    },
+    "wf_furn_chair_modern_c15": {
+      "textures": "textures/blocks/wf_furn_chair_modern_c15"
+    },
+    "wf_furn_chair_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c0"
+    },
+    "wf_furn_chair_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c1"
+    },
+    "wf_furn_chair_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c2"
+    },
+    "wf_furn_chair_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c3"
+    },
+    "wf_furn_chair_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c4"
+    },
+    "wf_furn_chair_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c5"
+    },
+    "wf_furn_chair_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c6"
+    },
+    "wf_furn_chair_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c7"
+    },
+    "wf_furn_chair_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c8"
+    },
+    "wf_furn_chair_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c9"
+    },
+    "wf_furn_chair_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c10"
+    },
+    "wf_furn_chair_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c11"
+    },
+    "wf_furn_chair_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c12"
+    },
+    "wf_furn_chair_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c13"
+    },
+    "wf_furn_chair_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c14"
+    },
+    "wf_furn_chair_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_chair_rustic_c15"
+    },
+    "wf_furn_chair_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c0"
+    },
+    "wf_furn_chair_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c1"
+    },
+    "wf_furn_chair_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c2"
+    },
+    "wf_furn_chair_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c3"
+    },
+    "wf_furn_chair_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c4"
+    },
+    "wf_furn_chair_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c5"
+    },
+    "wf_furn_chair_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c6"
+    },
+    "wf_furn_chair_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c7"
+    },
+    "wf_furn_chair_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c8"
+    },
+    "wf_furn_chair_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c9"
+    },
+    "wf_furn_chair_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c10"
+    },
+    "wf_furn_chair_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c11"
+    },
+    "wf_furn_chair_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c12"
+    },
+    "wf_furn_chair_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c13"
+    },
+    "wf_furn_chair_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c14"
+    },
+    "wf_furn_chair_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_chair_medieval_c15"
+    },
+    "wf_furn_stool_modern_c0": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c0"
+    },
+    "wf_furn_stool_modern_c1": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c1"
+    },
+    "wf_furn_stool_modern_c2": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c2"
+    },
+    "wf_furn_stool_modern_c3": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c3"
+    },
+    "wf_furn_stool_modern_c4": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c4"
+    },
+    "wf_furn_stool_modern_c5": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c5"
+    },
+    "wf_furn_stool_modern_c6": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c6"
+    },
+    "wf_furn_stool_modern_c7": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c7"
+    },
+    "wf_furn_stool_modern_c8": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c8"
+    },
+    "wf_furn_stool_modern_c9": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c9"
+    },
+    "wf_furn_stool_modern_c10": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c10"
+    },
+    "wf_furn_stool_modern_c11": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c11"
+    },
+    "wf_furn_stool_modern_c12": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c12"
+    },
+    "wf_furn_stool_modern_c13": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c13"
+    },
+    "wf_furn_stool_modern_c14": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c14"
+    },
+    "wf_furn_stool_modern_c15": {
+      "textures": "textures/blocks/wf_furn_stool_modern_c15"
+    },
+    "wf_furn_stool_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c0"
+    },
+    "wf_furn_stool_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c1"
+    },
+    "wf_furn_stool_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c2"
+    },
+    "wf_furn_stool_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c3"
+    },
+    "wf_furn_stool_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c4"
+    },
+    "wf_furn_stool_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c5"
+    },
+    "wf_furn_stool_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c6"
+    },
+    "wf_furn_stool_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c7"
+    },
+    "wf_furn_stool_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c8"
+    },
+    "wf_furn_stool_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c9"
+    },
+    "wf_furn_stool_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c10"
+    },
+    "wf_furn_stool_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c11"
+    },
+    "wf_furn_stool_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c12"
+    },
+    "wf_furn_stool_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c13"
+    },
+    "wf_furn_stool_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c14"
+    },
+    "wf_furn_stool_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_stool_rustic_c15"
+    },
+    "wf_furn_stool_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c0"
+    },
+    "wf_furn_stool_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c1"
+    },
+    "wf_furn_stool_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c2"
+    },
+    "wf_furn_stool_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c3"
+    },
+    "wf_furn_stool_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c4"
+    },
+    "wf_furn_stool_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c5"
+    },
+    "wf_furn_stool_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c6"
+    },
+    "wf_furn_stool_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c7"
+    },
+    "wf_furn_stool_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c8"
+    },
+    "wf_furn_stool_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c9"
+    },
+    "wf_furn_stool_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c10"
+    },
+    "wf_furn_stool_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c11"
+    },
+    "wf_furn_stool_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c12"
+    },
+    "wf_furn_stool_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c13"
+    },
+    "wf_furn_stool_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c14"
+    },
+    "wf_furn_stool_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_stool_medieval_c15"
+    },
+    "wf_furn_sofa_modern_c0": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c0"
+    },
+    "wf_furn_sofa_modern_c1": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c1"
+    },
+    "wf_furn_sofa_modern_c2": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c2"
+    },
+    "wf_furn_sofa_modern_c3": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c3"
+    },
+    "wf_furn_sofa_modern_c4": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c4"
+    },
+    "wf_furn_sofa_modern_c5": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c5"
+    },
+    "wf_furn_sofa_modern_c6": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c6"
+    },
+    "wf_furn_sofa_modern_c7": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c7"
+    },
+    "wf_furn_sofa_modern_c8": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c8"
+    },
+    "wf_furn_sofa_modern_c9": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c9"
+    },
+    "wf_furn_sofa_modern_c10": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c10"
+    },
+    "wf_furn_sofa_modern_c11": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c11"
+    },
+    "wf_furn_sofa_modern_c12": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c12"
+    },
+    "wf_furn_sofa_modern_c13": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c13"
+    },
+    "wf_furn_sofa_modern_c14": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c14"
+    },
+    "wf_furn_sofa_modern_c15": {
+      "textures": "textures/blocks/wf_furn_sofa_modern_c15"
+    },
+    "wf_furn_sofa_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c0"
+    },
+    "wf_furn_sofa_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c1"
+    },
+    "wf_furn_sofa_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c2"
+    },
+    "wf_furn_sofa_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c3"
+    },
+    "wf_furn_sofa_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c4"
+    },
+    "wf_furn_sofa_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c5"
+    },
+    "wf_furn_sofa_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c6"
+    },
+    "wf_furn_sofa_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c7"
+    },
+    "wf_furn_sofa_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c8"
+    },
+    "wf_furn_sofa_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c9"
+    },
+    "wf_furn_sofa_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c10"
+    },
+    "wf_furn_sofa_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c11"
+    },
+    "wf_furn_sofa_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c12"
+    },
+    "wf_furn_sofa_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c13"
+    },
+    "wf_furn_sofa_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c14"
+    },
+    "wf_furn_sofa_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_sofa_rustic_c15"
+    },
+    "wf_furn_sofa_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c0"
+    },
+    "wf_furn_sofa_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c1"
+    },
+    "wf_furn_sofa_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c2"
+    },
+    "wf_furn_sofa_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c3"
+    },
+    "wf_furn_sofa_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c4"
+    },
+    "wf_furn_sofa_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c5"
+    },
+    "wf_furn_sofa_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c6"
+    },
+    "wf_furn_sofa_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c7"
+    },
+    "wf_furn_sofa_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c8"
+    },
+    "wf_furn_sofa_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c9"
+    },
+    "wf_furn_sofa_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c10"
+    },
+    "wf_furn_sofa_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c11"
+    },
+    "wf_furn_sofa_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c12"
+    },
+    "wf_furn_sofa_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c13"
+    },
+    "wf_furn_sofa_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c14"
+    },
+    "wf_furn_sofa_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_sofa_medieval_c15"
+    },
+    "wf_furn_armchair_modern_c0": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c0"
+    },
+    "wf_furn_armchair_modern_c1": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c1"
+    },
+    "wf_furn_armchair_modern_c2": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c2"
+    },
+    "wf_furn_armchair_modern_c3": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c3"
+    },
+    "wf_furn_armchair_modern_c4": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c4"
+    },
+    "wf_furn_armchair_modern_c5": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c5"
+    },
+    "wf_furn_armchair_modern_c6": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c6"
+    },
+    "wf_furn_armchair_modern_c7": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c7"
+    },
+    "wf_furn_armchair_modern_c8": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c8"
+    },
+    "wf_furn_armchair_modern_c9": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c9"
+    },
+    "wf_furn_armchair_modern_c10": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c10"
+    },
+    "wf_furn_armchair_modern_c11": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c11"
+    },
+    "wf_furn_armchair_modern_c12": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c12"
+    },
+    "wf_furn_armchair_modern_c13": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c13"
+    },
+    "wf_furn_armchair_modern_c14": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c14"
+    },
+    "wf_furn_armchair_modern_c15": {
+      "textures": "textures/blocks/wf_furn_armchair_modern_c15"
+    },
+    "wf_furn_armchair_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c0"
+    },
+    "wf_furn_armchair_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c1"
+    },
+    "wf_furn_armchair_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c2"
+    },
+    "wf_furn_armchair_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c3"
+    },
+    "wf_furn_armchair_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c4"
+    },
+    "wf_furn_armchair_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c5"
+    },
+    "wf_furn_armchair_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c6"
+    },
+    "wf_furn_armchair_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c7"
+    },
+    "wf_furn_armchair_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c8"
+    },
+    "wf_furn_armchair_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c9"
+    },
+    "wf_furn_armchair_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c10"
+    },
+    "wf_furn_armchair_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c11"
+    },
+    "wf_furn_armchair_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c12"
+    },
+    "wf_furn_armchair_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c13"
+    },
+    "wf_furn_armchair_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c14"
+    },
+    "wf_furn_armchair_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_armchair_rustic_c15"
+    },
+    "wf_furn_armchair_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c0"
+    },
+    "wf_furn_armchair_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c1"
+    },
+    "wf_furn_armchair_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c2"
+    },
+    "wf_furn_armchair_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c3"
+    },
+    "wf_furn_armchair_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c4"
+    },
+    "wf_furn_armchair_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c5"
+    },
+    "wf_furn_armchair_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c6"
+    },
+    "wf_furn_armchair_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c7"
+    },
+    "wf_furn_armchair_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c8"
+    },
+    "wf_furn_armchair_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c9"
+    },
+    "wf_furn_armchair_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c10"
+    },
+    "wf_furn_armchair_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c11"
+    },
+    "wf_furn_armchair_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c12"
+    },
+    "wf_furn_armchair_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c13"
+    },
+    "wf_furn_armchair_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c14"
+    },
+    "wf_furn_armchair_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_armchair_medieval_c15"
+    },
+    "wf_furn_dining_table_modern_c0": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c0"
+    },
+    "wf_furn_dining_table_modern_c1": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c1"
+    },
+    "wf_furn_dining_table_modern_c2": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c2"
+    },
+    "wf_furn_dining_table_modern_c3": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c3"
+    },
+    "wf_furn_dining_table_modern_c4": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c4"
+    },
+    "wf_furn_dining_table_modern_c5": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c5"
+    },
+    "wf_furn_dining_table_modern_c6": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c6"
+    },
+    "wf_furn_dining_table_modern_c7": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c7"
+    },
+    "wf_furn_dining_table_modern_c8": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c8"
+    },
+    "wf_furn_dining_table_modern_c9": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c9"
+    },
+    "wf_furn_dining_table_modern_c10": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c10"
+    },
+    "wf_furn_dining_table_modern_c11": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c11"
+    },
+    "wf_furn_dining_table_modern_c12": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c12"
+    },
+    "wf_furn_dining_table_modern_c13": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c13"
+    },
+    "wf_furn_dining_table_modern_c14": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c14"
+    },
+    "wf_furn_dining_table_modern_c15": {
+      "textures": "textures/blocks/wf_furn_dining_table_modern_c15"
+    },
+    "wf_furn_dining_table_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c0"
+    },
+    "wf_furn_dining_table_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c1"
+    },
+    "wf_furn_dining_table_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c2"
+    },
+    "wf_furn_dining_table_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c3"
+    },
+    "wf_furn_dining_table_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c4"
+    },
+    "wf_furn_dining_table_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c5"
+    },
+    "wf_furn_dining_table_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c6"
+    },
+    "wf_furn_dining_table_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c7"
+    },
+    "wf_furn_dining_table_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c8"
+    },
+    "wf_furn_dining_table_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c9"
+    },
+    "wf_furn_dining_table_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c10"
+    },
+    "wf_furn_dining_table_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c11"
+    },
+    "wf_furn_dining_table_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c12"
+    },
+    "wf_furn_dining_table_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c13"
+    },
+    "wf_furn_dining_table_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c14"
+    },
+    "wf_furn_dining_table_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_dining_table_rustic_c15"
+    },
+    "wf_furn_dining_table_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c0"
+    },
+    "wf_furn_dining_table_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c1"
+    },
+    "wf_furn_dining_table_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c2"
+    },
+    "wf_furn_dining_table_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c3"
+    },
+    "wf_furn_dining_table_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c4"
+    },
+    "wf_furn_dining_table_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c5"
+    },
+    "wf_furn_dining_table_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c6"
+    },
+    "wf_furn_dining_table_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c7"
+    },
+    "wf_furn_dining_table_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c8"
+    },
+    "wf_furn_dining_table_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c9"
+    },
+    "wf_furn_dining_table_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c10"
+    },
+    "wf_furn_dining_table_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c11"
+    },
+    "wf_furn_dining_table_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c12"
+    },
+    "wf_furn_dining_table_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c13"
+    },
+    "wf_furn_dining_table_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c14"
+    },
+    "wf_furn_dining_table_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_dining_table_medieval_c15"
+    },
+    "wf_furn_coffee_table_modern_c0": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c0"
+    },
+    "wf_furn_coffee_table_modern_c1": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c1"
+    },
+    "wf_furn_coffee_table_modern_c2": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c2"
+    },
+    "wf_furn_coffee_table_modern_c3": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c3"
+    },
+    "wf_furn_coffee_table_modern_c4": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c4"
+    },
+    "wf_furn_coffee_table_modern_c5": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c5"
+    },
+    "wf_furn_coffee_table_modern_c6": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c6"
+    },
+    "wf_furn_coffee_table_modern_c7": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c7"
+    },
+    "wf_furn_coffee_table_modern_c8": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c8"
+    },
+    "wf_furn_coffee_table_modern_c9": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c9"
+    },
+    "wf_furn_coffee_table_modern_c10": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c10"
+    },
+    "wf_furn_coffee_table_modern_c11": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c11"
+    },
+    "wf_furn_coffee_table_modern_c12": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c12"
+    },
+    "wf_furn_coffee_table_modern_c13": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c13"
+    },
+    "wf_furn_coffee_table_modern_c14": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c14"
+    },
+    "wf_furn_coffee_table_modern_c15": {
+      "textures": "textures/blocks/wf_furn_coffee_table_modern_c15"
+    },
+    "wf_furn_coffee_table_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c0"
+    },
+    "wf_furn_coffee_table_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c1"
+    },
+    "wf_furn_coffee_table_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c2"
+    },
+    "wf_furn_coffee_table_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c3"
+    },
+    "wf_furn_coffee_table_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c4"
+    },
+    "wf_furn_coffee_table_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c5"
+    },
+    "wf_furn_coffee_table_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c6"
+    },
+    "wf_furn_coffee_table_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c7"
+    },
+    "wf_furn_coffee_table_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c8"
+    },
+    "wf_furn_coffee_table_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c9"
+    },
+    "wf_furn_coffee_table_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c10"
+    },
+    "wf_furn_coffee_table_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c11"
+    },
+    "wf_furn_coffee_table_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c12"
+    },
+    "wf_furn_coffee_table_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c13"
+    },
+    "wf_furn_coffee_table_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c14"
+    },
+    "wf_furn_coffee_table_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_coffee_table_rustic_c15"
+    },
+    "wf_furn_coffee_table_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c0"
+    },
+    "wf_furn_coffee_table_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c1"
+    },
+    "wf_furn_coffee_table_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c2"
+    },
+    "wf_furn_coffee_table_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c3"
+    },
+    "wf_furn_coffee_table_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c4"
+    },
+    "wf_furn_coffee_table_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c5"
+    },
+    "wf_furn_coffee_table_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c6"
+    },
+    "wf_furn_coffee_table_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c7"
+    },
+    "wf_furn_coffee_table_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c8"
+    },
+    "wf_furn_coffee_table_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c9"
+    },
+    "wf_furn_coffee_table_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c10"
+    },
+    "wf_furn_coffee_table_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c11"
+    },
+    "wf_furn_coffee_table_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c12"
+    },
+    "wf_furn_coffee_table_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c13"
+    },
+    "wf_furn_coffee_table_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c14"
+    },
+    "wf_furn_coffee_table_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_coffee_table_medieval_c15"
+    },
+    "wf_furn_desk_modern_c0": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c0"
+    },
+    "wf_furn_desk_modern_c1": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c1"
+    },
+    "wf_furn_desk_modern_c2": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c2"
+    },
+    "wf_furn_desk_modern_c3": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c3"
+    },
+    "wf_furn_desk_modern_c4": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c4"
+    },
+    "wf_furn_desk_modern_c5": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c5"
+    },
+    "wf_furn_desk_modern_c6": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c6"
+    },
+    "wf_furn_desk_modern_c7": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c7"
+    },
+    "wf_furn_desk_modern_c8": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c8"
+    },
+    "wf_furn_desk_modern_c9": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c9"
+    },
+    "wf_furn_desk_modern_c10": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c10"
+    },
+    "wf_furn_desk_modern_c11": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c11"
+    },
+    "wf_furn_desk_modern_c12": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c12"
+    },
+    "wf_furn_desk_modern_c13": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c13"
+    },
+    "wf_furn_desk_modern_c14": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c14"
+    },
+    "wf_furn_desk_modern_c15": {
+      "textures": "textures/blocks/wf_furn_desk_modern_c15"
+    },
+    "wf_furn_desk_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c0"
+    },
+    "wf_furn_desk_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c1"
+    },
+    "wf_furn_desk_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c2"
+    },
+    "wf_furn_desk_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c3"
+    },
+    "wf_furn_desk_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c4"
+    },
+    "wf_furn_desk_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c5"
+    },
+    "wf_furn_desk_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c6"
+    },
+    "wf_furn_desk_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c7"
+    },
+    "wf_furn_desk_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c8"
+    },
+    "wf_furn_desk_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c9"
+    },
+    "wf_furn_desk_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c10"
+    },
+    "wf_furn_desk_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c11"
+    },
+    "wf_furn_desk_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c12"
+    },
+    "wf_furn_desk_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c13"
+    },
+    "wf_furn_desk_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c14"
+    },
+    "wf_furn_desk_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_desk_rustic_c15"
+    },
+    "wf_furn_desk_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c0"
+    },
+    "wf_furn_desk_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c1"
+    },
+    "wf_furn_desk_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c2"
+    },
+    "wf_furn_desk_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c3"
+    },
+    "wf_furn_desk_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c4"
+    },
+    "wf_furn_desk_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c5"
+    },
+    "wf_furn_desk_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c6"
+    },
+    "wf_furn_desk_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c7"
+    },
+    "wf_furn_desk_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c8"
+    },
+    "wf_furn_desk_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c9"
+    },
+    "wf_furn_desk_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c10"
+    },
+    "wf_furn_desk_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c11"
+    },
+    "wf_furn_desk_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c12"
+    },
+    "wf_furn_desk_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c13"
+    },
+    "wf_furn_desk_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c14"
+    },
+    "wf_furn_desk_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_desk_medieval_c15"
+    },
+    "wf_furn_bookshelf_modern_c0": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c0"
+    },
+    "wf_furn_bookshelf_modern_c1": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c1"
+    },
+    "wf_furn_bookshelf_modern_c2": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c2"
+    },
+    "wf_furn_bookshelf_modern_c3": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c3"
+    },
+    "wf_furn_bookshelf_modern_c4": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c4"
+    },
+    "wf_furn_bookshelf_modern_c5": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c5"
+    },
+    "wf_furn_bookshelf_modern_c6": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c6"
+    },
+    "wf_furn_bookshelf_modern_c7": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c7"
+    },
+    "wf_furn_bookshelf_modern_c8": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c8"
+    },
+    "wf_furn_bookshelf_modern_c9": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c9"
+    },
+    "wf_furn_bookshelf_modern_c10": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c10"
+    },
+    "wf_furn_bookshelf_modern_c11": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c11"
+    },
+    "wf_furn_bookshelf_modern_c12": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c12"
+    },
+    "wf_furn_bookshelf_modern_c13": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c13"
+    },
+    "wf_furn_bookshelf_modern_c14": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c14"
+    },
+    "wf_furn_bookshelf_modern_c15": {
+      "textures": "textures/blocks/wf_furn_bookshelf_modern_c15"
+    },
+    "wf_furn_bookshelf_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c0"
+    },
+    "wf_furn_bookshelf_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c1"
+    },
+    "wf_furn_bookshelf_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c2"
+    },
+    "wf_furn_bookshelf_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c3"
+    },
+    "wf_furn_bookshelf_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c4"
+    },
+    "wf_furn_bookshelf_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c5"
+    },
+    "wf_furn_bookshelf_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c6"
+    },
+    "wf_furn_bookshelf_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c7"
+    },
+    "wf_furn_bookshelf_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c8"
+    },
+    "wf_furn_bookshelf_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c9"
+    },
+    "wf_furn_bookshelf_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c10"
+    },
+    "wf_furn_bookshelf_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c11"
+    },
+    "wf_furn_bookshelf_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c12"
+    },
+    "wf_furn_bookshelf_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c13"
+    },
+    "wf_furn_bookshelf_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c14"
+    },
+    "wf_furn_bookshelf_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_bookshelf_rustic_c15"
+    },
+    "wf_furn_bookshelf_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c0"
+    },
+    "wf_furn_bookshelf_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c1"
+    },
+    "wf_furn_bookshelf_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c2"
+    },
+    "wf_furn_bookshelf_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c3"
+    },
+    "wf_furn_bookshelf_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c4"
+    },
+    "wf_furn_bookshelf_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c5"
+    },
+    "wf_furn_bookshelf_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c6"
+    },
+    "wf_furn_bookshelf_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c7"
+    },
+    "wf_furn_bookshelf_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c8"
+    },
+    "wf_furn_bookshelf_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c9"
+    },
+    "wf_furn_bookshelf_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c10"
+    },
+    "wf_furn_bookshelf_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c11"
+    },
+    "wf_furn_bookshelf_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c12"
+    },
+    "wf_furn_bookshelf_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c13"
+    },
+    "wf_furn_bookshelf_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c14"
+    },
+    "wf_furn_bookshelf_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_bookshelf_medieval_c15"
+    },
+    "wf_furn_drawer_modern_c0": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c0"
+    },
+    "wf_furn_drawer_modern_c1": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c1"
+    },
+    "wf_furn_drawer_modern_c2": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c2"
+    },
+    "wf_furn_drawer_modern_c3": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c3"
+    },
+    "wf_furn_drawer_modern_c4": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c4"
+    },
+    "wf_furn_drawer_modern_c5": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c5"
+    },
+    "wf_furn_drawer_modern_c6": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c6"
+    },
+    "wf_furn_drawer_modern_c7": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c7"
+    },
+    "wf_furn_drawer_modern_c8": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c8"
+    },
+    "wf_furn_drawer_modern_c9": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c9"
+    },
+    "wf_furn_drawer_modern_c10": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c10"
+    },
+    "wf_furn_drawer_modern_c11": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c11"
+    },
+    "wf_furn_drawer_modern_c12": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c12"
+    },
+    "wf_furn_drawer_modern_c13": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c13"
+    },
+    "wf_furn_drawer_modern_c14": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c14"
+    },
+    "wf_furn_drawer_modern_c15": {
+      "textures": "textures/blocks/wf_furn_drawer_modern_c15"
+    },
+    "wf_furn_drawer_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c0"
+    },
+    "wf_furn_drawer_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c1"
+    },
+    "wf_furn_drawer_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c2"
+    },
+    "wf_furn_drawer_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c3"
+    },
+    "wf_furn_drawer_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c4"
+    },
+    "wf_furn_drawer_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c5"
+    },
+    "wf_furn_drawer_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c6"
+    },
+    "wf_furn_drawer_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c7"
+    },
+    "wf_furn_drawer_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c8"
+    },
+    "wf_furn_drawer_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c9"
+    },
+    "wf_furn_drawer_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c10"
+    },
+    "wf_furn_drawer_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c11"
+    },
+    "wf_furn_drawer_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c12"
+    },
+    "wf_furn_drawer_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c13"
+    },
+    "wf_furn_drawer_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c14"
+    },
+    "wf_furn_drawer_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_drawer_rustic_c15"
+    },
+    "wf_furn_drawer_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c0"
+    },
+    "wf_furn_drawer_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c1"
+    },
+    "wf_furn_drawer_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c2"
+    },
+    "wf_furn_drawer_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c3"
+    },
+    "wf_furn_drawer_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c4"
+    },
+    "wf_furn_drawer_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c5"
+    },
+    "wf_furn_drawer_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c6"
+    },
+    "wf_furn_drawer_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c7"
+    },
+    "wf_furn_drawer_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c8"
+    },
+    "wf_furn_drawer_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c9"
+    },
+    "wf_furn_drawer_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c10"
+    },
+    "wf_furn_drawer_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c11"
+    },
+    "wf_furn_drawer_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c12"
+    },
+    "wf_furn_drawer_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c13"
+    },
+    "wf_furn_drawer_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c14"
+    },
+    "wf_furn_drawer_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_drawer_medieval_c15"
+    },
+    "wf_furn_cabinet_modern_c0": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c0"
+    },
+    "wf_furn_cabinet_modern_c1": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c1"
+    },
+    "wf_furn_cabinet_modern_c2": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c2"
+    },
+    "wf_furn_cabinet_modern_c3": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c3"
+    },
+    "wf_furn_cabinet_modern_c4": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c4"
+    },
+    "wf_furn_cabinet_modern_c5": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c5"
+    },
+    "wf_furn_cabinet_modern_c6": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c6"
+    },
+    "wf_furn_cabinet_modern_c7": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c7"
+    },
+    "wf_furn_cabinet_modern_c8": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c8"
+    },
+    "wf_furn_cabinet_modern_c9": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c9"
+    },
+    "wf_furn_cabinet_modern_c10": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c10"
+    },
+    "wf_furn_cabinet_modern_c11": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c11"
+    },
+    "wf_furn_cabinet_modern_c12": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c12"
+    },
+    "wf_furn_cabinet_modern_c13": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c13"
+    },
+    "wf_furn_cabinet_modern_c14": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c14"
+    },
+    "wf_furn_cabinet_modern_c15": {
+      "textures": "textures/blocks/wf_furn_cabinet_modern_c15"
+    },
+    "wf_furn_cabinet_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c0"
+    },
+    "wf_furn_cabinet_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c1"
+    },
+    "wf_furn_cabinet_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c2"
+    },
+    "wf_furn_cabinet_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c3"
+    },
+    "wf_furn_cabinet_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c4"
+    },
+    "wf_furn_cabinet_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c5"
+    },
+    "wf_furn_cabinet_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c6"
+    },
+    "wf_furn_cabinet_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c7"
+    },
+    "wf_furn_cabinet_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c8"
+    },
+    "wf_furn_cabinet_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c9"
+    },
+    "wf_furn_cabinet_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c10"
+    },
+    "wf_furn_cabinet_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c11"
+    },
+    "wf_furn_cabinet_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c12"
+    },
+    "wf_furn_cabinet_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c13"
+    },
+    "wf_furn_cabinet_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c14"
+    },
+    "wf_furn_cabinet_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_cabinet_rustic_c15"
+    },
+    "wf_furn_cabinet_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c0"
+    },
+    "wf_furn_cabinet_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c1"
+    },
+    "wf_furn_cabinet_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c2"
+    },
+    "wf_furn_cabinet_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c3"
+    },
+    "wf_furn_cabinet_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c4"
+    },
+    "wf_furn_cabinet_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c5"
+    },
+    "wf_furn_cabinet_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c6"
+    },
+    "wf_furn_cabinet_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c7"
+    },
+    "wf_furn_cabinet_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c8"
+    },
+    "wf_furn_cabinet_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c9"
+    },
+    "wf_furn_cabinet_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c10"
+    },
+    "wf_furn_cabinet_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c11"
+    },
+    "wf_furn_cabinet_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c12"
+    },
+    "wf_furn_cabinet_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c13"
+    },
+    "wf_furn_cabinet_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c14"
+    },
+    "wf_furn_cabinet_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_cabinet_medieval_c15"
+    },
+    "wf_furn_wardrobe_modern_c0": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c0"
+    },
+    "wf_furn_wardrobe_modern_c1": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c1"
+    },
+    "wf_furn_wardrobe_modern_c2": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c2"
+    },
+    "wf_furn_wardrobe_modern_c3": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c3"
+    },
+    "wf_furn_wardrobe_modern_c4": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c4"
+    },
+    "wf_furn_wardrobe_modern_c5": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c5"
+    },
+    "wf_furn_wardrobe_modern_c6": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c6"
+    },
+    "wf_furn_wardrobe_modern_c7": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c7"
+    },
+    "wf_furn_wardrobe_modern_c8": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c8"
+    },
+    "wf_furn_wardrobe_modern_c9": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c9"
+    },
+    "wf_furn_wardrobe_modern_c10": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c10"
+    },
+    "wf_furn_wardrobe_modern_c11": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c11"
+    },
+    "wf_furn_wardrobe_modern_c12": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c12"
+    },
+    "wf_furn_wardrobe_modern_c13": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c13"
+    },
+    "wf_furn_wardrobe_modern_c14": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c14"
+    },
+    "wf_furn_wardrobe_modern_c15": {
+      "textures": "textures/blocks/wf_furn_wardrobe_modern_c15"
+    },
+    "wf_furn_wardrobe_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c0"
+    },
+    "wf_furn_wardrobe_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c1"
+    },
+    "wf_furn_wardrobe_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c2"
+    },
+    "wf_furn_wardrobe_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c3"
+    },
+    "wf_furn_wardrobe_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c4"
+    },
+    "wf_furn_wardrobe_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c5"
+    },
+    "wf_furn_wardrobe_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c6"
+    },
+    "wf_furn_wardrobe_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c7"
+    },
+    "wf_furn_wardrobe_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c8"
+    },
+    "wf_furn_wardrobe_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c9"
+    },
+    "wf_furn_wardrobe_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c10"
+    },
+    "wf_furn_wardrobe_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c11"
+    },
+    "wf_furn_wardrobe_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c12"
+    },
+    "wf_furn_wardrobe_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c13"
+    },
+    "wf_furn_wardrobe_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c14"
+    },
+    "wf_furn_wardrobe_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_wardrobe_rustic_c15"
+    },
+    "wf_furn_wardrobe_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c0"
+    },
+    "wf_furn_wardrobe_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c1"
+    },
+    "wf_furn_wardrobe_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c2"
+    },
+    "wf_furn_wardrobe_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c3"
+    },
+    "wf_furn_wardrobe_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c4"
+    },
+    "wf_furn_wardrobe_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c5"
+    },
+    "wf_furn_wardrobe_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c6"
+    },
+    "wf_furn_wardrobe_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c7"
+    },
+    "wf_furn_wardrobe_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c8"
+    },
+    "wf_furn_wardrobe_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c9"
+    },
+    "wf_furn_wardrobe_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c10"
+    },
+    "wf_furn_wardrobe_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c11"
+    },
+    "wf_furn_wardrobe_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c12"
+    },
+    "wf_furn_wardrobe_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c13"
+    },
+    "wf_furn_wardrobe_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c14"
+    },
+    "wf_furn_wardrobe_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_wardrobe_medieval_c15"
+    },
+    "wf_furn_fridge_modern_c0": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c0"
+    },
+    "wf_furn_fridge_modern_c1": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c1"
+    },
+    "wf_furn_fridge_modern_c2": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c2"
+    },
+    "wf_furn_fridge_modern_c3": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c3"
+    },
+    "wf_furn_fridge_modern_c4": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c4"
+    },
+    "wf_furn_fridge_modern_c5": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c5"
+    },
+    "wf_furn_fridge_modern_c6": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c6"
+    },
+    "wf_furn_fridge_modern_c7": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c7"
+    },
+    "wf_furn_fridge_modern_c8": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c8"
+    },
+    "wf_furn_fridge_modern_c9": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c9"
+    },
+    "wf_furn_fridge_modern_c10": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c10"
+    },
+    "wf_furn_fridge_modern_c11": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c11"
+    },
+    "wf_furn_fridge_modern_c12": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c12"
+    },
+    "wf_furn_fridge_modern_c13": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c13"
+    },
+    "wf_furn_fridge_modern_c14": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c14"
+    },
+    "wf_furn_fridge_modern_c15": {
+      "textures": "textures/blocks/wf_furn_fridge_modern_c15"
+    },
+    "wf_furn_fridge_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c0"
+    },
+    "wf_furn_fridge_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c1"
+    },
+    "wf_furn_fridge_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c2"
+    },
+    "wf_furn_fridge_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c3"
+    },
+    "wf_furn_fridge_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c4"
+    },
+    "wf_furn_fridge_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c5"
+    },
+    "wf_furn_fridge_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c6"
+    },
+    "wf_furn_fridge_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c7"
+    },
+    "wf_furn_fridge_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c8"
+    },
+    "wf_furn_fridge_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c9"
+    },
+    "wf_furn_fridge_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c10"
+    },
+    "wf_furn_fridge_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c11"
+    },
+    "wf_furn_fridge_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c12"
+    },
+    "wf_furn_fridge_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c13"
+    },
+    "wf_furn_fridge_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c14"
+    },
+    "wf_furn_fridge_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_fridge_rustic_c15"
+    },
+    "wf_furn_fridge_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c0"
+    },
+    "wf_furn_fridge_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c1"
+    },
+    "wf_furn_fridge_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c2"
+    },
+    "wf_furn_fridge_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c3"
+    },
+    "wf_furn_fridge_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c4"
+    },
+    "wf_furn_fridge_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c5"
+    },
+    "wf_furn_fridge_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c6"
+    },
+    "wf_furn_fridge_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c7"
+    },
+    "wf_furn_fridge_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c8"
+    },
+    "wf_furn_fridge_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c9"
+    },
+    "wf_furn_fridge_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c10"
+    },
+    "wf_furn_fridge_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c11"
+    },
+    "wf_furn_fridge_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c12"
+    },
+    "wf_furn_fridge_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c13"
+    },
+    "wf_furn_fridge_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c14"
+    },
+    "wf_furn_fridge_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_fridge_medieval_c15"
+    },
+    "wf_furn_lamp_modern_c0": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c0"
+    },
+    "wf_furn_lamp_modern_c1": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c1"
+    },
+    "wf_furn_lamp_modern_c2": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c2"
+    },
+    "wf_furn_lamp_modern_c3": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c3"
+    },
+    "wf_furn_lamp_modern_c4": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c4"
+    },
+    "wf_furn_lamp_modern_c5": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c5"
+    },
+    "wf_furn_lamp_modern_c6": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c6"
+    },
+    "wf_furn_lamp_modern_c7": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c7"
+    },
+    "wf_furn_lamp_modern_c8": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c8"
+    },
+    "wf_furn_lamp_modern_c9": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c9"
+    },
+    "wf_furn_lamp_modern_c10": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c10"
+    },
+    "wf_furn_lamp_modern_c11": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c11"
+    },
+    "wf_furn_lamp_modern_c12": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c12"
+    },
+    "wf_furn_lamp_modern_c13": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c13"
+    },
+    "wf_furn_lamp_modern_c14": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c14"
+    },
+    "wf_furn_lamp_modern_c15": {
+      "textures": "textures/blocks/wf_furn_lamp_modern_c15"
+    },
+    "wf_furn_lamp_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c0"
+    },
+    "wf_furn_lamp_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c1"
+    },
+    "wf_furn_lamp_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c2"
+    },
+    "wf_furn_lamp_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c3"
+    },
+    "wf_furn_lamp_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c4"
+    },
+    "wf_furn_lamp_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c5"
+    },
+    "wf_furn_lamp_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c6"
+    },
+    "wf_furn_lamp_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c7"
+    },
+    "wf_furn_lamp_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c8"
+    },
+    "wf_furn_lamp_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c9"
+    },
+    "wf_furn_lamp_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c10"
+    },
+    "wf_furn_lamp_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c11"
+    },
+    "wf_furn_lamp_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c12"
+    },
+    "wf_furn_lamp_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c13"
+    },
+    "wf_furn_lamp_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c14"
+    },
+    "wf_furn_lamp_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_lamp_rustic_c15"
+    },
+    "wf_furn_lamp_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c0"
+    },
+    "wf_furn_lamp_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c1"
+    },
+    "wf_furn_lamp_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c2"
+    },
+    "wf_furn_lamp_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c3"
+    },
+    "wf_furn_lamp_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c4"
+    },
+    "wf_furn_lamp_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c5"
+    },
+    "wf_furn_lamp_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c6"
+    },
+    "wf_furn_lamp_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c7"
+    },
+    "wf_furn_lamp_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c8"
+    },
+    "wf_furn_lamp_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c9"
+    },
+    "wf_furn_lamp_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c10"
+    },
+    "wf_furn_lamp_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c11"
+    },
+    "wf_furn_lamp_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c12"
+    },
+    "wf_furn_lamp_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c13"
+    },
+    "wf_furn_lamp_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c14"
+    },
+    "wf_furn_lamp_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_lamp_medieval_c15"
+    },
+    "wf_furn_floor_lamp_modern_c0": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c0"
+    },
+    "wf_furn_floor_lamp_modern_c1": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c1"
+    },
+    "wf_furn_floor_lamp_modern_c2": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c2"
+    },
+    "wf_furn_floor_lamp_modern_c3": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c3"
+    },
+    "wf_furn_floor_lamp_modern_c4": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c4"
+    },
+    "wf_furn_floor_lamp_modern_c5": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c5"
+    },
+    "wf_furn_floor_lamp_modern_c6": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c6"
+    },
+    "wf_furn_floor_lamp_modern_c7": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c7"
+    },
+    "wf_furn_floor_lamp_modern_c8": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c8"
+    },
+    "wf_furn_floor_lamp_modern_c9": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c9"
+    },
+    "wf_furn_floor_lamp_modern_c10": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c10"
+    },
+    "wf_furn_floor_lamp_modern_c11": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c11"
+    },
+    "wf_furn_floor_lamp_modern_c12": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c12"
+    },
+    "wf_furn_floor_lamp_modern_c13": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c13"
+    },
+    "wf_furn_floor_lamp_modern_c14": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c14"
+    },
+    "wf_furn_floor_lamp_modern_c15": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_modern_c15"
+    },
+    "wf_furn_floor_lamp_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c0"
+    },
+    "wf_furn_floor_lamp_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c1"
+    },
+    "wf_furn_floor_lamp_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c2"
+    },
+    "wf_furn_floor_lamp_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c3"
+    },
+    "wf_furn_floor_lamp_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c4"
+    },
+    "wf_furn_floor_lamp_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c5"
+    },
+    "wf_furn_floor_lamp_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c6"
+    },
+    "wf_furn_floor_lamp_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c7"
+    },
+    "wf_furn_floor_lamp_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c8"
+    },
+    "wf_furn_floor_lamp_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c9"
+    },
+    "wf_furn_floor_lamp_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c10"
+    },
+    "wf_furn_floor_lamp_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c11"
+    },
+    "wf_furn_floor_lamp_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c12"
+    },
+    "wf_furn_floor_lamp_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c13"
+    },
+    "wf_furn_floor_lamp_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c14"
+    },
+    "wf_furn_floor_lamp_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_rustic_c15"
+    },
+    "wf_furn_floor_lamp_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c0"
+    },
+    "wf_furn_floor_lamp_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c1"
+    },
+    "wf_furn_floor_lamp_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c2"
+    },
+    "wf_furn_floor_lamp_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c3"
+    },
+    "wf_furn_floor_lamp_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c4"
+    },
+    "wf_furn_floor_lamp_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c5"
+    },
+    "wf_furn_floor_lamp_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c6"
+    },
+    "wf_furn_floor_lamp_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c7"
+    },
+    "wf_furn_floor_lamp_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c8"
+    },
+    "wf_furn_floor_lamp_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c9"
+    },
+    "wf_furn_floor_lamp_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c10"
+    },
+    "wf_furn_floor_lamp_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c11"
+    },
+    "wf_furn_floor_lamp_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c12"
+    },
+    "wf_furn_floor_lamp_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c13"
+    },
+    "wf_furn_floor_lamp_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c14"
+    },
+    "wf_furn_floor_lamp_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_floor_lamp_medieval_c15"
+    },
+    "wf_furn_wall_lamp_modern_c0": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c0"
+    },
+    "wf_furn_wall_lamp_modern_c1": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c1"
+    },
+    "wf_furn_wall_lamp_modern_c2": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c2"
+    },
+    "wf_furn_wall_lamp_modern_c3": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c3"
+    },
+    "wf_furn_wall_lamp_modern_c4": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c4"
+    },
+    "wf_furn_wall_lamp_modern_c5": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c5"
+    },
+    "wf_furn_wall_lamp_modern_c6": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c6"
+    },
+    "wf_furn_wall_lamp_modern_c7": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c7"
+    },
+    "wf_furn_wall_lamp_modern_c8": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c8"
+    },
+    "wf_furn_wall_lamp_modern_c9": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c9"
+    },
+    "wf_furn_wall_lamp_modern_c10": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c10"
+    },
+    "wf_furn_wall_lamp_modern_c11": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c11"
+    },
+    "wf_furn_wall_lamp_modern_c12": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c12"
+    },
+    "wf_furn_wall_lamp_modern_c13": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c13"
+    },
+    "wf_furn_wall_lamp_modern_c14": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c14"
+    },
+    "wf_furn_wall_lamp_modern_c15": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_modern_c15"
+    },
+    "wf_furn_wall_lamp_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c0"
+    },
+    "wf_furn_wall_lamp_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c1"
+    },
+    "wf_furn_wall_lamp_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c2"
+    },
+    "wf_furn_wall_lamp_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c3"
+    },
+    "wf_furn_wall_lamp_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c4"
+    },
+    "wf_furn_wall_lamp_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c5"
+    },
+    "wf_furn_wall_lamp_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c6"
+    },
+    "wf_furn_wall_lamp_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c7"
+    },
+    "wf_furn_wall_lamp_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c8"
+    },
+    "wf_furn_wall_lamp_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c9"
+    },
+    "wf_furn_wall_lamp_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c10"
+    },
+    "wf_furn_wall_lamp_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c11"
+    },
+    "wf_furn_wall_lamp_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c12"
+    },
+    "wf_furn_wall_lamp_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c13"
+    },
+    "wf_furn_wall_lamp_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c14"
+    },
+    "wf_furn_wall_lamp_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_rustic_c15"
+    },
+    "wf_furn_wall_lamp_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c0"
+    },
+    "wf_furn_wall_lamp_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c1"
+    },
+    "wf_furn_wall_lamp_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c2"
+    },
+    "wf_furn_wall_lamp_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c3"
+    },
+    "wf_furn_wall_lamp_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c4"
+    },
+    "wf_furn_wall_lamp_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c5"
+    },
+    "wf_furn_wall_lamp_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c6"
+    },
+    "wf_furn_wall_lamp_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c7"
+    },
+    "wf_furn_wall_lamp_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c8"
+    },
+    "wf_furn_wall_lamp_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c9"
+    },
+    "wf_furn_wall_lamp_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c10"
+    },
+    "wf_furn_wall_lamp_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c11"
+    },
+    "wf_furn_wall_lamp_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c12"
+    },
+    "wf_furn_wall_lamp_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c13"
+    },
+    "wf_furn_wall_lamp_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c14"
+    },
+    "wf_furn_wall_lamp_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_wall_lamp_medieval_c15"
+    },
+    "wf_furn_bed_modern_c0": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c0"
+    },
+    "wf_furn_bed_modern_c1": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c1"
+    },
+    "wf_furn_bed_modern_c2": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c2"
+    },
+    "wf_furn_bed_modern_c3": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c3"
+    },
+    "wf_furn_bed_modern_c4": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c4"
+    },
+    "wf_furn_bed_modern_c5": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c5"
+    },
+    "wf_furn_bed_modern_c6": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c6"
+    },
+    "wf_furn_bed_modern_c7": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c7"
+    },
+    "wf_furn_bed_modern_c8": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c8"
+    },
+    "wf_furn_bed_modern_c9": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c9"
+    },
+    "wf_furn_bed_modern_c10": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c10"
+    },
+    "wf_furn_bed_modern_c11": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c11"
+    },
+    "wf_furn_bed_modern_c12": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c12"
+    },
+    "wf_furn_bed_modern_c13": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c13"
+    },
+    "wf_furn_bed_modern_c14": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c14"
+    },
+    "wf_furn_bed_modern_c15": {
+      "textures": "textures/blocks/wf_furn_bed_modern_c15"
+    },
+    "wf_furn_bed_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c0"
+    },
+    "wf_furn_bed_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c1"
+    },
+    "wf_furn_bed_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c2"
+    },
+    "wf_furn_bed_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c3"
+    },
+    "wf_furn_bed_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c4"
+    },
+    "wf_furn_bed_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c5"
+    },
+    "wf_furn_bed_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c6"
+    },
+    "wf_furn_bed_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c7"
+    },
+    "wf_furn_bed_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c8"
+    },
+    "wf_furn_bed_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c9"
+    },
+    "wf_furn_bed_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c10"
+    },
+    "wf_furn_bed_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c11"
+    },
+    "wf_furn_bed_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c12"
+    },
+    "wf_furn_bed_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c13"
+    },
+    "wf_furn_bed_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c14"
+    },
+    "wf_furn_bed_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_bed_rustic_c15"
+    },
+    "wf_furn_bed_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c0"
+    },
+    "wf_furn_bed_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c1"
+    },
+    "wf_furn_bed_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c2"
+    },
+    "wf_furn_bed_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c3"
+    },
+    "wf_furn_bed_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c4"
+    },
+    "wf_furn_bed_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c5"
+    },
+    "wf_furn_bed_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c6"
+    },
+    "wf_furn_bed_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c7"
+    },
+    "wf_furn_bed_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c8"
+    },
+    "wf_furn_bed_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c9"
+    },
+    "wf_furn_bed_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c10"
+    },
+    "wf_furn_bed_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c11"
+    },
+    "wf_furn_bed_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c12"
+    },
+    "wf_furn_bed_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c13"
+    },
+    "wf_furn_bed_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c14"
+    },
+    "wf_furn_bed_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_bed_medieval_c15"
+    },
+    "wf_furn_rug_modern_c0": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c0"
+    },
+    "wf_furn_rug_modern_c1": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c1"
+    },
+    "wf_furn_rug_modern_c2": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c2"
+    },
+    "wf_furn_rug_modern_c3": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c3"
+    },
+    "wf_furn_rug_modern_c4": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c4"
+    },
+    "wf_furn_rug_modern_c5": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c5"
+    },
+    "wf_furn_rug_modern_c6": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c6"
+    },
+    "wf_furn_rug_modern_c7": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c7"
+    },
+    "wf_furn_rug_modern_c8": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c8"
+    },
+    "wf_furn_rug_modern_c9": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c9"
+    },
+    "wf_furn_rug_modern_c10": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c10"
+    },
+    "wf_furn_rug_modern_c11": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c11"
+    },
+    "wf_furn_rug_modern_c12": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c12"
+    },
+    "wf_furn_rug_modern_c13": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c13"
+    },
+    "wf_furn_rug_modern_c14": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c14"
+    },
+    "wf_furn_rug_modern_c15": {
+      "textures": "textures/blocks/wf_furn_rug_modern_c15"
+    },
+    "wf_furn_rug_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c0"
+    },
+    "wf_furn_rug_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c1"
+    },
+    "wf_furn_rug_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c2"
+    },
+    "wf_furn_rug_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c3"
+    },
+    "wf_furn_rug_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c4"
+    },
+    "wf_furn_rug_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c5"
+    },
+    "wf_furn_rug_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c6"
+    },
+    "wf_furn_rug_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c7"
+    },
+    "wf_furn_rug_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c8"
+    },
+    "wf_furn_rug_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c9"
+    },
+    "wf_furn_rug_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c10"
+    },
+    "wf_furn_rug_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c11"
+    },
+    "wf_furn_rug_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c12"
+    },
+    "wf_furn_rug_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c13"
+    },
+    "wf_furn_rug_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c14"
+    },
+    "wf_furn_rug_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_rug_rustic_c15"
+    },
+    "wf_furn_rug_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c0"
+    },
+    "wf_furn_rug_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c1"
+    },
+    "wf_furn_rug_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c2"
+    },
+    "wf_furn_rug_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c3"
+    },
+    "wf_furn_rug_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c4"
+    },
+    "wf_furn_rug_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c5"
+    },
+    "wf_furn_rug_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c6"
+    },
+    "wf_furn_rug_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c7"
+    },
+    "wf_furn_rug_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c8"
+    },
+    "wf_furn_rug_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c9"
+    },
+    "wf_furn_rug_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c10"
+    },
+    "wf_furn_rug_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c11"
+    },
+    "wf_furn_rug_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c12"
+    },
+    "wf_furn_rug_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c13"
+    },
+    "wf_furn_rug_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c14"
+    },
+    "wf_furn_rug_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_rug_medieval_c15"
+    },
+    "wf_furn_plant_modern_c0": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c0"
+    },
+    "wf_furn_plant_modern_c1": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c1"
+    },
+    "wf_furn_plant_modern_c2": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c2"
+    },
+    "wf_furn_plant_modern_c3": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c3"
+    },
+    "wf_furn_plant_modern_c4": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c4"
+    },
+    "wf_furn_plant_modern_c5": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c5"
+    },
+    "wf_furn_plant_modern_c6": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c6"
+    },
+    "wf_furn_plant_modern_c7": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c7"
+    },
+    "wf_furn_plant_modern_c8": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c8"
+    },
+    "wf_furn_plant_modern_c9": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c9"
+    },
+    "wf_furn_plant_modern_c10": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c10"
+    },
+    "wf_furn_plant_modern_c11": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c11"
+    },
+    "wf_furn_plant_modern_c12": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c12"
+    },
+    "wf_furn_plant_modern_c13": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c13"
+    },
+    "wf_furn_plant_modern_c14": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c14"
+    },
+    "wf_furn_plant_modern_c15": {
+      "textures": "textures/blocks/wf_furn_plant_modern_c15"
+    },
+    "wf_furn_plant_rustic_c0": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c0"
+    },
+    "wf_furn_plant_rustic_c1": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c1"
+    },
+    "wf_furn_plant_rustic_c2": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c2"
+    },
+    "wf_furn_plant_rustic_c3": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c3"
+    },
+    "wf_furn_plant_rustic_c4": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c4"
+    },
+    "wf_furn_plant_rustic_c5": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c5"
+    },
+    "wf_furn_plant_rustic_c6": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c6"
+    },
+    "wf_furn_plant_rustic_c7": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c7"
+    },
+    "wf_furn_plant_rustic_c8": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c8"
+    },
+    "wf_furn_plant_rustic_c9": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c9"
+    },
+    "wf_furn_plant_rustic_c10": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c10"
+    },
+    "wf_furn_plant_rustic_c11": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c11"
+    },
+    "wf_furn_plant_rustic_c12": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c12"
+    },
+    "wf_furn_plant_rustic_c13": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c13"
+    },
+    "wf_furn_plant_rustic_c14": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c14"
+    },
+    "wf_furn_plant_rustic_c15": {
+      "textures": "textures/blocks/wf_furn_plant_rustic_c15"
+    },
+    "wf_furn_plant_medieval_c0": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c0"
+    },
+    "wf_furn_plant_medieval_c1": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c1"
+    },
+    "wf_furn_plant_medieval_c2": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c2"
+    },
+    "wf_furn_plant_medieval_c3": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c3"
+    },
+    "wf_furn_plant_medieval_c4": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c4"
+    },
+    "wf_furn_plant_medieval_c5": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c5"
+    },
+    "wf_furn_plant_medieval_c6": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c6"
+    },
+    "wf_furn_plant_medieval_c7": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c7"
+    },
+    "wf_furn_plant_medieval_c8": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c8"
+    },
+    "wf_furn_plant_medieval_c9": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c9"
+    },
+    "wf_furn_plant_medieval_c10": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c10"
+    },
+    "wf_furn_plant_medieval_c11": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c11"
+    },
+    "wf_furn_plant_medieval_c12": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c12"
+    },
+    "wf_furn_plant_medieval_c13": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c13"
+    },
+    "wf_furn_plant_medieval_c14": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c14"
+    },
+    "wf_furn_plant_medieval_c15": {
+      "textures": "textures/blocks/wf_furn_plant_medieval_c15"
     }
   }
 }

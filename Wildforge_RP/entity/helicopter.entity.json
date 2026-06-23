@@ -7,6 +7,23 @@
         "default": "entity_alphatest"
       },
       "textures": {
+        "0": "textures/entity/wf_helicopter_c0",
+        "1": "textures/entity/wf_helicopter_c1",
+        "2": "textures/entity/wf_helicopter_c2",
+        "3": "textures/entity/wf_helicopter_c3",
+        "4": "textures/entity/wf_helicopter_c4",
+        "5": "textures/entity/wf_helicopter_c5",
+        "6": "textures/entity/wf_helicopter_c6",
+        "7": "textures/entity/wf_helicopter_c7",
+        "8": "textures/entity/wf_helicopter_c8",
+        "9": "textures/entity/wf_helicopter_c9",
+        "10": "textures/entity/wf_helicopter_c10",
+        "11": "textures/entity/wf_helicopter_c11",
+        "12": "textures/entity/wf_helicopter_c12",
+        "13": "textures/entity/wf_helicopter_c13",
+        "14": "textures/entity/wf_helicopter_c14",
+        "15": "textures/entity/wf_helicopter_c15",
+        "16": "textures/entity/wf_helicopter",
         "default": "textures/entity/wf_helicopter"
       },
       "geometry": {
@@ -22,7 +39,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.wf_default"
+        "controller.render.wf_vehicle_tint"
       ],
       "spawn_egg": {
         "base_color": "#2a6a3a",

@@ -7,6 +7,23 @@
         "default": "entity_alphatest"
       },
       "textures": {
+        "0": "textures/entity/wf_prop_plane_c0",
+        "1": "textures/entity/wf_prop_plane_c1",
+        "2": "textures/entity/wf_prop_plane_c2",
+        "3": "textures/entity/wf_prop_plane_c3",
+        "4": "textures/entity/wf_prop_plane_c4",
+        "5": "textures/entity/wf_prop_plane_c5",
+        "6": "textures/entity/wf_prop_plane_c6",
+        "7": "textures/entity/wf_prop_plane_c7",
+        "8": "textures/entity/wf_prop_plane_c8",
+        "9": "textures/entity/wf_prop_plane_c9",
+        "10": "textures/entity/wf_prop_plane_c10",
+        "11": "textures/entity/wf_prop_plane_c11",
+        "12": "textures/entity/wf_prop_plane_c12",
+        "13": "textures/entity/wf_prop_plane_c13",
+        "14": "textures/entity/wf_prop_plane_c14",
+        "15": "textures/entity/wf_prop_plane_c15",
+        "16": "textures/entity/wf_prop_plane",
         "default": "textures/entity/wf_prop_plane"
       },
       "geometry": {
@@ -24,7 +41,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.wf_default"
+        "controller.render.wf_vehicle_tint"
       ],
       "spawn_egg": {
         "base_color": "#d8d8e0",
