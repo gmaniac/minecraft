@@ -1,0 +1,126 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wf:monster_truck",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "wf:monster_truck_drive": {
+        "minecraft:input_air_controlled": {
+          "strafe_speed_modifier": 1.0,
+          "backwards_movement_modifier": 0.55
+        },
+        "minecraft:flying_speed": {
+          "value": 0.3
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        },
+        "minecraft:physics": {
+          "has_gravity": true,
+          "has_collision": true
+        },
+        "minecraft:jump.static": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "wf_vehicle",
+          "monster_truck",
+          "land"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.82,
+        "height": 1.56
+      },
+      "minecraft:scale": {
+        "value": 1.3
+      },
+      "minecraft:health": {
+        "value": 120,
+        "max": 120
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:nameable": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": "no"
+        }
+      },
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "controlling_seat": 0,
+        "family_types": [
+          "player"
+        ],
+        "interact_text": "action.interact.ride.minecart",
+        "pull_in_entities": false,
+        "seats": [
+          {
+            "position": [
+              0.0,
+              1.3,
+              -1.5
+            ],
+            "lock_rider_rotation": 181
+          },
+          {
+            "position": [
+              0.0,
+              1.3,
+              -0.1
+            ],
+            "lock_rider_rotation": 181
+          }
+        ],
+        "on_rider_enter_event": "wf:drive",
+        "on_rider_exit_event": "wf:park"
+      }
+    },
+    "events": {
+      "wf:drive": {
+        "add": {
+          "component_groups": [
+            "wf:monster_truck_drive"
+          ]
+        }
+      },
+      "wf:park": {
+        "remove": {
+          "component_groups": [
+            "wf:monster_truck_drive"
+          ]
+        }
+      }
+    }
+  }
+}

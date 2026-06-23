@@ -5,12 +5,14 @@ import { system } from "@minecraft/server";
 import { startHatchSystem } from "./lib/hatch.js";
 import { init as initDragons } from "./dragons/index.js";
 import { init as initPets } from "./pets/index.js";
+import { init as initVehicles } from "./vehicles/index.js";
 
 // Domain initializers are added milestone by milestone.
 const DOMAINS = [
   initDragons,
   initPets,
-  // initVehicles, initFurniture, initHomeBuilding, initSecurity
+  initVehicles,
+  // initFurniture, initHomeBuilding, initSecurity
 ];
 
 system.run(() => {

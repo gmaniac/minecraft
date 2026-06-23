@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:prop_plane",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_prop_plane"
+      },
+      "geometry": {
+        "default": "geometry.wf_prop_plane"
+      },
+      "animations": {
+        "base": "animation.wf_vehicle.base",
+        "wheels": "animation.wf_vehicle.wheels",
+        "prop": "animation.wf_vehicle.prop"
+      },
+      "scripts": {
+        "animate": [
+          "wheels",
+          "prop"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#d8d8e0",
+        "overlay_color": "#c4202a"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "wf:glider_item"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:feather"
+      },
+      {
+        "item": "minecraft:feather"
+      },
+      {
+        "item": "minecraft:feather"
+      },
+      {
+        "item": "minecraft:feather"
+      },
+      {
+        "item": "minecraft:redstone"
+      },
+      {
+        "item": "minecraft:leather"
+      }
+    ],
+    "result": {
+      "item": "wf:glider_item",
+      "count": 1
+    }
+  }
+}

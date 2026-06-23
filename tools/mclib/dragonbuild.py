@@ -19,6 +19,10 @@ REGION = {
     "tail": ("body", 0.98), "tip": ("accent", 1.0), "eye": ("eye", 1.0),
     "teeth": ("horn", 1.15), "extra": ("accent", 1.0),
     "accent": ("accent", 1.0), "spot": ("extra", 1.0), "ear": ("body", 0.95),
+    # vehicle regions
+    "glass": ("glass", 1.0), "trim": ("trim", 1.0), "dark": ("dark", 1.0),
+    "wheel": ("dark", 0.7), "metal": ("trim", 0.9), "light": ("accent", 1.25),
+    "seat": ("dark", 1.1),
 }
 
 

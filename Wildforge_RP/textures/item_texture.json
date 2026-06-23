@@ -1,0 +1,57 @@
+{
+  "resource_pack_name": "wildforge",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "wf_sports_car_item": {
+      "textures": "textures/items/wf_sports_car_item"
+    },
+    "wf_sedan_item": {
+      "textures": "textures/items/wf_sedan_item"
+    },
+    "wf_pickup_item": {
+      "textures": "textures/items/wf_pickup_item"
+    },
+    "wf_monster_truck_item": {
+      "textures": "textures/items/wf_monster_truck_item"
+    },
+    "wf_bus_item": {
+      "textures": "textures/items/wf_bus_item"
+    },
+    "wf_motorbike_item": {
+      "textures": "textures/items/wf_motorbike_item"
+    },
+    "wf_atv_item": {
+      "textures": "textures/items/wf_atv_item"
+    },
+    "wf_dune_buggy_item": {
+      "textures": "textures/items/wf_dune_buggy_item"
+    },
+    "wf_prop_plane_item": {
+      "textures": "textures/items/wf_prop_plane_item"
+    },
+    "wf_jet_item": {
+      "textures": "textures/items/wf_jet_item"
+    },
+    "wf_helicopter_item": {
+      "textures": "textures/items/wf_helicopter_item"
+    },
+    "wf_glider_item": {
+      "textures": "textures/items/wf_glider_item"
+    },
+    "wf_balloon_item": {
+      "textures": "textures/items/wf_balloon_item"
+    },
+    "wf_speedboat_item": {
+      "textures": "textures/items/wf_speedboat_item"
+    },
+    "wf_jetski_item": {
+      "textures": "textures/items/wf_jetski_item"
+    },
+    "wf_submarine_item": {
+      "textures": "textures/items/wf_submarine_item"
+    },
+    "wf_pontoon_item": {
+      "textures": "textures/items/wf_pontoon_item"
+    }
+  }
+}

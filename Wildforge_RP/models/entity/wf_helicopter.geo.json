@@ -1,0 +1,272 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.wf_helicopter",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 20,
+        "visible_bounds_height": 14,
+        "visible_bounds_offset": [
+          0,
+          8,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": []
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            5,
+            0
+          ],
+          "parent": "root",
+          "cubes": [
+            {
+              "origin": [
+                -3,
+                5,
+                -7
+              ],
+              "size": [
+                6,
+                6,
+                14
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -2.6,
+                6,
+                -7.3
+              ],
+              "size": [
+                5.2,
+                4,
+                2
+              ],
+              "uv": [
+                41,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -1.5,
+                6,
+                7
+              ],
+              "size": [
+                3,
+                3,
+                12
+              ],
+              "uv": [
+                57,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -2,
+                4,
+                -5
+              ],
+              "size": [
+                1,
+                1,
+                10
+              ],
+              "uv": [
+                88,
+                0
+              ]
+            },
+            {
+              "origin": [
+                1,
+                4,
+                -5
+              ],
+              "size": [
+                1,
+                1,
+                10
+              ],
+              "uv": [
+                0,
+                21
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rotor",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "body",
+          "cubes": [
+            {
+              "origin": [
+                -18,
+                12,
+                -0.6
+              ],
+              "size": [
+                36,
+                0.6,
+                1.2
+              ],
+              "uv": [
+                23,
+                21
+              ]
+            },
+            {
+              "origin": [
+                -0.6,
+                12,
+                -18
+              ],
+              "size": [
+                1.2,
+                0.6,
+                36
+              ],
+              "uv": [
+                0,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rotor_t",
+          "pivot": [
+            0,
+            8,
+            18
+          ],
+          "parent": "body",
+          "cubes": [
+            {
+              "origin": [
+                1.5,
+                6,
+                17
+              ],
+              "size": [
+                0.6,
+                6,
+                0.6
+              ],
+              "uv": [
+                76,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "name": "seat_0_-2",
+          "pivot": [
+            0,
+            11,
+            -2
+          ],
+          "parent": "body",
+          "cubes": [
+            {
+              "origin": [
+                -1.5,
+                11,
+                -3.5
+              ],
+              "size": [
+                3,
+                1,
+                3
+              ],
+              "uv": [
+                80,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "name": "seat_0_1",
+          "pivot": [
+            0,
+            11,
+            1
+          ],
+          "parent": "body",
+          "cubes": [
+            {
+              "origin": [
+                -1.5,
+                11,
+                -0.5
+              ],
+              "size": [
+                3,
+                1,
+                3
+              ],
+              "uv": [
+                93,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "name": "seat_0_4",
+          "pivot": [
+            0,
+            11,
+            4
+          ],
+          "parent": "body",
+          "cubes": [
+            {
+              "origin": [
+                -1.5,
+                11,
+                2.5
+              ],
+              "size": [
+                3,
+                1,
+                3
+              ],
+              "uv": [
+                106,
+                33
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

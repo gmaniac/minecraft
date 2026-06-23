@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wf:sports_car",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wf_sports_car"
+      },
+      "geometry": {
+        "default": "geometry.wf_sports_car"
+      },
+      "animations": {
+        "base": "animation.wf_vehicle.base",
+        "wheels": "animation.wf_vehicle.wheels"
+      },
+      "scripts": {
+        "animate": [
+          "wheels"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wf_default"
+      ],
+      "spawn_egg": {
+        "base_color": "#c4202a",
+        "overlay_color": "#ffd24a"
+      }
+    }
+  }
+}

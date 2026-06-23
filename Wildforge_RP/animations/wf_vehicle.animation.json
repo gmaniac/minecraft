@@ -1,0 +1,88 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.wf_vehicle.base": {
+      "loop": true,
+      "bones": {}
+    },
+    "animation.wf_vehicle.wheels": {
+      "loop": true,
+      "anim_time_update": "q.modified_distance_moved",
+      "bones": {
+        "wheel_fl": {
+          "rotation": [
+            "q.anim_time*-360",
+            0,
+            0
+          ]
+        },
+        "wheel_fr": {
+          "rotation": [
+            "q.anim_time*-360",
+            0,
+            0
+          ]
+        },
+        "wheel_bl": {
+          "rotation": [
+            "q.anim_time*-360",
+            0,
+            0
+          ]
+        },
+        "wheel_br": {
+          "rotation": [
+            "q.anim_time*-360",
+            0,
+            0
+          ]
+        },
+        "wheel_f": {
+          "rotation": [
+            "q.anim_time*-360",
+            0,
+            0
+          ]
+        },
+        "wheel_b": {
+          "rotation": [
+            "q.anim_time*-360",
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.wf_vehicle.prop": {
+      "loop": true,
+      "bones": {
+        "prop": {
+          "rotation": [
+            0,
+            0,
+            "q.life_time*2400"
+          ]
+        }
+      }
+    },
+    "animation.wf_vehicle.rotor": {
+      "loop": true,
+      "bones": {
+        "rotor": {
+          "rotation": [
+            0,
+            "q.life_time*1800",
+            0
+          ]
+        },
+        "rotor_t": {
+          "rotation": [
+            "q.life_time*2000",
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}
