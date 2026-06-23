@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_ancient",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 13.0,
-        "visible_bounds_height": 23,
+        "visible_bounds_width": 62.4,
+        "visible_bounds_height": 41.2,
         "visible_bounds_offset": [
           0,
-          8.5,
-          0
+          16.6,
+          0.8
         ]
       },
       "bones": [

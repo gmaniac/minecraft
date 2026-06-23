@@ -6,11 +6,11 @@
         "identifier": "geometry.wf_sedan",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 12.0,
-        "visible_bounds_height": 13,
+        "visible_bounds_width": 24.6,
+        "visible_bounds_height": 18,
         "visible_bounds_offset": [
           0,
-          7,
+          6,
           0
         ]
       },

@@ -6,11 +6,11 @@
         "identifier": "geometry.wf_nidhoggr",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 14.0,
-        "visible_bounds_height": 23,
+        "visible_bounds_width": 74.0,
+        "visible_bounds_height": 44.0,
         "visible_bounds_offset": [
           0,
-          8.5,
+          18,
           0
         ]
       },

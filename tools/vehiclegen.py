@@ -135,7 +135,7 @@ def tint_render_controller():
         "controller.render.wf_vehicle_tint": {
             "geometry": "Geometry.default", "materials": [{"*": "Material.default"}],
             "arrays": {"textures": {"Array.skins": skins}},
-            "textures": [f"Array.skins[math.clamp(q.property('wf:color'), 0, {ORIGINAL})]"]}}}
+            "textures": ["Array.skins[q.property('wf:color')]"]}}}
 
 
 def item_json(v):

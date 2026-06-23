@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_inferno",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 14.0,
-        "visible_bounds_height": 23,
+        "visible_bounds_width": 64.4,
+        "visible_bounds_height": 40.2,
         "visible_bounds_offset": [
           0,
-          8.5,
-          0
+          16.1,
+          0.8
         ]
       },
       "bones": [

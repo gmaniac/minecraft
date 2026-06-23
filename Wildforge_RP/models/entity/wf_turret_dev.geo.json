@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_turret_dev",
         "texture_width": 64,
         "texture_height": 64,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 2,
+        "visible_bounds_width": 16.5,
+        "visible_bounds_height": 11,
         "visible_bounds_offset": [
           0,
-          4,
-          0
+          3.5,
+          -2.25
         ]
       },
       "bones": [

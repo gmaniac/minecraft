@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_rabbit",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 6.0,
-        "visible_bounds_height": 12,
+        "visible_bounds_width": 20.5,
+        "visible_bounds_height": 19,
         "visible_bounds_offset": [
           0,
-          4.5,
-          0
+          6.5,
+          -0.25
         ]
       },
       "bones": [

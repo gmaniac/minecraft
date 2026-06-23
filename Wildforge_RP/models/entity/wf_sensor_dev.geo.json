@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_sensor_dev",
         "texture_width": 64,
         "texture_height": 64,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 2,
+        "visible_bounds_width": 10,
+        "visible_bounds_height": 11,
         "visible_bounds_offset": [
           0,
-          4,
-          0
+          3.5,
+          -1.5
         ]
       },
       "bones": [

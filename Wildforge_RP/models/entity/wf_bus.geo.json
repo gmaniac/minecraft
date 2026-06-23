@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_bus",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 16.0,
-        "visible_bounds_height": 16,
+        "visible_bounds_width": 32.3,
+        "visible_bounds_height": 20,
         "visible_bounds_offset": [
           0,
-          9,
-          0
+          7,
+          -0.15
         ]
       },
       "bones": [

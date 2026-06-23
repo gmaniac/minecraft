@@ -85,6 +85,26 @@ class Geometry:
             for c in b.cubes:
                 yield c
 
+    def autobounds(self, pad=3):
+        """Set visible bounds to fully enclose every cube (+pad) so the entity is
+        never frustum-culled while part of the model is on screen."""
+        cubes = list(self.all_cubes())
+        if not cubes:
+            return
+        xs, ys, zs = [], [], []
+        for c in cubes:
+            for a, s, arr in ((0, c.size[0], xs), (1, c.size[1], ys), (2, c.size[2], zs)):
+                arr.append(c.origin[a])
+                arr.append(c.origin[a] + s)
+        minx, maxx = min(xs), max(xs)
+        miny, maxy = min(ys), max(ys)
+        minz, maxz = min(zs), max(zs)
+        width = max(maxx - minx, maxz - minz) + pad * 2
+        height = (maxy - miny) + pad * 2
+        self.bounds = [round(width, 2), round(height, 2)]
+        self.bounds_offset = [round((minx + maxx) / 2, 2), round((miny + maxy) / 2, 2),
+                              round((minz + maxz) / 2, 2)]
+
     def set_bounds(self, w, h, offset):
         self.bounds = [w, w, h] if isinstance(w, (int, float)) else list(w)
         self.bounds = [w, h, w] if isinstance(w, (int, float)) else self.bounds

@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_helicopter",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounds_width": 20,
-        "visible_bounds_height": 14,
+        "visible_bounds_width": 43.0,
+        "visible_bounds_height": 14.6,
         "visible_bounds_offset": [
           0,
-          8,
-          0
+          8.3,
+          0.5
         ]
       },
       "bones": [
