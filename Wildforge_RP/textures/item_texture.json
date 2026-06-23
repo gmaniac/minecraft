@@ -52,6 +52,30 @@
     },
     "wf_pontoon_item": {
       "textures": "textures/items/wf_pontoon_item"
+    },
+    "wf_modern_house_placer": {
+      "textures": "textures/items/wf_modern_house_placer"
+    },
+    "wf_cozy_cottage_placer": {
+      "textures": "textures/items/wf_cozy_cottage_placer"
+    },
+    "wf_cabin_placer": {
+      "textures": "textures/items/wf_cabin_placer"
+    },
+    "wf_mansion_placer": {
+      "textures": "textures/items/wf_mansion_placer"
+    },
+    "wf_tower_placer": {
+      "textures": "textures/items/wf_tower_placer"
+    },
+    "wf_barn_placer": {
+      "textures": "textures/items/wf_barn_placer"
+    },
+    "wf_shop_placer": {
+      "textures": "textures/items/wf_shop_placer"
+    },
+    "wf_starter_base_placer": {
+      "textures": "textures/items/wf_starter_base_placer"
     }
   }
 }

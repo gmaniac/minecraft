@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "wf:blue_siding"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:oak_planks"
+      },
+      {
+        "item": "minecraft:oak_planks"
+      },
+      {
+        "item": "minecraft:oak_planks"
+      },
+      {
+        "item": "minecraft:oak_planks"
+      }
+    ],
+    "result": {
+      "item": "wf:blue_siding",
+      "count": 4
+    }
+  }
+}
