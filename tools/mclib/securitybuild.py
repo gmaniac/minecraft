@@ -19,34 +19,48 @@ def build_device(kind):
 
 def _sensor(g):
     b = g.bone("body", (0, 4, 0), parent="root")
-    b.cube([-3, 2, -3], [6, 5, 4], [0, 0], region="body")       # housing
-    b.cube([-1, 0, -1], [2, 2, 2], [0, 0], region="dark")       # mount
-    b.cube([-2, 3.5, -4], [4, 2.5, 1], [0, 0], region="glass")  # lens
+    b.cube([-1, 0, -1], [2, 2, 2], [0, 0], region="dark")        # wall mount
+    b.cube([-3, 2, -3], [6, 5, 4], [0, 0], region="body")        # housing
+    b.cube([-3.2, 3, -3.2], [6.4, 1, 1.2], [0, 0], region="trim")  # vent band
+    b.cube([-2.2, 3.2, -4], [4.4, 2.6, 1], [0, 0], region="glass")  # lens
+    b.cube([2, 6, -3], [0.8, 1, 0.8], [0, 0], region="accent")   # status LED
 
 
 def _tripwire(g):
     b = g.bone("body", (0, 0, 0), parent="root")
-    b.cube([-1.5, 0, -1.5], [3, 10, 3], [0, 0], region="body")  # post
-    b.cube([-2, 9, -2], [4, 3, 4], [0, 0], region="dark")
-    b.cube([-1, 10, -2.5], [2, 1.5, 1], [0, 0], region="accent")  # emitter eye
+    b.cube([-2.5, 0, -2.5], [5, 1, 5], [0, 0], region="dark")    # base plate
+    b.cube([-1.5, 1, -1.5], [3, 9, 3], [0, 0], region="body")    # post
+    b.cube([-2, 9, -2], [4, 3.5, 4], [0, 0], region="trim")      # emitter head
+    b.cube([-2.2, 10, -2.6], [4.4, 1.5, 1], [0, 0], region="accent")  # emitter eye
+    b.cube([-0.6, 12.4, -0.6], [1.2, 1, 1.2], [0, 0], region="dark")  # cap
 
 
 def _turret(g):
     base = g.bone("body", (0, 2, 0), parent="root")
-    base.cube([-4, 0, -4], [8, 3, 8], [0, 0], region="dark")    # base
-    base.cube([-3, 3, -3], [6, 4, 6], [0, 0], region="body")    # dome
-    barrel = g.bone("barrel", (0, 5, -2), parent="body")        # rotates in script-driven anim
-    barrel.cube([-1.2, 4, -8], [2.4, 2.4, 7], [0, 0], region="trim")
-    barrel.cube([-1.6, 3.6, -8.5], [3.2, 3.2, 1.5], [0, 0], region="accent")  # muzzle
+    base.cube([-4.5, 0, -4.5], [9, 2, 9], [0, 0], region="dark")     # base plate
+    base.cube([-3.5, 0, -3.5], [7, 1, 7], [0, 0], region="trim")     # base ring
+    base.cube([-3, 2, -3], [6, 4, 6], [0, 0], region="body")         # housing
+    base.cube([-3.2, 3, -3.2], [6.4, 1, 6.4], [0, 0], region="trim")  # housing band
+    base.cube([2.5, 4, -1], [2, 3, 4], [0, 0], region="dark")        # ammo drum
+    base.cube([-0.5, 7, -1], [1, 1.5, 1], [0, 0], region="accent")   # status light
+    barrel = g.bone("barrel", (0, 5, -2), parent="body")            # script-rotated
+    barrel.cube([-2, 4, -9], [4, 3, 8], [0, 0], region="trim")       # barrel housing
+    for bx in (-1.1, 0.3):                                          # twin barrels
+        barrel.cube([bx, 4.4, -11], [0.8, 0.8, 3], [0, 0], region="dark")
+    barrel.cube([-1.6, 3.8, -9.6], [3.2, 3.2, 1.2], [0, 0], region="accent")  # muzzle ring
 
 
 def _laser(g):
     base = g.bone("body", (0, 2, 0), parent="root")
-    base.cube([-4, 0, -4], [8, 3, 8], [0, 0], region="dark")
-    base.cube([-3, 3, -3], [6, 5, 6], [0, 0], region="body")
-    emit = g.bone("barrel", (0, 6, -3), parent="body")
-    emit.cube([-2, 5, -6], [4, 4, 4], [0, 0], region="trim")
-    emit.cube([-1.4, 5.6, -7], [2.8, 2.8, 1.5], [0, 0], region="accent")  # lens (glowing)
+    base.cube([-4.5, 0, -4.5], [9, 2, 9], [0, 0], region="dark")     # base plate
+    base.cube([-3.5, 0, -3.5], [7, 1, 7], [0, 0], region="trim")     # base ring
+    base.cube([-3, 2, -3], [6, 5, 6], [0, 0], region="body")         # housing
+    base.cube([-3.2, 4, -3.2], [6.4, 1, 6.4], [0, 0], region="trim")  # trim band
+    emit = g.bone("barrel", (0, 6, -3), parent="body")             # script-rotated
+    emit.cube([-2.5, 5, -7], [5, 5, 5], [0, 0], region="trim")       # emitter housing
+    emit.cube([-2, 5.4, -7.7], [4, 4, 1], [0, 0], region="dark")     # housing face
+    emit.cube([-1.4, 5.6, -8.3], [2.8, 2.8, 1.2], [0, 0], region="accent")  # glowing lens
+    emit.cube([-0.6, 5.8, -8.7], [1.2, 1.2, 0.6], [0, 0], region="glass")   # lens core
 
 
 # ---------------- interact blocks (block space -8..8 / 0..16) ----------------
@@ -62,10 +76,12 @@ def build_block(geo_kind):
 
 
 def _b_camera(b):
-    b.cube([-2, 8, 4], [4, 4, 4], [0, 0], region="dark")        # mount on back wall
+    b.cube([-1, 9, 5], [2, 2, 3], [0, 0], region="dark")        # wall plate
+    b.cube([-0.6, 8, 1], [1.2, 1.2, 4], [0, 0], region="trim")  # swivel arm
     b.cube([-3, 6, -4], [6, 5, 8], [0, 0], region="body")       # body
+    b.cube([-3.2, 6.5, -4.5], [6.4, 4, 1], [0, 0], region="dark")  # lens hood
     b.cube([-2, 7, -5], [4, 3, 1], [0, 0], region="glass")      # lens
-    b.cube([-0.5, 11, -1], [1, 2, 1], [0, 0], region="accent")  # status LED
+    b.cube([-0.5, 11.2, -1], [1, 1.5, 1], [0, 0], region="accent")  # status LED
 
 
 def _b_monitor(b):
@@ -104,5 +120,9 @@ def _b_siren(b):
 def _b_hub(b):
     b.cube([-7, 0, 2], [14, 3, 6], [0, 0], region="dark")       # desk
     b.cube([-7, 3, 6], [14, 9, 2], [0, 0], region="body")       # console back
-    b.cube([-6, 4, 5.6], [12, 7, 0.5], [0, 0], region="glass")  # screen
+    b.cube([-7.2, 3, 6], [14.4, 1, 2], [0, 0], region="trim")   # console base trim
+    b.cube([-6, 4.5, 5.5], [7, 6, 0.5], [0, 0], region="glass")  # main screen
+    b.cube([1.5, 4.5, 5.5], [4, 6, 0.5], [0, 0], region="accent")  # status panel
     b.cube([-6, 0, -2], [12, 1, 4], [0, 0], region="trim")      # keyboard shelf
+    for c in range(5):                                          # keypad buttons
+        b.cube([-5 + c * 2.2, 1, -1.5], [1.4, 0.6, 1.4], [0, 0], region="accent")
