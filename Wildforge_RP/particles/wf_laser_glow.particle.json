@@ -21,8 +21,8 @@
       "minecraft:particle_initial_speed": 0,
       "minecraft:particle_appearance_billboard": {
         "size": [
-          0.26,
-          0.26
+          0.34,
+          0.34
         ],
         "facing_camera_mode": "lookat_xyz",
         "uv": {
