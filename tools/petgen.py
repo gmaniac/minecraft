@@ -250,7 +250,7 @@ def main():
     for p in PETS:
         i = p["id"]
         g = build(p)
-        pack_and_paint(g, p["palette"]).save(os.path.join(tex, f"wf_{i}.png"))
+        pack_and_paint(g, p["palette"], "fur").save(os.path.join(tex, f"wf_{i}.png"))
         g.save(os.path.join(mdl, f"wf_{i}.geo.json"))
         dump(os.path.join(ent, f"{i}.json"), bp_entity(p))
         dump(os.path.join(sr, f"{i}.json"), spawn_rule(p))

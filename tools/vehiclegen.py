@@ -227,9 +227,9 @@ def main():
     for v in VEHICLES:
         i = v["id"]
         g = build(v)
-        pack_and_paint(g, v["palette"]).save(os.path.join(tex, f"wf_{i}.png"))
+        pack_and_paint(g, v["palette"], "panel").save(os.path.join(tex, f"wf_{i}.png"))
         for idx, hexc in enumerate(HEX):     # body-tinted color variants
-            pack_and_paint(g, {**v["palette"], "body": hexc}).save(
+            pack_and_paint(g, {**v["palette"], "body": hexc}, "panel").save(
                 os.path.join(tex, f"wf_{i}_c{idx}.png"))
         g.save(os.path.join(mdl, f"wf_{i}.geo.json"))
         dump(os.path.join(ent, f"{i}.json"), bp_entity(v))

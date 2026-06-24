@@ -351,7 +351,7 @@ def main():
     for d in DRAGONS:
         i = d["id"]
         g = build(d)
-        t = pack_and_paint(g, d["palette"])
+        t = pack_and_paint(g, d["palette"], "scales")
         g.save(os.path.join(mdl_dir, f"wf_{i}.geo.json"))
         t.save(os.path.join(tex_dir, f"wf_{i}.png"))
         dump(os.path.join(ent_dir, f"{i}.json"), bp_entity(d))
