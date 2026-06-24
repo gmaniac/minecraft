@@ -83,8 +83,9 @@ def block_json(blk):
         "minecraft:destructible_by_mining": {"seconds_to_destroy": 1.5},
         "minecraft:destructible_by_explosion": {"explosion_resistance": 6},
     }
-    if blk.get("geo"):
-        comps["minecraft:geometry"] = f"geometry.wf_secblk_{blk['geo']}"
+    # since 1.21.80 a block with material_instances must also declare geometry
+    comps["minecraft:geometry"] = (f"geometry.wf_secblk_{blk['geo']}" if blk.get("geo")
+                                   else "minecraft:geometry.full_block")
     if blk.get("light"):
         comps["minecraft:light_emission"] = blk["light"]
     if blk.get("component"):
@@ -173,7 +174,7 @@ def floodlight_texture(palette):
     return t
 
 
-def beam_particle(ident, size, tinted):
+def beam_particle(ident, size, tinted, texture="wf_dot"):
     comps = {
         "minecraft:emitter_rate_instant": {"num_particles": 1},
         "minecraft:emitter_lifetime_once": {"active_time": 0.05},
@@ -188,12 +189,13 @@ def beam_particle(ident, size, tinted):
             "color": ["v.color.r", "v.color.g", "v.color.b", 1.0]}
     return {"format_version": "1.10.0", "particle_effect": {
         "description": {"identifier": ident, "basic_render_parameters": {
-            "material": "particles_blend", "texture": "textures/particle/wf_dot"}},
+            "material": "particles_blend", "texture": f"textures/particle/{texture}"}},
         "components": comps}}
 
 
-def dot_texture():
-    # soft radial glow: bright centre fading to transparent edges (a glow point)
+def dot_texture(soft=True):
+    # soft=True: radial glow (halo). soft=False: fuller disc (solid core that merges
+    # into a continuous line when stamped densely).
     import math
     n = 16
     c = (n - 1) / 2
@@ -201,8 +203,10 @@ def dot_texture():
     for j in range(n):
         for i in range(n):
             d = math.hypot(i - c, j - c) / (c + 0.5)
-            a = max(0.0, 1.0 - d)
-            a = a * a                      # soft falloff
+            if soft:
+                a = max(0.0, 1.0 - d) ** 2
+            else:
+                a = 1.0 if d < 0.62 else max(0.0, (1.0 - d) / 0.38)   # flat centre, thin fade
             t.px[i, j] = (255, 255, 255, int(255 * a))
     return t
 
@@ -304,10 +308,12 @@ def main():
     # custom beam particles (white-hot core + tinted glow) + soft glow texture
     pdir = ensure(RP, "particles")
     dump(os.path.join(pdir, "wf_laser_core.particle.json"),
-         beam_particle("wf:laser_core", 0.16, tinted=False))   # bright continuous core
+         beam_particle("wf:laser_core", 0.18, tinted=False, texture="wf_core"))  # solid core
     dump(os.path.join(pdir, "wf_laser_glow.particle.json"),
          beam_particle("wf:laser_glow", 0.34, tinted=True))    # colored halo
-    dot_texture().save(os.path.join(ensure(RP, "textures", "particle"), "wf_dot.png"))
+    ptex = ensure(RP, "textures", "particle")
+    dot_texture(soft=True).save(os.path.join(ptex, "wf_dot.png"))
+    dot_texture(soft=False).save(os.path.join(ptex, "wf_core.png"))
 
     merge_atlas(os.path.join(RP, "textures", "terrain_texture.json"), "atlas.terrain", terrain)
     merge_atlas(os.path.join(RP, "textures", "item_texture.json"), "atlas.items", item_tex)

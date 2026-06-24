@@ -5,7 +5,7 @@
       "identifier": "wf:laser_core",
       "basic_render_parameters": {
         "material": "particles_blend",
-        "texture": "textures/particle/wf_dot"
+        "texture": "textures/particle/wf_core"
       }
     },
     "components": {
@@ -21,8 +21,8 @@
       "minecraft:particle_initial_speed": 0,
       "minecraft:particle_appearance_billboard": {
         "size": [
-          0.16,
-          0.16
+          0.18,
+          0.18
         ],
         "facing_camera_mode": "lookat_xyz",
         "uv": {

@@ -46,6 +46,9 @@ def block_json(m):
     short = f"wf_{m['id']}"
     render = "blend" if m.get("glass") else "opaque"
     comps = {
+        # since 1.21.80 a block with material_instances must also have geometry,
+        # else it renders invisible. full_block is the built-in unit cube.
+        "minecraft:geometry": "minecraft:geometry.full_block",
         "minecraft:material_instances": {"*": {"texture": short, "render_method": render}},
         "minecraft:destructible_by_mining": {"seconds_to_destroy": 1.2},
         "minecraft:destructible_by_explosion": {"explosion_resistance": 3},

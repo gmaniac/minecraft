@@ -44,6 +44,7 @@
       "minecraft:destructible_by_explosion": {
         "explosion_resistance": 6
       },
+      "minecraft:geometry": "minecraft:geometry.full_block",
       "minecraft:light_emission": 15
     }
   }

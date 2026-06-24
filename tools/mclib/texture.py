@@ -86,12 +86,15 @@ def _shift(c, n):
 
 
 def _scales(t, x, y, w, h, c):
-    dk = shade(c, 0.82)
+    dk, lt = shade(c, 0.7), shade(c, 1.14)
     for j in range(0, h, 3):
         off = 2 if (j // 3) % 2 else 0
         for i in range(off, w, 4):
-            t._put(x + i, y + j, dk)
+            t._put(x + i, y + j, dk)            # scale lower edge (shadow)
             t._put(x + i + 1, y + j, dk)
+            t._put(x + i + 2, y + j, dk)
+            if j > 0:
+                t._put(x + i + 1, y + j - 1, lt)  # scale highlight
 
 
 def _fur(t, x, y, w, h, c):

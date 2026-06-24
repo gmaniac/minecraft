@@ -221,7 +221,10 @@ def main():
         comps = b.get("components") or {}
         geo = comps.get("minecraft:geometry")
         geo = geo if isinstance(geo, str) else (geo or {}).get("identifier")
-        if geo and geo not in geoms:
+        # since 1.21.80 a block using material_instances must also declare geometry
+        if comps.get("minecraft:material_instances") and not geo:
+            err(f"{ident}: has material_instances but no geometry (renders invisible on 1.21.80+)")
+        if geo and not geo.startswith("minecraft:") and geo not in geoms:
             err(f"{ident}: geometry '{geo}' not found in models/")
         mat_blocks = [comps.get("minecraft:material_instances") or {}]
         for perm in (b.get("permutations") or []):
