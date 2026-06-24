@@ -38,7 +38,7 @@ DRAGONS = [
     },
     {
         "id": "ancient", "name": "Ancient Dragon", "archetype": "drake", "tier": "common",
-        "element": "stone", "food": GAPPLE, "health": 60, "scale": 1.3, "move": 0.26,
+        "element": "stone", "food": GAPPLE, "health": 60, "scale": 1.6, "move": 0.26,
         "spawn": {"dimension": "overworld", "biome": "mountains", "bright": (0, 15), "weight": 2},
         "palette": {"body": "#5a534a", "belly": "#8a8276", "accent": "#b8a06a",
                      "membrane": "#6e6456", "horn": "#dcd0b0", "eye": "#ffd966"},
@@ -65,7 +65,7 @@ DRAGONS = [
     },
     {
         "id": "eclipse", "name": "Eclipse Dragon", "archetype": "four_winged", "tier": "common",
-        "element": "void", "food": EGAPPLE, "health": 64, "scale": 1.25, "move": 0.36,
+        "element": "void", "food": EGAPPLE, "health": 64, "scale": 1.5, "move": 0.36,
         "spawn": {"dimension": "the_end", "biome": "the_end", "bright": (0, 15), "weight": 2},
         "palette": {"body": "#241a33", "belly": "#5b3f7a", "accent": "#b07bf0",
                      "membrane": "#3a2557", "horn": "#0e0a14", "eye": "#caa6ff"},
@@ -75,7 +75,7 @@ DRAGONS = [
     # ---------------- reworked mythic legends ----------------
     {
         "id": "nidhoggr", "name": "Níðhǫggr", "archetype": "western", "tier": "mythic",
-        "element": "decay", "food": EGAPPLE, "health": 220, "scale": 1.9, "move": 0.28,
+        "element": "decay", "food": EGAPPLE, "health": 220, "scale": 2.6, "move": 0.28,
         "spawn": {"dimension": "overworld", "underground": True, "bright": (0, 4), "weight": 1},
         "palette": {"body": "#3b3a30", "belly": "#6b5b3a", "accent": "#9bbf5a",
                      "membrane": "#4a4730", "horn": "#c8bd92", "eye": "#bfff66"},
@@ -84,7 +84,7 @@ DRAGONS = [
     },
     {
         "id": "apep", "name": "Apep", "archetype": "serpentine", "tier": "mythic",
-        "element": "venom", "food": EGAPPLE, "health": 200, "scale": 1.7, "move": 0.30,
+        "element": "venom", "food": EGAPPLE, "health": 200, "scale": 2.4, "move": 0.30,
         "spawn": {"dimension": "overworld", "biome": "desert", "bright": (0, 7), "weight": 1},
         "palette": {"body": "#5a3a1a", "belly": "#caa05a", "accent": "#d4b35a",
                      "membrane": "#7a5a2a", "horn": "#2a1a0a", "eye": "#ff5a2a"},
@@ -93,7 +93,7 @@ DRAGONS = [
     },
     {
         "id": "tiamat", "name": "Tiamat", "archetype": "multi_head", "tier": "mythic",
-        "element": "tidal", "food": NSTAR, "health": 260, "scale": 2.1, "move": 0.30,
+        "element": "tidal", "food": NSTAR, "health": 260, "scale": 2.9, "move": 0.30,
         "spawn": {"dimension": "overworld", "biome": "ocean", "bright": (0, 15), "weight": 1},
         "palette": {"body": "#1c5a5a", "belly": "#8fd6cf", "accent": "#39c6c6",
                      "membrane": "#2a8a8a", "horn": "#dffaf6", "eye": "#7afff0"},
@@ -102,7 +102,7 @@ DRAGONS = [
     },
     {
         "id": "hydra", "name": "The Hydra", "archetype": "multi_head", "tier": "mythic",
-        "element": "venom", "food": EGAPPLE, "health": 240, "scale": 2.0, "move": 0.30,
+        "element": "venom", "food": EGAPPLE, "health": 240, "scale": 2.7, "move": 0.30,
         "spawn": {"dimension": "overworld", "biome": "swamp", "bright": (0, 15), "weight": 1},
         "palette": {"body": "#2f4a2a", "belly": "#7fa05a", "accent": "#9bd45a",
                      "membrane": "#3f5f33", "horn": "#1a2a14", "eye": "#c6ff5a"},

@@ -1,9 +1,8 @@
 // homebuilding/index.js — place a prefab structure from its crafted placer item.
-import { world, system } from "@minecraft/server";
+import { world, system, BlockPermutation } from "@minecraft/server";
 import { PREFABS } from "./data.js";
-import { actionMenu } from "../lib/menu.js";
 
-const SLICE = 160;        // blocks placed per tick (keeps placement smooth)
+const SLICE = 200;        // blocks placed per tick (keeps placement smooth)
 
 // rotate a local (x,z) by r quarter-turns
 function rot(x, z, r) {
@@ -23,34 +22,37 @@ function placePrefab(player, def) {
   const r = facingRot(player);
   const dim = player.dimension;
   const d = player.getViewDirection();
-  const ox = Math.floor(player.location.x + d.x * 2);
+  const ox = Math.floor(player.location.x + d.x * 3);
   const oy = Math.floor(player.location.y);
-  const oz = Math.floor(player.location.z + d.z * 2);
+  const oz = Math.floor(player.location.z + d.z * 3);
   const blocks = def.blocks;
-  let i = 0;
+  // cache resolved permutations so we resolve each block type once
+  const cache = {};
+  let i = 0, placed = 0;
   const step = () => {
     let n = 0;
     while (i < blocks.length && n < SLICE) {
-      const [x, y, z, b] = blocks[i++];
+      const [x, y, z, b] = blocks[i++]; n++;
+      let perm = cache[b];
+      if (perm === undefined) {
+        try { perm = BlockPermutation.resolve(b); } catch (_) { perm = null; }
+        cache[b] = perm;
+      }
+      if (!perm) continue;
       const [rx, rz] = rot(x, z, r);
-      try {
-        dim.getBlock({ x: ox + rx, y: oy + y, z: oz + rz })?.setType(b);
-      } catch (_) {}
-      n++;
+      try { dim.getBlock({ x: ox + rx, y: oy + y, z: oz + rz })?.setPermutation(perm); placed++; }
+      catch (_) {}
     }
     if (i < blocks.length) system.runTimeout(step, 1);
-    else try { player.sendMessage(`§a${def.name} placed.`); } catch (_) {}
+    else { try { player.sendMessage(`§a${def.name} built — ${placed} blocks.`); } catch (_) {} }
   };
   step();
 }
 
-async function onUse(player, itemId) {
+function onUse(player, itemId) {
   const def = PREFABS[itemId];
   if (!def) return;
-  const sel = await actionMenu(player, def.name,
-    "Place this structure here? Existing blocks will be overwritten.",
-    [{ text: "§2Place it" }, { text: "Cancel" }]);
-  if (sel !== 0) return;
+  try { player.sendMessage(`§7Building ${def.name}…`); } catch (_) {}
   // consume one placer (skip in creative)
   try {
     if (!(player.getGameMode && player.getGameMode() === "creative")) {
@@ -62,7 +64,8 @@ async function onUse(player, itemId) {
       }
     }
   } catch (_) {}
-  placePrefab(player, def);
+  // defer out of the event so world mutation is always allowed
+  system.run(() => placePrefab(player, def));
 }
 
 export function init() {

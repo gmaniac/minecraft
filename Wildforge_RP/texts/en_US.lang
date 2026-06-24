@@ -80,14 +80,6 @@ item.spawn_egg.entity.wf:shadow.name=Spawn Shadow Dragon
 entity.wf:shadow_egg.name=Shadow Dragon Egg
 item.spawn_egg.entity.wf:shadow_egg.name=Shadow Dragon Egg
 
-
-
-
-
-
-
-
-
 ## HomeBuilding
 tile.wf:ashwood_planks.name=Ashwood Planks
 tile.wf:walnut_planks.name=Walnut Planks

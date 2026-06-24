@@ -35,7 +35,7 @@
             {
               "position": [
                 0.0,
-                2.09,
+                2.86,
                 0.0
               ],
               "lock_rider_rotation": 181
@@ -43,8 +43,8 @@
             {
               "position": [
                 0.0,
-                2.09,
-                2.66
+                2.86,
+                3.64
               ],
               "lock_rider_rotation": 181
             }
@@ -86,11 +86,11 @@
         ]
       },
       "minecraft:collision_box": {
-        "width": 2.28,
-        "height": 2.47
+        "width": 3.12,
+        "height": 3.38
       },
       "minecraft:scale": {
-        "value": 1.9
+        "value": 2.6
       },
       "minecraft:health": {
         "value": 220,

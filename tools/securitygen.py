@@ -304,9 +304,9 @@ def main():
     # custom beam particles (white-hot core + tinted glow) + soft glow texture
     pdir = ensure(RP, "particles")
     dump(os.path.join(pdir, "wf_laser_core.particle.json"),
-         beam_particle("wf:laser_core", 0.09, tinted=False))
+         beam_particle("wf:laser_core", 0.16, tinted=False))   # bright continuous core
     dump(os.path.join(pdir, "wf_laser_glow.particle.json"),
-         beam_particle("wf:laser_glow", 0.26, tinted=True))
+         beam_particle("wf:laser_glow", 0.34, tinted=True))    # colored halo
     dot_texture().save(os.path.join(ensure(RP, "textures", "particle"), "wf_dot.png"))
 
     merge_atlas(os.path.join(RP, "textures", "terrain_texture.json"), "atlas.terrain", terrain)

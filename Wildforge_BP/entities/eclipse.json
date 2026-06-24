@@ -35,7 +35,7 @@
             {
               "position": [
                 0.0,
-                1.38,
+                1.65,
                 0.0
               ],
               "lock_rider_rotation": 181
@@ -91,11 +91,11 @@
       "wf:eclipse_baby": {
         "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value": 0.5
+          "value": 0.6
         },
         "minecraft:collision_box": {
-          "width": 0.75,
-          "height": 0.88
+          "width": 0.9,
+          "height": 1.05
         },
         "minecraft:tameable": {
           "probability": 0.0,
@@ -133,11 +133,11 @@
         ]
       },
       "minecraft:collision_box": {
-        "width": 1.5,
-        "height": 1.62
+        "width": 1.8,
+        "height": 1.95
       },
       "minecraft:scale": {
-        "value": 1.25
+        "value": 1.5
       },
       "minecraft:health": {
         "value": 64,
