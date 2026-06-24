@@ -7,12 +7,16 @@ is **owner-configurable**: it never harms you, your allowlist, or your pets.
 Place these from their crafted items (or Creative spawn eggs). They run automatically:
 
 - **Motion Sensor** — alerts you (sound + message) when an intruder enters its range.
-- **Laser Tripwire** — projects a beam; anything that crosses it is alarmed and zapped.
+- **Laser Tripwire** — projects a **visible beam** in the direction you placed it; anything that crosses it triggers the alarm (and a light zap).
 - **Auto Turret** — targets intruders and fires at them on a cooldown.
-- **Laser Emitter** — fires a continuous **lethal** beam at whatever it targets.
+- **Laser Emitter** — projects a **visible, continuous lethal beam** that melts anything in it.
 
 By default they target **hostile mobs only**. Use the **Control Hub** to switch them to
 also target **intruders** (non-allowlisted players), and to arm/disarm them.
+
+These are **placed from their crafted item** (no spawn egg — they're devices, not
+creatures). A laser/tripwire's beam shoots in the direction you were **facing when you
+placed it**. To recolour a beam, hold any **dye** and **interact** with the device.
 
 ## Cameras & monitor
 Place **Security Cameras** around your base, then **interact a Monitor** to pick a camera

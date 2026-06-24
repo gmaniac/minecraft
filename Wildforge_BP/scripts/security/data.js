@@ -5,3 +5,5 @@ export const BLOCK_COMPONENTS = ["wf:camera", "wf:monitor", "wf:door", "wf:keypa
 export const SEC_BLOCKS = ["wf:security_camera", "wf:monitor", "wf:owner_door", "wf:keypad", "wf:floodlight", "wf:alarm_siren", "wf:control_hub"];
 export const CAMERA_ID = "wf:security_camera";
 export const KEYCARD = "wf:keycard";
+export const DYE_INDEX = {"minecraft:white_dye": 0, "minecraft:orange_dye": 1, "minecraft:magenta_dye": 2, "minecraft:light_blue_dye": 3, "minecraft:yellow_dye": 4, "minecraft:lime_dye": 5, "minecraft:pink_dye": 6, "minecraft:gray_dye": 7, "minecraft:light_gray_dye": 8, "minecraft:cyan_dye": 9, "minecraft:purple_dye": 10, "minecraft:blue_dye": 11, "minecraft:brown_dye": 12, "minecraft:green_dye": 13, "minecraft:red_dye": 14, "minecraft:black_dye": 15};
+export const HEX = ["#e9ecec", "#e06a1b", "#bd44b3", "#3aafd9", "#f8c627", "#70b919", "#ed8dac", "#3e4447", "#8e8e86", "#158991", "#792aac", "#35399d", "#724728", "#546d1b", "#a52721", "#1a1a1e"];
