@@ -66,6 +66,10 @@ def _quad(g, p, lh=5, bl=9, bw=5, bh=5):
     by = lh
     body = g.bone("body", (0, by + bh / 2, 0), parent="root")
     body.cube([-bw / 2, by, -bl / 2], [bw, bh, bl], [0, 0], region="body")
+    body.cube([-(bw + 1) / 2, by, -bl / 2 - 0.4], [bw + 1, bh + 1, bl * 0.34], [0, 0],
+              region="body")                                                        # chest
+    body.cube([-(bw + 0.6) / 2, by + 0.4, bl / 2 - bl * 0.32], [bw + 0.6, bh, bl * 0.32],
+              [0, 0], region="body")                                                # haunch
     body.cube([-bw / 2 + 0.5, by - 0.3, -bl / 2 + 1], [bw - 1, 1.5, bl - 2], [0, 0], region="belly")
     if f.get("mane"):
         body.cube([-bw / 2 - 0.2, by + bh - 1, -bl / 2 - 0.5], [bw + 0.4, 3, 3], [0, 0], region="spot")
@@ -79,15 +83,22 @@ def _quad(g, p, lh=5, bl=9, bw=5, bh=5):
     head = g.bone("head", (0, by + bh, hz), parent="body")
     hs = 4 if p["id"] != "rabbit" else 3
     head.cube([-hs / 2, by + bh - 1, hz - hs], [hs, hs, hs], [0, 0], region="head")
+    head.cube([-hs / 2 - 0.3, by + bh + hs - 1.6, hz - hs + 0.3], [hs + 0.6, 1, hs - 0.6],
+              [0, 0], region="head")                                                 # brow/forehead
     head.cube([-1.2, by + bh - 1.5, hz - hs - 1.5], [2.4, 2, 2], [0, 0], region="head")  # snout
+    head.cube([-0.6, by + bh - 1, hz - hs - 2.1], [1.2, 1, 0.8], [0, 0], region="eye")   # nose
     _eyes(head, hs / 2 - 0.5, by + bh + 0.5, hz - hs + 0.4, hs)
     _ears(g, p, hs / 2, by + bh, hz - hs + 1)
-    # legs
+    # legs with paws
     w = 1.6 if p["size"] != "large" else 2.0
     for nm, (x, z) in (("leg_fl", (-bw / 2 + 1, -bl / 2 + 2)), ("leg_fr", (bw / 2 - 1, -bl / 2 + 2)),
                        ("leg_bl", (-bw / 2 + 1, bl / 2 - 2)), ("leg_br", (bw / 2 - 1, bl / 2 - 2))):
         b = g.bone(nm, (x, lh, z), parent="body")
         b.cube([x - w / 2, 0, z - w / 2], [w, lh, w], [0, 0], region="leg")
+        b.cube([x - w / 2 - 0.2, 0, z - w / 2 - 0.8], [w + 0.4, 1.4, w + 1], [0, 0], region="leg")  # paw
+        for tx in (-0.4, w / 2 - 0.2):                                                # toe lines
+            b.cube([x - w / 2 - 0.2 + (tx + w / 2), 0, z - w / 2 - 1.6], [0.4, 1, 1], [0, 0],
+                   region="leg")
     _tail(g, p, 0, by + bh / 2, bl / 2)
     g.tex_w = g.tex_h = 64
     g.bounds = [max(4, bl / 2 + 3), lh + bh + 3]
@@ -100,20 +111,29 @@ def _bird(g, p):
     body.cube([-bw / 2, by, -bl / 2], [bw, bh, bl], [0, 0], region="body")
     body.cube([-bw / 2 + 0.4, by + 0.4, -bl / 2 + 0.4], [bw - 0.8, bh - 1, 1], [0, 0], region="belly")
     head = g.bone("head", (0, by + bh, -bl / 2), parent="body")
+    body.cube([-(bw + 1) / 2, by, -bl / 2 - 0.3], [bw + 1, bh + 0.5, bl * 0.5], [0, 0],
+              region="belly")                                                       # puffed chest
     head.cube([-1.5, by + bh - 0.5, -bl / 2 - 2.5], [3, 3, 3], [0, 0], region="head")
-    head.cube([-0.6, by + bh, -bl / 2 - 4], [1.2, 1, 1.5], [0, 0], region="accent")  # beak
+    head.cube([-0.6, by + bh, -bl / 2 - 4], [1.2, 1, 1.5], [0, 0], region="accent")  # upper beak
+    head.cube([-0.5, by + bh - 0.6, -bl / 2 - 3.7], [1, 0.6, 1.2], [0, 0], region="head")  # lower beak
     _eyes(head, 1.0, by + bh + 1, -bl / 2 - 1.6, 3)
     if p["features"].get("crest"):
-        head.cube([-0.4, by + bh + 2.5, -bl / 2 - 1], [0.8, 2, 1.5], [0, 0], region="accent")
+        for cz in (-1, 0):
+            head.cube([-0.4, by + bh + 2.2 + (cz + 1), -bl / 2 - 1 + cz], [0.8, 2, 1], [0, 0],
+                      region="accent")
     for nm, s in (("wing_l", -1), ("wing_r", 1)):
         w = g.bone(nm, (s * bw / 2, by + bh - 1, 0), parent="body", rotation=[0, 0, -s * 8])
-        w.cube([min(s * bw / 2, s * (bw / 2 + 5)), by + 1, -bl / 2], [5, 0.6, bl], [0, 0],
-               region="accent")
+        w.cube([min(s * bw / 2, s * (bw / 2 + 6)), by + 1.5, -bl / 2], [6, 0.6, bl], [0, 0],
+               region="accent")                                                     # primary
+        w.cube([min(s * bw / 2, s * (bw / 2 + 4)), by, -bl / 2 + 0.5], [4, 0.6, bl - 1], [0, 0],
+               region="body")                                                       # covert
     for nm, x in (("leg_bl", -1), ("leg_br", 1)):
         b = g.bone(nm, (x, by, 1), parent="body")
         b.cube([x - 0.4, 0, 0.6], [0.8, by, 0.8], [0, 0], region="accent")
+        b.cube([x - 0.7, 0, -0.2], [1.4, 0.6, 1.6], [0, 0], region="accent")        # foot
     t = g.bone("tail", (0, by + 1, bl / 2), parent="body")
-    t.cube([-1.5, by, bl / 2], [3, 0.6, 4], [0, 0], region="accent")
+    for i, tw in enumerate((3.4, 2.4, 1.6)):                                        # fanned tail feathers
+        t.cube([-tw / 2, by - i * 0.3, bl / 2 + i * 1.5], [tw, 0.5, 5 - i], [0, 0], region="accent")
     g.tex_w = g.tex_h = 64
     g.bounds = [6, 10]
     g.bounds_offset = [0, 5, 0]
@@ -142,6 +162,10 @@ def _reptile(g, p):
                            ("leg_bl", (-bw / 2, bl / 2 - 2, -1)), ("leg_br", (bw / 2, bl / 2 - 2, 1))):
         b = g.bone(nm, (x, by, z), parent="body", rotation=[0, 0, sx * 30])
         b.cube([x - w / 2 + (sx * 0.5), 0, z - w / 2], [w, lh + 1, w], [0, 0], region="leg")
+        b.cube([x - w / 2 + sx * 1.2, 0, z - w / 2 - 1.5], [w, 1, w + 1.5], [0, 0], region="leg")  # foot
+        for tx in (-1.2, 0, 1.2):                                             # three toe claws
+            b.cube([x + tx - 0.35 + sx * 1.2, 0, z - w / 2 - 2.4], [0.7, 0.8, 1], [0, 0],
+                   region="accent")
     tb = g.bone("tail", (0, by + bh / 2, bl / 2), parent="body")
     seg = bw
     for i in range(4):
@@ -161,13 +185,19 @@ def _turtle(g, p):
     shell = g.bone("shell", (0, by, 0), parent="body")
     shell.cube([-bw / 2, by + 0.5, -bl / 2], [bw, 3, bl], [0, 0], region="body")
     shell.cube([-bw / 2 + 1.5, by + 3, -bl / 2 + 1.5], [bw - 3, 2, bl - 3], [0, 0], region="accent")
+    for sx in (-2, 1):                                            # raised shell scutes
+        for sz in (-2, 1):
+            shell.cube([sx, by + 3, sz], [1.6, 1.2, 1.6], [0, 0], region="accent")
     head = g.bone("head", (0, by, -bl / 2), parent="body")
     head.cube([-1.5, by, -bl / 2 - 3], [3, 3, 3], [0, 0], region="head")
+    head.cube([-1, by - 0.5, -bl / 2 - 4], [2, 1.5, 1], [0, 0], region="head")   # snout
     _eyes(head, 1.0, by + 1.5, -bl / 2 - 1.6, 3)
     for nm, (x, z) in (("leg_fl", (-bw / 2 + 1, -bl / 2 + 2)), ("leg_fr", (bw / 2 - 1, -bl / 2 + 2)),
                        ("leg_bl", (-bw / 2 + 1, bl / 2 - 2)), ("leg_br", (bw / 2 - 1, bl / 2 - 2))):
         b = g.bone(nm, (x, by, z), parent="body")
         b.cube([x - 1, 0, z - 1], [2, lh, 2], [0, 0], region="leg")
+        b.cube([x - 1.2, 0, z - 2], [2.4, 1, 2], [0, 0], region="leg")           # flipper foot
+        b.cube([x - 0.9, 0, z - 2.6], [0.5, 0.8, 0.8], [0, 0], region="accent")
     g.tex_w = g.tex_h = 64
     g.bounds = [bl / 2 + 2, lh + 6]
     g.bounds_offset = [0, 3, 0]
