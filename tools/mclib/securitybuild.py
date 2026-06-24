@@ -91,16 +91,28 @@ def _b_monitor(b):
 
 
 def _b_door(b):
-    # default (closed) geometry — full panel; open permutation hides it via thin slab
-    b.cube([-8, 0, -1.5], [16, 16, 3], [0, 0], region="body")
-    b.cube([-7, 1, -2], [14, 14, 0.5], [0, 0], region="trim")   # inset
-    b.cube([4, 7, -2.2], [1, 3, 0.6], [0, 0], region="accent")  # handle/light
+    # a clear sci-fi security door: frame, two leaves meeting at a center seam,
+    # window slits, a lock light and hazard stripes
+    b.cube([-8, 0, -2], [2, 16, 4], [0, 0], region="trim")       # left post
+    b.cube([6, 0, -2], [2, 16, 4], [0, 0], region="trim")        # right post
+    b.cube([-8, 14, -2], [16, 2, 4], [0, 0], region="trim")      # top lintel
+    b.cube([-6, 0, -1.5], [6, 14, 2.5], [0, 0], region="body")   # left leaf
+    b.cube([0, 0, -1.5], [6, 14, 2.5], [0, 0], region="body")    # right leaf
+    b.cube([-0.3, 0, -2], [0.6, 14, 3], [0, 0], region="dark")   # center seam
+    b.cube([-5, 9, -2.2], [4, 2, 0.4], [0, 0], region="glass")   # window slit L
+    b.cube([1, 9, -2.2], [4, 2, 0.4], [0, 0], region="glass")    # window slit R
+    b.cube([-0.5, 6, -2.4], [1, 1.5, 0.6], [0, 0], region="accent")  # lock light
+    for sx in range(-5, 6, 2):                                   # hazard stripes
+        b.cube([sx, 1, -2.1], [1, 1.5, 0.3], [0, 0], region="accent")
 
 
 def _b_door_open(b):
-    # door swung to the side — passable; small post + thin panel against one edge
-    b.cube([6, 0, -2], [2, 16, 3], [0, 0], region="body")
-    b.cube([6, 1, -2.2], [1.5, 14, 0.5], [0, 0], region="trim")
+    # door retracted into the frame posts — passable
+    b.cube([-8, 0, -2], [2, 16, 4], [0, 0], region="trim")       # left post (leaf hidden inside)
+    b.cube([6, 0, -2], [2, 16, 4], [0, 0], region="trim")        # right post
+    b.cube([-8, 14, -2], [16, 2, 4], [0, 0], region="trim")      # top lintel
+    b.cube([-7.4, 1, -1.5], [1, 13, 2], [0, 0], region="body")   # retracted leaf L
+    b.cube([6.4, 1, -1.5], [1, 13, 2], [0, 0], region="body")    # retracted leaf R
 
 
 def _b_keypad(b):
@@ -112,9 +124,15 @@ def _b_keypad(b):
 
 
 def _b_siren(b):
-    b.cube([-2, 0, -2], [4, 2, 4], [0, 0], region="dark")
-    b.cube([-3, 2, -3], [6, 6, 6], [0, 0], region="body")       # body
-    b.cube([-2.5, 8, -2.5], [5, 4, 5], [0, 0], region="glass")  # light dome
+    # alarm: speaker horn at the front + a rotating beacon light on top
+    b.cube([-1.5, 0, -2], [3, 2, 4], [0, 0], region="dark")      # mount bracket
+    b.cube([-3, 2, -3], [6, 5, 6], [0, 0], region="body")        # body
+    b.cube([-3.2, 3, -3.2], [6.4, 1, 6.4], [0, 0], region="trim")  # trim band
+    b.cube([-2.5, 3, -5], [5, 4, 2], [0, 0], region="dark")      # horn base
+    b.cube([-2, 3.5, -6], [4, 3, 1], [0, 0], region="trim")      # horn rim
+    b.cube([-1.5, 4, -6.6], [3, 2, 0.6], [0, 0], region="glass")  # speaker membrane
+    b.cube([-2.5, 7, -2.5], [5, 3, 5], [0, 0], region="glass")   # beacon light dome
+    b.cube([-1, 10, -1], [2, 1, 2], [0, 0], region="trim")       # beacon cap
 
 
 def _b_hub(b):

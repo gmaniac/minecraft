@@ -98,8 +98,10 @@ def bp_entity(v):
     }
     if cat == "water":
         comps["minecraft:behavior.float"] = {"priority": 0}
+    # is_spawnable False -> no creative "Spawn …" egg; vehicles are placed from their
+    # crafted item (they're vehicles, not creatures).
     return {"format_version": "1.21.90", "minecraft:entity": {
-        "description": {"identifier": ident, "is_spawnable": True, "is_summonable": True,
+        "description": {"identifier": ident, "is_spawnable": False, "is_summonable": True,
                         "is_experimental": False,
                         "properties": {"wf:color": {"type": "int", "range": [0, ORIGINAL],
                                                     "default": ORIGINAL, "client_sync": True}}},
@@ -196,19 +198,25 @@ def script_data():
             f"export const DYE_INDEX = {json.dumps(DYE_INDEX)};\n")
 
 
-def lang_merge(lines):
+def lang_merge(lines, purge=()):
+    """Replace the whole ## Vehicles section (purges stale keys), keep other sections."""
     path = os.path.join(RP, "texts", "en_US.lang")
-    keys = {ln.split("=", 1)[0] for ln in lines if "=" in ln}
-    existing = []
+    keys = {ln.split("=", 1)[0] for ln in lines if "=" in ln} | set(purge)
+    out, skip = [], False
     if os.path.exists(path):
         with open(path) as f:
             for ln in f.read().splitlines():
-                k = ln.split("=", 1)[0] if "=" in ln else None
-                if k in keys or ln.strip() == "## Vehicles":
+                s = ln.strip()
+                if s == "## Vehicles":
+                    skip = True
                     continue
-                existing.append(ln)
+                if skip and s.startswith("## "):
+                    skip = False
+                if skip or (ln.split("=", 1)[0] if "=" in ln else None) in keys:
+                    continue
+                out.append(ln)
     with open(path, "w") as f:
-        f.write("\n".join(existing).rstrip() + "\n\n## Vehicles\n" + "\n".join(lines) + "\n")
+        f.write("\n".join(out).rstrip() + "\n\n## Vehicles\n" + "\n".join(lines) + "\n")
 
 
 def main():
@@ -239,7 +247,6 @@ def main():
         item_icon(v).save(os.path.join(itx, f"wf_{i}_item.png"))
         tex_data[f"wf_{i}_item"] = {"textures": f"textures/items/wf_{i}_item"}
         lang.append(f"entity.wf:{i}.name={v['name']}")
-        lang.append(f"item.spawn_egg.entity.wf:{i}.name=Spawn {v['name']}")
         lang.append(f"item.wf:{i}_item.name={v['name']}")
 
     merge_atlas(os.path.join(RP, "textures", "item_texture.json"), "atlas.items", tex_data)
@@ -249,7 +256,7 @@ def main():
          tint_render_controller())
     with open(os.path.join(BP, "scripts", "vehicles", "data.js"), "w") as f:
         f.write(script_data())
-    lang_merge(lang)
+    lang_merge(lang, purge={f"item.spawn_egg.entity.wf:{v['id']}.name" for v in VEHICLES})
     print(f"generated {len(VEHICLES)} vehicles")
 
 

@@ -125,7 +125,7 @@ def bp_entity(d):
         "minecraft:movement": {"value": d["move"]},
         "minecraft:navigation.walk": {"can_path_over_water": True, "avoid_water": not aquatic,
                                       "avoid_damage_blocks": True},
-        "minecraft:movement.basic": {}, "minecraft:jump.static": {}, "minecraft:can_climb": {},
+        "minecraft:movement.basic": {}, "minecraft:jump.static": {},
         "minecraft:breathable": {"breathes_air": True, "breathes_water": aquatic,
                                  "total_supply": 15},
         "minecraft:nameable": {},
