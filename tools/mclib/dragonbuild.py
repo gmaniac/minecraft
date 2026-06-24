@@ -71,9 +71,16 @@ def _build_quad(g, d):
     body_y = leg_h
 
     body = g.bone("body", (0, body_y + bh / 2, 0), parent="root")
-    body.cube([-bw / 2, body_y, -bl / 2], [bw, bh, bl], [0, 0], region="body")
-    body.cube([-bw / 2 + 0.5, body_y - 0.4, -bl / 2 + 1], [bw - 1, 2, bl - 2], [0, 0],
-              region="belly")  # belly plate
+    # shaped torso: broad chest/shoulders -> core -> raised haunches, with a belly plate
+    body.cube([-bw / 2, body_y, -bl / 2], [bw, bh, bl], [0, 0], region="body")          # core
+    body.cube([-(bw + 2) / 2, body_y - 0.5, -bl / 2 - 0.5], [bw + 2, bh + 2, bl * 0.38],
+              [0, 0], region="body")                                                    # chest/shoulders
+    body.cube([-(bw + 1) / 2, body_y + 1, bl / 2 - bl * 0.34], [bw + 1, bh, bl * 0.34],
+              [0, 0], region="body")                                                    # haunches (raised)
+    body.cube([-bw / 2 + 0.5, body_y - 0.7, -bl / 2 + 1], [bw - 1, 2, bl - 2], [0, 0],
+              region="belly")                                                           # belly plate
+    body.cube([-(bw + 2) / 2 + 0.5, body_y - 0.5, -bl / 2], [bw + 1, 2, bl * 0.36], [0, 0],
+              region="belly")                                                           # chest underplate
 
     # ---- necks + heads ----
     neck_n = f.get("neck", 3)
@@ -151,20 +158,29 @@ def _head(g, d, parent, pivot, name):
     f = d["features"]
     px, py, pz = pivot
     hb = g.bone(name, (px, py, pz), parent=parent, rotation=[0, 0, 0])
-    hb.cube([px - 3, py - 2, pz - 7], [6, 6, 7], [0, 0], region="head")
-    # snout
-    hb.cube([px - 2, py - 1.5, pz - 11], [4, 3.5, 4], [0, 0], region="head")
-    # brow
-    hb.cube([px - 3, py + 3.5, pz - 6], [6, 1, 4], [0, 0], region="head")
-    # eyes (glow)
-    hb.cube([px - 3.2, py + 1.5, pz - 6.5], [0.4, 1.4, 1.6], [0, 0], region="eye")
-    hb.cube([px + 2.8, py + 1.5, pz - 6.5], [0.4, 1.4, 1.6], [0, 0], region="eye")
-    # jaw (animatable)
+    hb.cube([px - 3, py - 2, pz - 7], [6, 6, 7], [0, 0], region="head")          # skull
+    hb.cube([px - 3.3, py - 1, pz - 5], [6.6, 4, 4], [0, 0], region="head")      # cheeks (wider)
+    # tapered snout (two segments)
+    hb.cube([px - 2.5, py - 1.5, pz - 11], [5, 4, 4], [0, 0], region="head")
+    hb.cube([px - 2, py - 1.2, pz - 13.5], [4, 3, 3], [0, 0], region="head")
+    hb.cube([px - 0.9, py + 1.2, pz - 13.6], [0.9, 0.8, 1], [0, 0], region="head")  # nostril ridge L
+    hb.cube([px, py + 1.2, pz - 13.6], [0.9, 0.8, 1], [0, 0], region="head")        # nostril ridge R
+    # angled brow ridges over each eye
+    br = g.bone(f"{name}_browL", (px - 2, py + 3.5, pz - 5), parent=name, rotation=[0, 0, 18])
+    br.cube([px - 3.4, py + 3, pz - 6.5], [3, 1.4, 4.5], [0, 0], region="head")
+    br2 = g.bone(f"{name}_browR", (px + 2, py + 3.5, pz - 5), parent=name, rotation=[0, 0, -18])
+    br2.cube([px + 0.4, py + 3, pz - 6.5], [3, 1.4, 4.5], [0, 0], region="head")
+    # eyes (glow), set into sockets
+    hb.cube([px - 3.3, py + 1.4, pz - 6.6], [0.5, 1.6, 1.8], [0, 0], region="eye")
+    hb.cube([px + 2.8, py + 1.4, pz - 6.6], [0.5, 1.6, 1.8], [0, 0], region="eye")
+    # lower jaw (animatable) + chin
     jaw = g.bone(f"{name}_jaw", (px, py - 2, pz - 5), parent=name, rotation=[0, 0, 0])
-    jaw.cube([px - 2.5, py - 4, pz - 10], [5, 2, 9], [0, 0], region="head")
-    # teeth
-    for tx in (-2, 0, 2):
-        hb.cube([px + tx, py - 2.2, pz - 10], [0.8, 1.4, 0.8], [0, 0], region="teeth")
+    jaw.cube([px - 2.5, py - 4, pz - 12], [5, 2.2, 11], [0, 0], region="head")
+    jaw.cube([px - 1.5, py - 4, pz - 5], [3, 2, 3], [0, 0], region="head")       # jaw hinge
+    # upper + lower teeth
+    for tx in (-2.2, -0.8, 0.8, 2.2):
+        hb.cube([px + tx, py - 2.4, pz - 12], [0.7, 1.5, 0.7], [0, 0], region="teeth")
+        jaw.cube([px + tx, py - 2.2, pz - 11.5], [0.7, 1.4, 0.7], [0, 0], region="teeth")
     _horns(g, d, name, px, py, pz)
 
 
@@ -240,58 +256,60 @@ def _leg(g, d, name, pivot, leg_h, big=False):
     px, py, pz = pivot
     w = 3.2 if not big else 3.6
     thigh = g.bone(name, (px, py, pz), parent="body", rotation=[0, 0, 0])
-    thigh.cube([px - w / 2, py - leg_h * 0.5, pz - w / 2], [w, leg_h * 0.5 + 1, w], [0, 0], region="leg")
+    # haunch/thigh muscle (wider at top), tapering to the knee
+    thigh.cube([px - (w + 1.4) / 2, py - leg_h * 0.5, pz - (w + 1.4) / 2],
+               [w + 1.4, leg_h * 0.5 + 1, w + 1.4], [0, 0], region="leg")
     shin = g.bone(f"{name}_shin", (px, py - leg_h * 0.45, pz), parent=name)
     shin.cube([px - w / 2 + 0.3, py - leg_h, pz - w / 2 + 0.3], [w - 0.6, leg_h * 0.5, w - 0.6],
               [0, 0], region="leg")
+    shin.cube([px - w / 2, py - leg_h * 0.5, pz - w / 2], [w, 1.6, w], [0, 0], region="leg")  # knee
     foot = g.bone(f"{name}_foot", (px, py - leg_h, pz), parent=f"{name}_shin")
-    foot.cube([px - w / 2, py - leg_h, pz - w / 2 - 2], [w, 2, w + 2], [0, 0], region="leg")
-    for cx in (-1, 0, 1):
-        foot.cube([px + cx - 0.4, py - leg_h, pz - w / 2 - 3], [0.8, 1, 1.5], [0, 0], region="claw")
+    foot.cube([px - w / 2, py - leg_h, pz - w / 2 - 1], [w, 1.8, w], [0, 0], region="leg")     # ankle
+    # three splayed toes, each tipped with a claw
+    for cx in (-1.4, 0, 1.4):
+        foot.cube([px + cx - 0.7, py - leg_h, pz - w / 2 - 3.5], [1.4, 1.6, 4], [0, 0], region="leg")
+        foot.cube([px + cx - 0.45, py - leg_h, pz - w / 2 - 4.8], [0.9, 1, 1.6], [0, 0], region="claw")
 
 
 def _wing(g, d, name, pivot, side, second=False):
-    f = d["features"]
-    style = f.get("wing_style", "membrane")
+    style = d["features"].get("wing_style", "membrane")
     px, py, pz = pivot
-    span = 16 if not second else 12
     s = side
-    wing = g.bone(name, (px, py, pz), parent="body",
-                  rotation=[0, 0, -18 * s if not second else -10 * s])
-    # humerus
-    wing.cube([min(px, px + s * 6), py - 1, pz - 1], [6, 2, 2], [0, 0], region="wingbone")
-    fore = g.bone(f"{name}_fore", (px + s * 6, py, pz), parent=name, rotation=[0, -20 * s, 0])
-    fore.cube([min(px + s * 6, px + s * span), py - 1, pz - 1], [span - 6, 1.6, 1.6], [0, 0],
-              region="wingbone")
-    tipx = px + s * span
-    # finger struts + membrane
-    fingers = 4 if style != "skeletal" else 5
-    for i in range(fingers):
-        fz = pz - 2 + i * (10 / max(1, fingers - 1))
-        fb = g.bone(f"{name}_f{i}", (tipx, py, pz), parent=f"{name}_fore",
-                    rotation=[0, 0, 0])
-        fb.cube([min(tipx, tipx + s * 1), py - 1, fz], [1, 1, 1], [0, 0], region="wingbone")
-        # strut backwards
-        fb.cube([min(tipx - s * 6, tipx), py - 0.6, fz], [6, 1, 1], [0, 0], region="wingbone")
-    if style not in ("skeletal",):
-        mcol = "membrane"
-        # membrane sheet between forearm tip and body, behind the struts
-        x_in = px + s * 5
-        mwidth = abs(tipx - x_in)
-        mx = min(tipx, x_in)
-        if style == "crystalline":
-            for i in range(3):
-                cb = g.bone(f"{name}_cry{i}", (mx, py, pz + i * 3), parent=f"{name}_fore")
-                cb.cube([mx + i * (mwidth / 3), py - 1, pz - 1 + i * 3], [mwidth / 3, 5, 0.4],
-                        [0, 0], region=mcol)
-        else:
-            depth = 11 if style != "butterfly" else 14
-            mem = g.bone(f"{name}_mem", (mx, py, pz), parent=f"{name}_fore")
-            mem.cube([mx, py - 0.2, pz - 2], [mwidth, 0.4, depth], [0, 0], region=mcol)
-            if style == "tattered":
-                # notch out the trailing edge with a belly-colored gap cube (visual tear)
-                mem.cube([mx + mwidth * 0.4, py - 0.2, pz + depth - 4], [mwidth * 0.5, 0.5, 4],
-                         [0, 0], region="belly")
+    span = 19 if not second else 14
+    raise_deg = (-40 if not second else -28) * s
+    wing = g.bone(name, (px, py, pz), parent="body", rotation=[0, 0, raise_deg])
+    shoulder, elbow, tip = px, px + s * 7, px + s * span
+
+    def xc(bone, xa, xb, y, dy, z, dz, region):
+        bone.cube([min(xa, xb), y, z], [max(0.4, abs(xb - xa)), dy, dz], [0, 0], region=region)
+
+    # humerus + forearm (the wing "arm")
+    xc(wing, shoulder, elbow, py - 1.3, 2.6, pz - 1.5, 3, "wingbone")
+    fore = g.bone(f"{name}_fore", (elbow, py, pz), parent=name, rotation=[0, -26 * s, 0])
+    xc(fore, elbow, tip, py - 0.9, 2.0, pz - 1.2, 2.4, "wingbone")
+
+    if style == "skeletal":                          # bones only, no web
+        for i in range(5):
+            fb = g.bone(f"{name}_f{i}", (tip, py, pz), parent=f"{name}_fore")
+            xc(fb, tip, tip - s * 9, py - 0.5, 1, pz - 3 + i * 4, 1, "wingbone")
+        return
+
+    back = 16 if style == "butterfly" else 12        # trailing-edge depth
+    mem = g.bone(f"{name}_mem", (px, py, pz), parent=f"{name}_fore")
+    if style == "crystalline":                       # angled crystal panes
+        for i in range(4):
+            cb = g.bone(f"{name}_cry{i}", (elbow, py, pz), parent=f"{name}_fore")
+            xc(cb, elbow + s * (i * (span - 7) / 4), tip, py, 5, pz - 1 + i * 3, 0.5, "membrane")
+    else:                                            # broad membrane fan
+        xc(mem, shoulder + s * 2, tip, py - 0.2, 0.4, pz - 2, back + 2, "membrane")
+        if style == "tattered":                      # torn trailing edge
+            xc(mem, shoulder + s * 9, tip, py - 0.25, 0.5, pz + back - 2, 4, "belly")
+    # finger struts fanning across the membrane (the "finger-boned" look)
+    for i in range(4):
+        fz = pz - 1 + back * (i / 3.0)
+        flen = abs(tip - (shoulder + s * 3)) * (0.55 + 0.13 * i)
+        fb = g.bone(f"{name}_f{i}", (tip, py, pz), parent=f"{name}_fore")
+        xc(fb, tip, tip - s * flen, py + 0.1, 0.9, fz, 0.9, "wingbone")
 
 
 def _spines(g, d, top_y, z0, z1, x):
