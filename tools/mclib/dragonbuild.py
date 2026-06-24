@@ -373,7 +373,7 @@ def _build_serpent(g, d):
 # --------------------------------------------------------------------------- #
 # Texture: auto box-UV packing + region painting
 # --------------------------------------------------------------------------- #
-def pack_and_paint(geo: Geometry, palette: dict) -> Tex:
+def pack_and_paint(geo: Geometry, palette: dict, style: str = "plain") -> Tex:
     cubes = list(geo.all_cubes())
 
     def net(c):
@@ -389,10 +389,8 @@ def pack_and_paint(geo: Geometry, palette: dict) -> Tex:
             t = Tex(size, size)
             for c in cubes:
                 col = _col(palette, c.region or "body")
-                top = shade(col, 0.85)
-                belly = shade(col, 1.18)
-                t.box(c.uv[0], c.uv[1], abs(c.size[0]), abs(c.size[1]), abs(c.size[2]),
-                      col, top=top, belly=belly)
+                t.box_detailed(c.uv[0], c.uv[1], abs(c.size[0]), abs(c.size[1]), abs(c.size[2]),
+                               col, c.region or "body", style)
             return t
     raise RuntimeError("could not pack UVs even at 512x512")
 

@@ -256,7 +256,7 @@ def main():
 
     for a in ACTIVE:
         g = build_device(a["kind"])
-        pack_and_paint(g, a["palette"]).save(os.path.join(etex, f"wf_{a['id']}.png"))
+        pack_and_paint(g, a["palette"], "panel").save(os.path.join(etex, f"wf_{a['id']}.png"))
         dump(os.path.join(ent, f"{a['id']}.json"), device_bp(a))
         dump(os.path.join(rpe, f"{a['id']}.entity.json"), device_rp(a))
         # spawn item
@@ -283,7 +283,7 @@ def main():
     for b in BLOCKS:
         short = f"wf_{b['id']}"
         if b.get("geo"):
-            pack_and_paint(build_block(b["geo"]), b["palette"]).save(
+            pack_and_paint(build_block(b["geo"]), b["palette"], "panel").save(
                 os.path.join(btex, f"{short}.png"))
         else:
             floodlight_texture(b["palette"]).save(os.path.join(btex, f"{short}.png"))
