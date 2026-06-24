@@ -35,16 +35,37 @@ def _car(g, v):
     bl, bw = 18, 8
     ride = 4 if v["id"] != "monster_truck" else 7
     body = g.bone("body", (0, ride, 0), parent="root")
-    body.cube([-bw / 2, ride, -bl / 2], [bw, 4, bl], [0, 0], region="body")  # chassis
-    # cabin / windscreen
-    body.cube([-bw / 2 + 0.5, ride + 4, -bl / 6], [bw - 1, 4, bl / 2], [0, 0], region="glass")
-    body.cube([-bw / 2 + 0.4, ride + 3.5, -bl / 6 + 0.4], [bw - 0.8, 1, bl / 2 - 0.8], [0, 0],
-              region="body")
-    # headlights / taillights
+    body.cube([-bw / 2, ride, -bl / 2], [bw, 3, bl], [0, 0], region="body")          # chassis
+    body.cube([-bw / 2 + 0.5, ride + 3, -bl / 2 + 1], [bw - 1, 1.5, bl * 0.28], [0, 0],
+              region="body")                                                          # hood
+    body.cube([-bw / 2 + 0.5, ride + 3, bl / 6], [bw - 1, 1.5, bl * 0.28], [0, 0],
+              region="body")                                                          # trunk
+    # cabin glass + roof
+    body.cube([-bw / 2 + 0.6, ride + 3, -bl / 6], [bw - 1.2, 4, bl * 0.42], [0, 0], region="glass")
+    body.cube([-bw / 2 + 0.9, ride + 6.5, -bl / 6 + 0.5], [bw - 1.8, 1.2, bl * 0.42 - 1], [0, 0],
+              region="body")                                                          # roof
+    # bumpers + fenders (wheel arches)
+    body.cube([-bw / 2, ride - 0.5, -bl / 2 - 0.8], [bw, 2, 1], [0, 0], region="trim")  # front bumper
+    body.cube([-bw / 2, ride - 0.5, bl / 2 - 0.2], [bw, 2, 1], [0, 0], region="trim")   # rear bumper
+    r = 3.4 if v["id"] == "monster_truck" else 2.4
+    for (fx, fz) in ((-bw / 2, -bl / 2 + 4), (bw / 2, -bl / 2 + 4), (-bw / 2, bl / 2 - 4),
+                     (bw / 2, bl / 2 - 4)):
+        sgn = 1 if fx > 0 else -1
+        body.cube([fx - sgn * 0.6 - (0 if sgn > 0 else 1), ride - 1, fz - r], [1.6, 2, r * 2],
+                  [0, 0], region="trim")                                               # fender
+    # mirrors
+    body.cube([-bw / 2 - 1, ride + 5, -bl / 8], [1, 1, 1.2], [0, 0], region="trim")
+    body.cube([bw / 2, ride + 5, -bl / 8], [1, 1, 1.2], [0, 0], region="trim")
+    # lights
     body.cube([-bw / 2 + 0.5, ride + 1, -bl / 2 - 0.3], [1.5, 1.5, 0.4], [0, 0], region="light")
     body.cube([bw / 2 - 2, ride + 1, -bl / 2 - 0.3], [1.5, 1.5, 0.4], [0, 0], region="light")
     body.cube([-bw / 2 + 0.5, ride + 1, bl / 2 - 0.1], [1.5, 1.5, 0.4], [0, 0], region="accent")
-    r = 3.4 if v["id"] == "monster_truck" else 2.4
+    body.cube([bw / 2 - 2, ride + 1, bl / 2 - 0.1], [1.5, 1.5, 0.4], [0, 0], region="accent")
+    # rear spoiler for sporty builds
+    if v["id"] in ("sports_car", "dune_buggy"):
+        for sx in (-bw / 2 + 1, bw / 2 - 2):
+            body.cube([sx, ride + 3, bl / 2 - 2], [1, 2, 1], [0, 0], region="dark")    # posts
+        body.cube([-bw / 2, ride + 5, bl / 2 - 2.5], [bw, 0.8, 2], [0, 0], region="accent")  # wing
     _wheel(g, "wheel_fl", -bw / 2, -bl / 2 + 4, r); _wheel(g, "wheel_fr", bw / 2, -bl / 2 + 4, r)
     _wheel(g, "wheel_bl", -bw / 2, bl / 2 - 4, r); _wheel(g, "wheel_br", bw / 2, bl / 2 - 4, r)
     for s in range(v["seats"]):
@@ -97,7 +118,11 @@ def _plane(g, v):
     y = 6
     body = g.bone("body", (0, y, 0), parent="root")
     body.cube([-bw / 2, y, -bl / 2], [bw, 5, bl], [0, 0], region="body")          # fuselage
+    body.cube([-1.5, y + 1, -bl / 2 - 2], [3, 3, 2], [0, 0], region="trim")        # nose cone
     body.cube([-bw / 2 + 0.5, y + 4, -4], [bw - 1, 3, 7], [0, 0], region="glass")  # cockpit
+    body.cube([-bw / 2 + 0.3, y + 6.6, -3.5], [bw - 0.6, 1, 6], [0, 0], region="dark")  # canopy frame
+    body.cube([-9, y + 0.5, -1], [4, 2.5, 4], [0, 0], region="trim")               # L engine cowl
+    body.cube([5, y + 0.5, -1], [4, 2.5, 4], [0, 0], region="trim")               # R engine cowl
     body.cube([-18, y + 1, -1], [36, 1.2, 7], [0, 0], region="body")               # main wing
     body.cube([-7, y + 4, bl / 2 - 3], [14, 1, 5], [0, 0], region="trim")          # h-stab
     body.cube([-0.5, y + 4, bl / 2 - 3], [1, 5, 5], [0, 0], region="trim")         # v-stab
