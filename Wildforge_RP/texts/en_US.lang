@@ -184,24 +184,6 @@ tile.wf:plant_rustic.name=Rustic Potted Plant
 tile.wf:plant_medieval.name=Medieval Potted Plant
 entity.wf:seat.name=Seat
 
-## Security
-entity.wf:motion_sensor.name=Motion Sensor
-item.wf:motion_sensor_item.name=Motion Sensor
-entity.wf:laser_tripwire.name=Laser Tripwire
-item.wf:laser_tripwire_item.name=Laser Tripwire
-entity.wf:auto_turret.name=Auto Turret
-item.wf:auto_turret_item.name=Auto Turret
-entity.wf:laser_emitter.name=Laser Emitter
-item.wf:laser_emitter_item.name=Laser Emitter
-tile.wf:security_camera.name=Security Camera
-tile.wf:monitor.name=Security Monitor
-tile.wf:owner_door.name=Security Door
-tile.wf:keypad.name=Keypad Lock
-tile.wf:floodlight.name=Floodlight
-tile.wf:alarm_siren.name=Alarm Siren
-tile.wf:control_hub.name=Control Hub
-item.wf:keycard.name=Keycard
-
 ## Pets
 entity.wf:dog.name=Dog
 item.spawn_egg.entity.wf:dog.name=Spawn Dog
@@ -294,3 +276,21 @@ item.wf:submarine_item.name=Submarine
 entity.wf:pontoon.name=Pontoon Boat
 item.spawn_egg.entity.wf:pontoon.name=Spawn Pontoon Boat
 item.wf:pontoon_item.name=Pontoon Boat
+
+## Security
+entity.wf:motion_sensor.name=Motion Sensor
+item.wf:motion_sensor_item.name=Motion Sensor
+entity.wf:laser_tripwire.name=Laser Tripwire
+item.wf:laser_tripwire_item.name=Laser Tripwire
+entity.wf:auto_turret.name=Auto Turret
+item.wf:auto_turret_item.name=Auto Turret
+entity.wf:laser_emitter.name=Laser Emitter
+item.wf:laser_emitter_item.name=Laser Emitter
+tile.wf:security_camera.name=Security Camera
+tile.wf:monitor.name=Security Monitor
+tile.wf:owner_door.name=Security Door
+tile.wf:keypad.name=Keypad Lock
+tile.wf:floodlight.name=Floodlight
+tile.wf:alarm_siren.name=Alarm Siren
+tile.wf:control_hub.name=Control Hub
+item.wf:keycard.name=Keycard

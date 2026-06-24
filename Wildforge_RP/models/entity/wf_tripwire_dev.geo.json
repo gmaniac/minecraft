@@ -6,12 +6,12 @@
         "identifier": "geometry.wf_tripwire_dev",
         "texture_width": 64,
         "texture_height": 64,
-        "visible_bounds_width": 8.5,
-        "visible_bounds_height": 16,
+        "visible_bounds_width": 9.1,
+        "visible_bounds_height": 17.4,
         "visible_bounds_offset": [
           0,
-          6,
-          -0.25
+          6.7,
+          -0.05
         ]
       },
       "bones": [
@@ -35,13 +35,29 @@
           "cubes": [
             {
               "origin": [
-                -1.5,
+                -2.5,
                 0,
+                -2.5
+              ],
+              "size": [
+                5,
+                1,
+                5
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -1.5,
+                1,
                 -1.5
               ],
               "size": [
                 3,
-                10,
+                9,
                 3
               ],
               "uv": [
@@ -57,7 +73,7 @@
               ],
               "size": [
                 4,
-                3,
+                3.5,
                 4
               ],
               "uv": [
@@ -67,14 +83,30 @@
             },
             {
               "origin": [
-                -1,
+                -2.2,
                 10,
-                -2.5
+                -2.6
               ],
               "size": [
-                2,
+                4.4,
                 1.5,
                 1
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -0.6,
+                12.4,
+                -0.6
+              ],
+              "size": [
+                1.2,
+                1,
+                1.2
               ],
               "uv": [
                 0,
