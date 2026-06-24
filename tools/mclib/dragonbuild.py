@@ -63,41 +63,50 @@ def _build_quad(g, d):
     if arch == "multi_head" and not f.get("legs4") and "fin" in f.get("wing_style", ""):
         legs4 = True  # tiamat still gets 4 limbs
 
-    bulk = 1.25 if arch == "drake" else (0.9 if d["id"] == "fae" else 1.0)
-    bw = int(8 * bulk)            # body width
-    bh = int(8 * bulk)            # body height
-    bl = 16 if arch != "drake" else 14   # body length
-    leg_h = 9 if arch != "drake" else 7
+    bulk = 1.35 if arch == "drake" else (0.85 if d["id"] == "fae" else 1.0)
+    bw = round(10 * bulk)         # body width
+    bh = round(9 * bulk)          # body height
+    bl = 22 if arch != "drake" else 18   # body length
+    leg_h = 11 if arch != "drake" else 8
     body_y = leg_h
 
     body = g.bone("body", (0, body_y + bh / 2, 0), parent="root")
-    # shaped torso: broad chest/shoulders -> core -> raised haunches, with a belly plate
+    # tapered torso: broad chest/shoulders -> core -> raised haunches
     body.cube([-bw / 2, body_y, -bl / 2], [bw, bh, bl], [0, 0], region="body")          # core
-    body.cube([-(bw + 2) / 2, body_y - 0.5, -bl / 2 - 0.5], [bw + 2, bh + 2, bl * 0.38],
+    body.cube([-(bw + 2) / 2, body_y - 0.5, -bl / 2 - 0.5], [bw + 2, bh + 2, bl * 0.34],
               [0, 0], region="body")                                                    # chest/shoulders
-    body.cube([-(bw + 1) / 2, body_y + 1, bl / 2 - bl * 0.34], [bw + 1, bh, bl * 0.34],
+    body.cube([-(bw + 1.4) / 2, body_y + 1.5, -bl / 5], [bw + 1.4, bh * 0.55, bl * 0.5],
+              [0, 0], region="body")                                                    # upper flank/back muscle
+    body.cube([-(bw + 1) / 2, body_y + 1, bl / 2 - bl * 0.3], [bw + 1, bh - 1, bl * 0.3],
               [0, 0], region="body")                                                    # haunches (raised)
-    body.cube([-bw / 2 + 0.5, body_y - 0.7, -bl / 2 + 1], [bw - 1, 2, bl - 2], [0, 0],
-              region="belly")                                                           # belly plate
-    body.cube([-(bw + 2) / 2 + 0.5, body_y - 0.5, -bl / 2], [bw + 1, 2, bl * 0.36], [0, 0],
-              region="belly")                                                           # chest underplate
+    # stacked belly scutes (the armored underside look)
+    z = -bl / 2 + 2
+    while z < bl / 2 - 2:
+        body.cube([-(bw - 1) / 2, body_y - 0.8, z], [bw - 1, 1.6, 2.0], [0, 0], region="belly")
+        z += 2.6
+    # overlapping back plates along the spine (armor)
+    z = -bl / 2 + 3
+    while z < bl / 2 - 2:
+        body.cube([-1.6, body_y + bh - 0.3, z], [3.2, 1.2, 2.2], [0, 0], region="spine")
+        z += 2.4
 
     # ---- necks + heads ----
-    neck_n = f.get("neck", 3)
     front_z = -bl / 2
+    nlen, nrise, nbw = bl * 0.7, bh * 0.9, bw * 0.7
     if heads > 1:
-        spread = [-bw * 0.6, 0, bw * 0.6]
+        spread = [-bw * 0.55, 0, bw * 0.55]
         names = ["head", "head2", "head3"]
         for i in range(heads):
-            _neck_and_head(g, d, parent="body", base=(spread[i], body_y + bh, front_z),
-                            neck_n=neck_n, head_name=names[i],
-                            yaw=(-22 if i == 0 else (22 if i == 2 else 0)))
+            _neck_curved(g, d, "body", (spread[i], body_y + bh - 1, front_z + 1), names[i],
+                          yaw=(-20 if i == 0 else (20 if i == 2 else 0)),
+                          length=nlen, rise=nrise, base_w=nbw, head_w=5)
     else:
-        _neck_and_head(g, d, parent="body", base=(0, body_y + bh, front_z),
-                        neck_n=neck_n, head_name="head", yaw=0)
+        _neck_curved(g, d, "body", (0, body_y + bh - 1, front_z + 1), "head",
+                      yaw=0, length=nlen, rise=nrise, base_w=nbw, head_w=5)
 
     # ---- tail ----
-    _tail(g, d, parent="body", base=(0, body_y + bh / 2, bl / 2), bw=bw)
+    _tail_curved(g, d, "body", (0, body_y + bh / 2, bl / 2), base_w=bw * 0.55,
+                 length=bl * 0.95)
 
     # ---- legs ----
     if arch == "wyvern":
@@ -132,26 +141,28 @@ def _build_quad(g, d):
     g.bounds_offset = [0, (leg_h + bh) / 2, 0]
 
 
-def _neck_and_head(g, d, parent, base, neck_n, head_name, yaw):
-    f = d["features"]
-    x0, y0, z0 = base
-    seg_len = 3.2
-    seg = 6
-    prev = parent
-    pivot = list(base)
-    for i in range(neck_n):
-        nm = f"{head_name}_neck{i+1}" if head_name != "head" else f"neck{i+1}"
-        # No baked pitch — the stepped pivots form a forward arch; rotations are
-        # left to the animations so the dragon never sits locked staring upward.
-        b = g.bone(nm, tuple(pivot), parent=prev,
-                   rotation=[0, yaw if i == 0 else 0, 0])
-        b.cube([pivot[0] - seg / 2, pivot[1] - seg / 2, pivot[2] - seg_len], [seg, seg, seg_len],
-               [0, 0], region="body")
-        prev = nm
-        pivot = [pivot[0] + math.sin(math.radians(yaw)) * 0.5,
-                 pivot[1] + 1.4, pivot[2] - seg_len + 0.4]
-        seg = max(4, seg - 0.5)
-    _head(g, d, parent=prev, pivot=tuple(pivot), name=head_name)
+def _neck_curved(g, d, parent, base, head_name, yaw, length, rise, base_w, head_w):
+    # a smooth curved neck built from many small tapered boxes positioned along an
+    # arc (positions only -> reads identically in-game and in preview, no pitch lock)
+    bx, by, bz = base
+    nb = (head_name + "_neck") if head_name != "head" else "neck"
+    neck = g.bone(nb, (bx, by, bz), parent=parent)
+    yawr = math.radians(yaw)
+    segs = 10
+    last = (bx, by, bz)
+    for i in range(segs):
+        t = (i + 0.5) / segs
+        z = bz - t * length
+        y = by + math.sin(min(1.0, t * 1.15) * math.pi * 0.5) * rise
+        x = bx + math.sin(yawr) * t * length * 0.35
+        w = base_w + (head_w - base_w) * t
+        neck.cube([x - w / 2, y - w / 2, z - 2.4], [w, w, 2.8], [0, 0], region="body")
+        # underside throat scutes
+        if i % 2 == 0:
+            neck.cube([x - (w - 1) / 2, y - w / 2 - 0.3, z - 2.2], [w - 1, 1.0, 2.2], [0, 0],
+                      region="belly")
+        last = (x, y, z)
+    _head(g, d, parent=nb, pivot=(last[0], last[1] + 1, last[2] - 1), name=head_name)
 
 
 def _head(g, d, parent, pivot, name):
@@ -219,21 +230,23 @@ def _horns(g, d, parent, px, py, pz):
         horn(-2.6, 4, [10, -30, -60], sz=1.8); horn(2.6, 4, [10, 30, 60], sz=1.8)
 
 
-def _tail(g, d, parent, base, bw):
-    f = d["features"]
-    n = f.get("long_tail", 4)
-    x0, y0, z0 = base
-    prev = parent
-    pivot = list(base)
-    w = bw * 0.55
-    for i in range(n):
-        nm = f"tail{i+1}"
-        b = g.bone(nm, tuple(pivot), parent=prev, rotation=[6, 0, 0])
-        b.cube([pivot[0] - w / 2, pivot[1] - w / 2, pivot[2]], [w, w, 4.5], [0, 0], region="tail")
-        prev = nm
-        pivot = [pivot[0], pivot[1] - 0.4, pivot[2] + 4.0]
-        w = max(2, w - 1.0)
-    _tail_tip(g, d, prev, pivot)
+def _tail_curved(g, d, parent, base, base_w, length):
+    # long tapered tail as many small boxes along a gentle droop-then-lift arc,
+    # split across two animatable bones (tail1/tail2) so it can sway
+    bx, by, bz = base
+    t1 = g.bone("tail1", (bx, by, bz), parent=parent)
+    t2 = g.bone("tail2", (bx, by, bz), parent="tail1")
+    segs = 12
+    last = (bx, by, bz)
+    for i in range(segs):
+        t = (i + 0.5) / segs
+        z = bz + t * length
+        y = by - math.sin(t * math.pi * 0.5) * (by * 0.4) + max(0.0, t - 0.82) * 7
+        w = max(1.4, base_w * (1 - t * 0.82))
+        bone = t1 if t < 0.5 else t2
+        bone.cube([bx - w / 2, y - w / 2, z - 2.2], [w, w, 2.6], [0, 0], region="tail")
+        last = (bx, y, z)
+    _tail_tip(g, d, "tail2", last)
 
 
 def _tail_tip(g, d, parent, pivot):
@@ -275,41 +288,47 @@ def _wing(g, d, name, pivot, side, second=False):
     style = d["features"].get("wing_style", "membrane")
     px, py, pz = pivot
     s = side
-    span = 19 if not second else 14
-    raise_deg = (-40 if not second else -28) * s
+    span = 24 if not second else 17
+    raise_deg = (-42 if not second else -28) * s
     wing = g.bone(name, (px, py, pz), parent="body", rotation=[0, 0, raise_deg])
-    shoulder, elbow, tip = px, px + s * 7, px + s * span
+    shoulder, elbow, tip = px, px + s * 9, px + s * span
 
     def xc(bone, xa, xb, y, dy, z, dz, region):
         bone.cube([min(xa, xb), y, z], [max(0.4, abs(xb - xa)), dy, dz], [0, 0], region=region)
 
     # humerus + forearm (the wing "arm")
-    xc(wing, shoulder, elbow, py - 1.3, 2.6, pz - 1.5, 3, "wingbone")
-    fore = g.bone(f"{name}_fore", (elbow, py, pz), parent=name, rotation=[0, -26 * s, 0])
-    xc(fore, elbow, tip, py - 0.9, 2.0, pz - 1.2, 2.4, "wingbone")
+    xc(wing, shoulder, elbow, py - 1.4, 3, pz - 1.6, 3.2, "wingbone")
+    fore = g.bone(f"{name}_fore", (elbow, py, pz), parent=name, rotation=[0, -24 * s, 0])
+    xc(fore, elbow, tip, py - 1, 2.2, pz - 1.3, 2.6, "wingbone")
 
     if style == "skeletal":                          # bones only, no web
         for i in range(5):
             fb = g.bone(f"{name}_f{i}", (tip, py, pz), parent=f"{name}_fore")
-            xc(fb, tip, tip - s * 9, py - 0.5, 1, pz - 3 + i * 4, 1, "wingbone")
+            xc(fb, tip, tip - s * (10 - i), py - 0.5, 1, pz - 3 + i * 4.5, 1, "wingbone")
         return
 
-    back = 16 if style == "butterfly" else 12        # trailing-edge depth
+    back = 20 if style == "butterfly" else 15        # max trailing-edge depth (at the tip)
     mem = g.bone(f"{name}_mem", (px, py, pz), parent=f"{name}_fore")
-    if style == "crystalline":                       # angled crystal panes
-        for i in range(4):
-            cb = g.bone(f"{name}_cry{i}", (elbow, py, pz), parent=f"{name}_fore")
-            xc(cb, elbow + s * (i * (span - 7) / 4), tip, py, 5, pz - 1 + i * 3, 0.5, "membrane")
-    else:                                            # broad membrane fan
-        xc(mem, shoulder + s * 2, tip, py - 0.2, 0.4, pz - 2, back + 2, "membrane")
-        if style == "tattered":                      # torn trailing edge
-            xc(mem, shoulder + s * 9, tip, py - 0.25, 0.5, pz + back - 2, 4, "belly")
-    # finger struts fanning across the membrane (the "finger-boned" look)
-    for i in range(4):
-        fz = pz - 1 + back * (i / 3.0)
-        flen = abs(tip - (shoulder + s * 3)) * (0.55 + 0.13 * i)
+    # membrane built as strips that DEEPEN toward the wingtip -> a real wing silhouette
+    strips = 6
+    x_in = shoulder + s * 3
+    for i in range(strips):
+        xa = x_in + (tip - x_in) * (i / strips)
+        xb = x_in + (tip - x_in) * ((i + 1) / strips)
+        depth = back * (0.35 + 0.65 * ((i + 1) / strips))
+        xc(mem, xa, xb, py - 0.2, 0.5, pz - 2, depth, "membrane")
+        if style == "crystalline":                   # crystal ribs along each strip
+            xc(mem, xb, xb + s * 0.6, py - 0.4, 4.5, pz - 1, depth, "membrane")
+    if style == "tattered":                          # torn notches in the trailing edge
+        for i in (1, 3):
+            xc(mem, x_in + (tip - x_in) * (i / strips), x_in + (tip - x_in) * ((i + 0.6) / strips),
+               py - 0.25, 0.6, pz - 2 + back * 0.7, back * 0.5, "belly")
+    # finger struts fanning from the wrist to the scalloped trailing edge
+    for i in range(5):
+        a = i / 4.0
+        flen = (span - 9) * (0.5 + 0.12 * i)
         fb = g.bone(f"{name}_f{i}", (tip, py, pz), parent=f"{name}_fore")
-        xc(fb, tip, tip - s * flen, py + 0.1, 0.9, fz, 0.9, "wingbone")
+        xc(fb, tip, tip - s * flen, py + 0.1, 0.9, pz - 2 + back * a, 0.9, "wingbone")
 
 
 def _spines(g, d, top_y, z0, z1, x):
@@ -370,8 +389,8 @@ def _build_serpent(g, d):
     pivot = [0, body_y, -n * 2]
     w = 6
     # head first (front)
-    _neck_and_head(g, d, parent="root", base=(0, body_y + 2, pivot[2]),
-                    neck_n=2, head_name="head", yaw=0)
+    _neck_curved(g, d, parent="root", base=(0, body_y + 2, pivot[2]), head_name="head",
+                 yaw=0, length=10, rise=3, base_w=6, head_w=5)
     # undulating segmented body
     for i in range(n):
         nm = f"seg{i+1}" if i else "body"
