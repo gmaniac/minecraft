@@ -13,7 +13,7 @@ const DIMS = ["overworld", "nether", "the_end"];
 const R = { sensor: 10, turret: 16 };
 const CD = { sensor: 40, turret: 25, tripalarm: 30 };
 const DMG = { turret: 6, laser: 4, tripwire: 3 };
-const BEAM_LEN = 24, BEAM_STEP = 0.4, BEAM_RADIUS = 1.0;
+const BEAM_LEN = 24, BEAM_STEP = 0.22, BEAM_RADIUS = 1.0;
 const MODE_KEY = "wf:mode", ARM_KEY = "wf:armed", CD_KEY = "wf:cd";
 const BVX = "wf:bvx", BVZ = "wf:bvz", LCOLOR = "wf:lcolor", DEFAULT_COLOR = 14;  // red
 
@@ -79,7 +79,7 @@ function beamLength(dim, o, dir) {
   return BEAM_LEN;
 }
 
-// draw the continuous colored beam (always visible)
+// draw the continuous beam: white-hot core layered over a colored glow halo
 function drawBeam(dim, o, dir, len, rgb) {
   const m = new MolangVariableMap();
   try { m.setColorRGB("variable.color", rgb); } catch (_) {}
@@ -87,7 +87,8 @@ function drawBeam(dim, o, dir, len, rgb) {
   for (let i = 1; i <= n; i++) {
     const p = { x: o.x + dir.x * BEAM_STEP * i, y: o.y + dir.y * BEAM_STEP * i,
                 z: o.z + dir.z * BEAM_STEP * i };
-    try { dim.spawnParticle("wf:laser_beam", p, m); } catch (_) {}
+    try { dim.spawnParticle("wf:laser_glow", p, m); } catch (_) {}   // colored halo
+    try { dim.spawnParticle("wf:laser_core", p); } catch (_) {}      // bright white centre
   }
 }
 

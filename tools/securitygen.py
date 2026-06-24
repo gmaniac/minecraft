@@ -173,27 +173,37 @@ def floodlight_texture(palette):
     return t
 
 
-def beam_particle():
+def beam_particle(ident, size, tinted):
+    comps = {
+        "minecraft:emitter_rate_instant": {"num_particles": 1},
+        "minecraft:emitter_lifetime_once": {"active_time": 0.05},
+        "minecraft:particle_lifetime_expression": {"max_lifetime": 0.3},
+        "minecraft:particle_initial_speed": 0,
+        "minecraft:particle_appearance_billboard": {
+            "size": [size, size], "facing_camera_mode": "lookat_xyz",
+            "uv": {"texture_width": 16, "texture_height": 16, "uv": [0, 0], "uv_size": [16, 16]}},
+    }
+    if tinted:
+        comps["minecraft:particle_appearance_tinting"] = {
+            "color": ["v.color.r", "v.color.g", "v.color.b", 1.0]}
     return {"format_version": "1.10.0", "particle_effect": {
-        "description": {"identifier": "wf:laser_beam", "basic_render_parameters": {
+        "description": {"identifier": ident, "basic_render_parameters": {
             "material": "particles_blend", "texture": "textures/particle/wf_dot"}},
-        "components": {
-            "minecraft:emitter_rate_instant": {"num_particles": 1},
-            "minecraft:emitter_lifetime_once": {"active_time": 0.05},
-            "minecraft:particle_lifetime_expression": {"max_lifetime": 0.35},
-            "minecraft:particle_initial_speed": 0,
-            "minecraft:particle_appearance_billboard": {
-                "size": [0.16, 0.16], "facing_camera_mode": "lookat_xyz",
-                "uv": {"texture_width": 8, "texture_height": 8, "uv": [0, 0], "uv_size": [8, 8]}},
-            "minecraft:particle_appearance_tinting": {
-                "color": ["v.color.r", "v.color.g", "v.color.b", 1.0]}}}}
+        "components": comps}}
 
 
 def dot_texture():
-    t = Tex(8, 8)
-    for j in range(8):
-        for i in range(8):
-            t.px[i, j] = (255, 255, 255, 255)
+    # soft radial glow: bright centre fading to transparent edges (a glow point)
+    import math
+    n = 16
+    c = (n - 1) / 2
+    t = Tex(n, n)
+    for j in range(n):
+        for i in range(n):
+            d = math.hypot(i - c, j - c) / (c + 0.5)
+            a = max(0.0, 1.0 - d)
+            a = a * a                      # soft falloff
+            t.px[i, j] = (255, 255, 255, int(255 * a))
     return t
 
 
@@ -291,9 +301,12 @@ def main():
     item_tex["wf_keycard"] = {"textures": "textures/items/wf_keycard"}
     lang.append(f"item.wf:keycard.name={KEYCARD['name']}")
 
-    # custom tintable beam particle + its texture
-    ensure(RP, "particles")
-    dump(os.path.join(RP, "particles", "wf_laser_beam.particle.json"), beam_particle())
+    # custom beam particles (white-hot core + tinted glow) + soft glow texture
+    pdir = ensure(RP, "particles")
+    dump(os.path.join(pdir, "wf_laser_core.particle.json"),
+         beam_particle("wf:laser_core", 0.09, tinted=False))
+    dump(os.path.join(pdir, "wf_laser_glow.particle.json"),
+         beam_particle("wf:laser_glow", 0.26, tinted=True))
     dot_texture().save(os.path.join(ensure(RP, "textures", "particle"), "wf_dot.png"))
 
     merge_atlas(os.path.join(RP, "textures", "terrain_texture.json"), "atlas.terrain", terrain)
