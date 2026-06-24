@@ -163,7 +163,6 @@
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
-      "minecraft:can_climb": {},
       "minecraft:breathable": {
         "breathes_air": true,
         "breathes_water": true,
