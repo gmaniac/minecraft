@@ -8,6 +8,7 @@
       }
     },
     "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
       "minecraft:material_instances": {
         "*": {
           "texture": "wf_ebony_beam",

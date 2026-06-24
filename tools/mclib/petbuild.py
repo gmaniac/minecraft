@@ -156,15 +156,17 @@ def _reptile(g, p):
     head = g.bone("head", (0, by + bh / 2, -bl / 2), parent="body")
     head.cube([-bw / 2 + 0.5, by, -bl / 2 - 3.5], [bw - 1, bh - 0.5, 3.5], [0, 0], region="head")
     _eyes(head, bw / 2 - 1, by + bh - 1, -bl / 2 - 2, bw)
-    # splayed legs
+    # splayed legs — splay via geometry (a sideways "elbow"), no bone roll, so the
+    # feet always rest at y=0 and never sink under the ground
     w = 1.4 if not big else 2.2
     for nm, (x, z, sx) in (("leg_fl", (-bw / 2, -bl / 2 + 2, -1)), ("leg_fr", (bw / 2, -bl / 2 + 2, 1)),
                            ("leg_bl", (-bw / 2, bl / 2 - 2, -1)), ("leg_br", (bw / 2, bl / 2 - 2, 1))):
-        b = g.bone(nm, (x, by, z), parent="body", rotation=[0, 0, sx * 30])
-        b.cube([x - w / 2 + (sx * 0.5), 0, z - w / 2], [w, lh + 1, w], [0, 0], region="leg")
-        b.cube([x - w / 2 + sx * 1.2, 0, z - w / 2 - 1.5], [w, 1, w + 1.5], [0, 0], region="leg")  # foot
+        b = g.bone(nm, (x, by, z), parent="body")
+        b.cube([x - w / 2 + sx * 1.5, lh - 1, z - w / 2], [w, 2, w], [0, 0], region="leg")  # elbow out
+        b.cube([x - w / 2 + sx * 2.2, 0, z - w / 2], [w, lh, w], [0, 0], region="leg")      # lower leg
+        b.cube([x - w / 2 + sx * 2.2, 0, z - w / 2 - 1.5], [w, 1, w + 1.5], [0, 0], region="leg")  # foot
         for tx in (-1.2, 0, 1.2):                                             # three toe claws
-            b.cube([x + tx - 0.35 + sx * 1.2, 0, z - w / 2 - 2.4], [0.7, 0.8, 1], [0, 0],
+            b.cube([x + tx - 0.35 + sx * 2.2, 0, z - w / 2 - 2.4], [0.7, 0.8, 1], [0, 0],
                    region="accent")
     tb = g.bone("tail", (0, by + bh / 2, bl / 2), parent="body")
     seg = bw

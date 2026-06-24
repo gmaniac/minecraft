@@ -13,7 +13,7 @@ const DIMS = ["overworld", "nether", "the_end"];
 const R = { sensor: 10, turret: 16 };
 const CD = { sensor: 40, turret: 25, tripalarm: 30 };
 const DMG = { turret: 6, laser: 4, tripwire: 3 };
-const BEAM_LEN = 24, BEAM_STEP = 0.13, BEAM_RADIUS = 1.0;
+const BEAM_LEN = 24, BEAM_STEP = 0.1, BEAM_RADIUS = 1.0;
 const MODE_KEY = "wf:mode", ARM_KEY = "wf:armed", CD_KEY = "wf:cd";
 const BVX = "wf:bvx", BVZ = "wf:bvz", LCOLOR = "wf:lcolor", DEFAULT_COLOR = 14;  // red
 
