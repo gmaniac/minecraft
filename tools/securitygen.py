@@ -9,7 +9,7 @@ import json
 import os
 from security_data import ACTIVE, BLOCKS, KEYCARD
 from mclib.securitybuild import build_device, build_block
-from mclib.dragonbuild import pack_and_paint
+from mclib.dragonbuild import pack_and_paint, save_pbr
 from mclib.texture import Tex, hex_rgba, shade
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -260,7 +260,7 @@ def main():
 
     for a in ACTIVE:
         g = build_device(a["kind"])
-        pack_and_paint(g, a["palette"], "panel").save(os.path.join(etex, f"wf_{a['id']}.png"))
+        save_pbr(g, a["palette"], "panel", etex, f"wf_{a['id']}")   # PBR: lens/eye glow + metal
         dump(os.path.join(ent, f"{a['id']}.json"), device_bp(a))
         dump(os.path.join(rpe, f"{a['id']}.entity.json"), device_rp(a))
         # spawn item
@@ -287,8 +287,7 @@ def main():
     for b in BLOCKS:
         short = f"wf_{b['id']}"
         if b.get("geo"):
-            pack_and_paint(build_block(b["geo"]), b["palette"], "panel").save(
-                os.path.join(btex, f"{short}.png"))
+            save_pbr(build_block(b["geo"]), b["palette"], "panel", btex, short)
         else:
             floodlight_texture(b["palette"]).save(os.path.join(btex, f"{short}.png"))
         terrain[short] = {"textures": f"textures/blocks/{short}"}

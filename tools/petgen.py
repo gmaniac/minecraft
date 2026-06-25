@@ -9,7 +9,7 @@ import json
 import os
 from pets_data import PETS
 from mclib.petbuild import build
-from mclib.dragonbuild import pack_and_paint
+from mclib.dragonbuild import pack_and_paint, save_pbr
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BP = os.path.join(ROOT, "Wildforge_BP")
@@ -250,7 +250,7 @@ def main():
     for p in PETS:
         i = p["id"]
         g = build(p)
-        pack_and_paint(g, p["palette"], "fur").save(os.path.join(tex, f"wf_{i}.png"))
+        save_pbr(g, p["palette"], "fur", tex, f"wf_{i}")
         g.save(os.path.join(mdl, f"wf_{i}.geo.json"))
         dump(os.path.join(ent, f"{i}.json"), bp_entity(p))
         dump(os.path.join(sr, f"{i}.json"), spawn_rule(p))

@@ -8,7 +8,7 @@ the shared dragon animation set, the shared egg model, and the script data table
 import json
 import os
 from dragons_data import DRAGONS
-from mclib.dragonbuild import build, build_lod, pack_and_paint
+from mclib.dragonbuild import build, build_lod, pack_and_paint, save_pbr
 from mclib.geometry import Geometry
 from mclib.texture import Tex, hex_rgba, shade
 
@@ -381,12 +381,12 @@ def main():
 
     for d in DRAGONS:
         i = d["id"]
+        glow = {"accent", "spine", "extra", "tip"}          # magical scales/spines glow (PBR)
         g = build(d)
-        t = pack_and_paint(g, d["palette"], "scales")
+        save_pbr(g, d["palette"], "scales", tex_dir, f"wf_{i}", emissive_extra=glow)
         g.save(os.path.join(mdl_dir, f"wf_{i}.geo.json"))
-        t.save(os.path.join(tex_dir, f"wf_{i}.png"))
         lg = build_lod(d)                                    # long-distance LOD model
-        pack_and_paint(lg, d["palette"], "scales").save(os.path.join(tex_dir, f"wf_{i}_lod.png"))
+        save_pbr(lg, d["palette"], "scales", tex_dir, f"wf_{i}_lod", emissive_extra=glow)
         lg.save(os.path.join(mdl_dir, f"wf_{i}_lod.geo.json"))
         dump(os.path.join(ent_dir, f"{i}.json"), bp_entity(d))
         dump(os.path.join(sr_dir, f"{i}.json"), spawn_rule(d))

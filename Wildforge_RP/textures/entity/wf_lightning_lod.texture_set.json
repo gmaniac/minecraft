@@ -1,0 +1,7 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "wf_lightning_lod",
+    "metalness_emissive_roughness": "wf_lightning_lod_mer"
+  }
+}
