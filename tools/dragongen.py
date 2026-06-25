@@ -8,7 +8,7 @@ the shared dragon animation set, the shared egg model, and the script data table
 import json
 import os
 from dragons_data import DRAGONS
-from mclib.dragonbuild import build, pack_and_paint
+from mclib.dragonbuild import build, build_lod, pack_and_paint
 from mclib.geometry import Geometry
 from mclib.texture import Tex, hex_rgba, shade
 
@@ -207,13 +207,13 @@ def rp_entity(d):
     mat = "entity_alphatest"
     return {"format_version": "1.10.0", "minecraft:client_entity": {"description": {
         "identifier": f"wf:{i}", "materials": {"default": mat},
-        "textures": {"default": f"textures/entity/wf_{i}"},
-        "geometry": {"default": f"geometry.wf_{i}"},
+        "textures": {"default": f"textures/entity/wf_{i}", "lod": f"textures/entity/wf_{i}_lod"},
+        "geometry": {"default": f"geometry.wf_{i}", "lod": f"geometry.wf_{i}_lod"},
         "animations": {"idle": "animation.wf_dragon.idle", "walk": "animation.wf_dragon.walk",
                        "fly": "animation.wf_dragon.fly",
                        "move": "controller.animation.wf_dragon.move"},
         "scripts": {"animate": ["move"]},   # state machine blends idle<->walk<->fly
-        "render_controllers": ["controller.render.wf_default"],
+        "render_controllers": ["controller.render.wf_dragon_lod"],
         "spawn_egg": {"base_color": pal["body"], "overlay_color": pal["accent"]}}}}
 
 
@@ -253,6 +253,22 @@ def egg_texture(d):
     for (x, y) in [(4, 8), (10, 14), (20, 26), (44, 10), (15, 30), (8, 22)]:
         t.rect(x, y, 2, 2, spot)
     return t
+
+
+LOD_DIST = 64   # blocks; beyond this the low-cube model is shown
+
+
+def lod_render_controller():
+    """Switch geometry + texture to the low-detail model past LOD_DIST (long range)."""
+    pick = f"(q.distance_from_camera > {LOD_DIST} ? 1 : 0)"
+    return {"format_version": "1.10.0", "render_controllers": {
+        "controller.render.wf_dragon_lod": {
+            "arrays": {
+                "geometries": {"Array.geo": ["Geometry.default", "Geometry.lod"]},
+                "textures": {"Array.skin": ["Texture.default", "Texture.lod"]}},
+            "geometry": f"Array.geo[{pick}]",
+            "materials": [{"*": "Material.default"}],
+            "textures": [f"Array.skin[{pick}]"]}}}
 
 
 def move_controller():
@@ -369,6 +385,9 @@ def main():
         t = pack_and_paint(g, d["palette"], "scales")
         g.save(os.path.join(mdl_dir, f"wf_{i}.geo.json"))
         t.save(os.path.join(tex_dir, f"wf_{i}.png"))
+        lg = build_lod(d)                                    # long-distance LOD model
+        pack_and_paint(lg, d["palette"], "scales").save(os.path.join(tex_dir, f"wf_{i}_lod.png"))
+        lg.save(os.path.join(mdl_dir, f"wf_{i}_lod.geo.json"))
         dump(os.path.join(ent_dir, f"{i}.json"), bp_entity(d))
         dump(os.path.join(sr_dir, f"{i}.json"), spawn_rule(d))
         dump(os.path.join(rpent_dir, f"{i}.entity.json"), rp_entity(d))
@@ -386,6 +405,8 @@ def main():
     dump(os.path.join(anim_dir, "wf_dragon.animation.json"), animations())
     ac_dir = ensure(RP, "animation_controllers")
     dump(os.path.join(ac_dir, "wf_dragon.ac.json"), move_controller())
+    rc_dir = ensure(RP, "render_controllers")
+    dump(os.path.join(rc_dir, "wf_dragon_lod.render.json"), lod_render_controller())
     with open(os.path.join(BP, "scripts", "dragons", "data.js"), "w") as f:
         f.write(script_data())
 

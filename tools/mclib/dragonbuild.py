@@ -55,6 +55,78 @@ def build(d) -> Geometry:
     return g
 
 
+def build_lod(d):
+    """A low-cube version (~25 cubes) shown at long distance via a render controller.
+    Uses the SAME bone names so the shared animation controller still drives it."""
+    arch = d["archetype"]
+    f = d["features"]
+    heads = f.get("heads", 1)
+    g = Geometry(f"geometry.wf_{d['id']}_lod", 1, 1)
+    g.bone("root", (0, 0, 0))
+    bw, bh, bl, leg_h = 10, 9, 22, 11
+    by = leg_h
+    body = g.bone("body", (0, by + bh / 2, 0), parent="root")
+    body.cube([-bw / 2, by, -bl / 2], [bw, bh, bl], [0, 0], region="body")
+    body.cube([-bw / 2 + 1, by - 0.6, -bl / 2 + 1], [bw - 2, 1.6, bl - 2], [0, 0], region="belly")
+    z = -bl / 2 + 3
+    while z < bl / 2 - 2:
+        body.cube([-0.6, by + bh, z], [1.2, 2, 1], [0, 0], region="spine")
+        z += 5
+
+    def neck_head(nx, name, yaw):
+        nb = (name + "_neck") if name != "head" else "neck"
+        nbone = g.bone(nb, (nx, by + bh - 1, -bl / 2 + 1), parent="body")
+        xx, yy, zz = nx, by + bh - 1, -bl / 2 + 1
+        for i in range(3):
+            t = (i + 0.5) / 3
+            zz = -bl / 2 + 1 - t * bl * 0.55
+            yy = by + bh - 1 + math.sin(t * 1.3) * bh * 0.6
+            xx = nx + math.sin(math.radians(yaw)) * t * 4
+            w = 7 - t * 3
+            nbone.cube([xx - w / 2, yy - w / 2, zz - 3], [w, w, 3.2], [0, 0], region="body")
+        hb = g.bone(name, (xx, yy + 1, zz - 1), parent=nb)
+        hb.cube([xx - 3, yy - 1, zz - 9], [6, 5, 8], [0, 0], region="head")
+        hb.cube([xx - 2, yy - 1, zz - 12], [4, 3, 3], [0, 0], region="head")
+        hb.cube([xx - 3.2, yy + 1.5, zz - 9.5], [0.5, 1.4, 1.6], [0, 0], region="eye")
+        hb.cube([xx + 2.7, yy + 1.5, zz - 9.5], [0.5, 1.4, 1.6], [0, 0], region="eye")
+        hb.cube([xx - 2.5, yy + 4, zz - 6], [1.2, 5, 1.2], [0, 0], region="horn")
+        hb.cube([xx + 1.3, yy + 4, zz - 6], [1.2, 5, 1.2], [0, 0], region="horn")
+
+    if heads > 1:
+        for i in range(heads):
+            neck_head([-bw * 0.5, 0, bw * 0.5][i], ["head", "head2", "head3"][i],
+                      -18 if i == 0 else (18 if i == 2 else 0))
+    else:
+        neck_head(0, "head", 0)
+
+    t1 = g.bone("tail1", (0, by + bh / 2, bl / 2), parent="body")
+    t2 = g.bone("tail2", (0, by + bh / 2, bl / 2), parent="tail1")
+    for i in range(5):
+        t = (i + 0.5) / 5
+        zz = bl / 2 + t * bl * 0.7
+        yy = by + bh / 2 - t * by * 0.3
+        w = max(1.5, 6 * (1 - t * 0.8))
+        (t1 if t < 0.5 else t2).cube([-w / 2, yy - w / 2, zz - 3], [w, w, 3.2], [0, 0], region="tail")
+
+    if arch != "serpentine":
+        legs = [("leg_bl", -bw / 2 + 1, bl / 2 - 3), ("leg_br", bw / 2 - 1, bl / 2 - 3)]
+        if arch != "wyvern":
+            legs += [("leg_fl", -bw / 2 + 1, -bl / 2 + 3), ("leg_fr", bw / 2 - 1, -bl / 2 + 3)]
+        for nm, lx, lz in legs:
+            b = g.bone(nm, (lx, leg_h, lz), parent="body")
+            b.cube([lx - 2, 0, lz - 2], [4, leg_h, 4], [0, 0], region="leg")
+
+    if f.get("wing_style", "membrane") != "none":
+        for nm, s in (("wing_l", -1), ("wing_r", 1)):
+            wb = g.bone(nm, (s * bw / 2, by + bh - 1, -bl / 4), parent="body",
+                        rotation=[0, 0, -38 * s])
+            x0 = s * bw / 2
+            wb.cube([min(x0, x0 + s * 18), by - 0.2, -bl / 4 - 2], [18, 0.6, 16], [0, 0],
+                    region="membrane")
+    g.autobounds(pad=4)
+    return g
+
+
 def _build_quad(g, d):
     arch = d["archetype"]
     f = d["features"]

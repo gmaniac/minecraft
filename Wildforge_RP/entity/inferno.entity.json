@@ -7,10 +7,12 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/entity/wf_inferno"
+        "default": "textures/entity/wf_inferno",
+        "lod": "textures/entity/wf_inferno_lod"
       },
       "geometry": {
-        "default": "geometry.wf_inferno"
+        "default": "geometry.wf_inferno",
+        "lod": "geometry.wf_inferno_lod"
       },
       "animations": {
         "idle": "animation.wf_dragon.idle",
@@ -24,7 +26,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.wf_default"
+        "controller.render.wf_dragon_lod"
       ],
       "spawn_egg": {
         "base_color": "#3a1410",

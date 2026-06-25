@@ -22,6 +22,15 @@ function headLoc(dragon) {
   return { x: l.x, y: l.y + 1.4, z: l.z };
 }
 
+// predictive aim: lead the target by its velocity so the dragon "hunts" rather than
+// firing where the target already was
+function leadPos(target, ticks) {
+  let v = { x: 0, y: 0, z: 0 };
+  try { v = target.getVelocity(); } catch (_) {}
+  const l = target.location;
+  return { x: l.x + v.x * ticks, y: l.y + 0.9 + v.y * ticks, z: l.z + v.z * ticks };
+}
+
 function onCooldown(dragon, cd) {
   let last = 0;
   try { last = dragon.getDynamicProperty(CD_KEY) ?? 0; } catch (_) {}
@@ -93,7 +102,7 @@ function defendTick() {
       const target = acquireTarget(dragon, { radius: DEFEND_RANGE, mode: "hostiles", ownerId });
       if (!target) continue;
       if (onCooldown(dragon, DEFEND_CD)) continue;
-      const o = headLoc(dragon), l = target.location;
+      const o = headLoc(dragon), l = leadPos(target, 6);   // aim where the target is heading
       fireBreath(dragon, { x: l.x - o.x, y: l.y - o.y, z: l.z - o.z }, element);
     }
   }
