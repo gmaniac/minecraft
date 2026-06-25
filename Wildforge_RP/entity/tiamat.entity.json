@@ -7,10 +7,12 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/entity/wf_tiamat"
+        "default": "textures/entity/wf_tiamat",
+        "lod": "textures/entity/wf_tiamat_lod"
       },
       "geometry": {
-        "default": "geometry.wf_tiamat"
+        "default": "geometry.wf_tiamat",
+        "lod": "geometry.wf_tiamat_lod"
       },
       "animations": {
         "idle": "animation.wf_dragon.idle",
@@ -24,7 +26,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.wf_default"
+        "controller.render.wf_dragon_lod"
       ],
       "spawn_egg": {
         "base_color": "#1c5a5a",

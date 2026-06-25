@@ -7,10 +7,12 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/entity/wf_apep"
+        "default": "textures/entity/wf_apep",
+        "lod": "textures/entity/wf_apep_lod"
       },
       "geometry": {
-        "default": "geometry.wf_apep"
+        "default": "geometry.wf_apep",
+        "lod": "geometry.wf_apep_lod"
       },
       "animations": {
         "idle": "animation.wf_dragon.idle",
@@ -24,7 +26,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.wf_default"
+        "controller.render.wf_dragon_lod"
       ],
       "spawn_egg": {
         "base_color": "#5a3a1a",

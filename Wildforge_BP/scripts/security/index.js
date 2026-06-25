@@ -52,10 +52,14 @@ function devOrigin(dev) {
   return { x: l.x, y: l.y + 0.6, z: l.z };
 }
 
-// tracer beam toward a target (turret)
+// tracer beam toward a target (turret) — leads the target's velocity (predictive)
 function beam(dev, target, particle) {
-  const o = devOrigin(dev), l = target.location;
-  const dir = normalize({ x: l.x - o.x, y: l.y + 1 - o.y, z: l.z - o.z });
+  const o = devOrigin(dev);
+  let v = { x: 0, y: 0, z: 0 };
+  try { v = target.getVelocity(); } catch (_) {}
+  const tl = target.location;
+  const l = { x: tl.x + v.x * 5, y: tl.y + 1 + v.y * 5, z: tl.z + v.z * 5 };
+  const dir = normalize({ x: l.x - o.x, y: l.y - o.y, z: l.z - o.z });
   const len = Math.min(20, Math.hypot(l.x - o.x, l.y - o.y, l.z - o.z));
   for (const p of rayPoints(o, dir, len, 0.7)) spawnParticle(dev.dimension, particle, p);
 }
