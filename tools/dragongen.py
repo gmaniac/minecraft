@@ -210,11 +210,9 @@ def rp_entity(d):
         "textures": {"default": f"textures/entity/wf_{i}"},
         "geometry": {"default": f"geometry.wf_{i}"},
         "animations": {"idle": "animation.wf_dragon.idle", "walk": "animation.wf_dragon.walk",
-                       "fly": "animation.wf_dragon.fly"},
-        "scripts": {"animate": [
-            {"idle": "q.is_on_ground && q.modified_move_speed <= 0.05"},
-            {"walk": "q.is_on_ground && q.modified_move_speed > 0.05"},
-            {"fly": "!q.is_on_ground"}]},
+                       "fly": "animation.wf_dragon.fly",
+                       "move": "controller.animation.wf_dragon.move"},
+        "scripts": {"animate": ["move"]},   # state machine blends idle<->walk<->fly
         "render_controllers": ["controller.render.wf_default"],
         "spawn_egg": {"base_color": pal["body"], "overlay_color": pal["accent"]}}}}
 
@@ -255,6 +253,23 @@ def egg_texture(d):
     for (x, y) in [(4, 8), (10, 14), (20, 26), (44, 10), (15, 30), (8, 22)]:
         t.rect(x, y, 2, 2, spot)
     return t
+
+
+def move_controller():
+    """State machine that blends idle <-> walk <-> fly with smooth transitions."""
+    return {"format_version": "1.10.0", "animation_controllers": {
+        "controller.animation.wf_dragon.move": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {"animations": ["idle"], "blend_transition": 0.3, "transitions": [
+                    {"walk": "q.is_on_ground && q.modified_move_speed > 0.05"},
+                    {"fly": "!q.is_on_ground"}]},
+                "walk": {"animations": ["walk"], "blend_transition": 0.3, "transitions": [
+                    {"idle": "q.is_on_ground && q.modified_move_speed <= 0.05"},
+                    {"fly": "!q.is_on_ground"}]},
+                "fly": {"animations": ["fly"], "blend_transition": 0.45, "transitions": [
+                    {"idle": "q.is_on_ground && q.modified_move_speed <= 0.05"},
+                    {"walk": "q.is_on_ground && q.modified_move_speed > 0.05"}]}}}}}
 
 
 def animations():
@@ -369,6 +384,8 @@ def main():
     # shared assets
     egg_geo().save(os.path.join(mdl_dir, "wf_dragon_egg.geo.json"))
     dump(os.path.join(anim_dir, "wf_dragon.animation.json"), animations())
+    ac_dir = ensure(RP, "animation_controllers")
+    dump(os.path.join(ac_dir, "wf_dragon.ac.json"), move_controller())
     with open(os.path.join(BP, "scripts", "dragons", "data.js"), "w") as f:
         f.write(script_data())
 

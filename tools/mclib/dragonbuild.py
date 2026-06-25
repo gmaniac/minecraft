@@ -73,21 +73,24 @@ def _build_quad(g, d):
     body = g.bone("body", (0, body_y + bh / 2, 0), parent="root")
     # tapered torso: broad chest/shoulders -> core -> raised haunches
     body.cube([-bw / 2, body_y, -bl / 2], [bw, bh, bl], [0, 0], region="body")          # core
+    # overlapping detail cubes use a small inflate so coplanar faces don't Z-fight
     body.cube([-(bw + 2) / 2, body_y - 0.5, -bl / 2 - 0.5], [bw + 2, bh + 2, bl * 0.34],
-              [0, 0], region="body")                                                    # chest/shoulders
+              [0, 0], region="body", inflate=0.2)                                       # chest/shoulders
     body.cube([-(bw + 1.4) / 2, body_y + 1.5, -bl / 5], [bw + 1.4, bh * 0.55, bl * 0.5],
-              [0, 0], region="body")                                                    # upper flank/back muscle
+              [0, 0], region="body", inflate=0.2)                                       # upper flank/back muscle
     body.cube([-(bw + 1) / 2, body_y + 1, bl / 2 - bl * 0.3], [bw + 1, bh - 1, bl * 0.3],
-              [0, 0], region="body")                                                    # haunches (raised)
+              [0, 0], region="body", inflate=0.2)                                       # haunches (raised)
     # stacked belly scutes (the armored underside look)
     z = -bl / 2 + 2
     while z < bl / 2 - 2:
-        body.cube([-(bw - 1) / 2, body_y - 0.8, z], [bw - 1, 1.6, 2.0], [0, 0], region="belly")
+        body.cube([-(bw - 1) / 2, body_y - 0.8, z], [bw - 1, 1.6, 2.0], [0, 0], region="belly",
+                  inflate=0.25)
         z += 2.6
     # overlapping back plates along the spine (armor)
     z = -bl / 2 + 3
     while z < bl / 2 - 2:
-        body.cube([-1.6, body_y + bh - 0.3, z], [3.2, 1.2, 2.2], [0, 0], region="spine")
+        body.cube([-1.6, body_y + bh - 0.3, z], [3.2, 1.2, 2.2], [0, 0], region="spine",
+                  inflate=0.25)
         z += 2.4
 
     # ---- necks + heads ----
