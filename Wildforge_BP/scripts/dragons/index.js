@@ -5,6 +5,7 @@ import { registerEgg } from "../lib/hatch.js";
 import { acquireTarget } from "../lib/targeting.js";
 import { getOwnerId } from "../lib/owner.js";
 import { spawnParticle, playSound, rayPoints, normalize } from "../lib/fx.js";
+import { playersByDimension, nearAnyPlayer } from "../lib/perf.js";
 
 const HATCH_TICKS = 90 * 20;     // ~90s, matches the reworked dragons
 const BREATH_LEN = 12;           // blocks
@@ -72,7 +73,10 @@ function onItemUse(player) {
 
 // ---- auto-defend: tamed, un-ridden dragons breathe at nearby hostiles ----
 function defendTick() {
+  const byDim = playersByDimension();
   for (const dimId of DIMS) {
+    const players = byDim[dimId];
+    if (!players) continue;
     let dim;
     try { dim = world.getDimension(dimId); } catch (_) { continue; }
     let dragons;
@@ -80,6 +84,7 @@ function defendTick() {
     for (const dragon of dragons) {
       const element = DRAGON_ELEMENT[dragon.typeId];
       if (!element) continue;
+      if (!nearAnyPlayer(dragon.location, players)) continue;
       if (!dragon.getComponent("minecraft:is_tamed")) continue;
       let riders = [];
       try { riders = dragon.getComponent("minecraft:rideable")?.getRiders() ?? []; } catch (_) {}

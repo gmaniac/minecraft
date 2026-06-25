@@ -8,6 +8,7 @@ import { nearestPlayer, setOwner, getOwnerId } from "../lib/owner.js";
 import { acquireTarget, isHostile } from "../lib/targeting.js";
 import { getStr, setStr, getBool, setBool, getNum, setNum, getJson, setJson } from "../lib/persist.js";
 import { spawnParticle, playSound, rayPoints, normalize } from "../lib/fx.js";
+import { playersByDimension, nearAnyPlayer } from "../lib/perf.js";
 
 const DIMS = ["overworld", "nether", "the_end"];
 const R = { sensor: 10, turret: 16 };
@@ -127,7 +128,10 @@ function alarm(dev, ownerId, msg) {
 
 // ---------- active device tick ----------
 function tick() {
+  const byDim = playersByDimension();
   for (const dimId of DIMS) {
+    const players = byDim[dimId];
+    if (!players) continue;                              // no one here -> skip the dimension
     let dim;
     try { dim = world.getDimension(dimId); } catch (_) { continue; }
     let devs;
@@ -135,6 +139,7 @@ function tick() {
     for (const dev of devs) {
       const kind = ACTIVE_KIND[dev.typeId];
       if (!kind) continue;
+      if (!nearAnyPlayer(dev.location, players)) continue;  // cull when far from players
       if (!getBool(dev, ARM_KEY, true)) continue;
       const ownerId = getOwnerId(dev);
       const mode = getStr(dev, MODE_KEY, "hostiles");

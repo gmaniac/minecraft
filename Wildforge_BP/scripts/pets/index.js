@@ -5,6 +5,7 @@ import { getOwnerId, setOwner, isOwner } from "../lib/owner.js";
 import { getNum, setNum, getBool, setBool, getStr, setStr } from "../lib/persist.js";
 import { actionMenu } from "../lib/menu.js";
 import { playSound, spawnParticle } from "../lib/fx.js";
+import { playersByDimension } from "../lib/perf.js";
 
 const XP_KEY = "wf:xp", LVL_KEY = "wf:level", BASE_KEY = "wf:basename";
 const CARRY_KEY = "wf:carried", STAY_KEY = "wf:stay", MODE_KEY = "wf:mode", CARE_CD = "wf:care_cd";
@@ -119,7 +120,9 @@ function toggleCarry(pet) {
 
 // ---- per-tick upkeep: carry positioning + teleport-follow ----
 function upkeep() {
+  const byDim = playersByDimension();
   for (const dimId of DIMS) {
+    if (!byDim[dimId]) continue;                 // no players in this dimension -> skip
     let dim;
     try { dim = world.getDimension(dimId); } catch (_) { continue; }
     let pets;

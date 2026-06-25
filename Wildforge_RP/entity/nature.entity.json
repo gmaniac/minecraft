@@ -15,19 +15,12 @@
       "animations": {
         "idle": "animation.wf_dragon.idle",
         "walk": "animation.wf_dragon.walk",
-        "fly": "animation.wf_dragon.fly"
+        "fly": "animation.wf_dragon.fly",
+        "move": "controller.animation.wf_dragon.move"
       },
       "scripts": {
         "animate": [
-          {
-            "idle": "q.is_on_ground && q.modified_move_speed <= 0.05"
-          },
-          {
-            "walk": "q.is_on_ground && q.modified_move_speed > 0.05"
-          },
-          {
-            "fly": "!q.is_on_ground"
-          }
+          "move"
         ]
       },
       "render_controllers": [

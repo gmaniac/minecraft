@@ -1,0 +1,52 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.wf_dragon.move": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "blend_transition": 0.3,
+          "transitions": [
+            {
+              "walk": "q.is_on_ground && q.modified_move_speed > 0.05"
+            },
+            {
+              "fly": "!q.is_on_ground"
+            }
+          ]
+        },
+        "walk": {
+          "animations": [
+            "walk"
+          ],
+          "blend_transition": 0.3,
+          "transitions": [
+            {
+              "idle": "q.is_on_ground && q.modified_move_speed <= 0.05"
+            },
+            {
+              "fly": "!q.is_on_ground"
+            }
+          ]
+        },
+        "fly": {
+          "animations": [
+            "fly"
+          ],
+          "blend_transition": 0.45,
+          "transitions": [
+            {
+              "idle": "q.is_on_ground && q.modified_move_speed <= 0.05"
+            },
+            {
+              "walk": "q.is_on_ground && q.modified_move_speed > 0.05"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
