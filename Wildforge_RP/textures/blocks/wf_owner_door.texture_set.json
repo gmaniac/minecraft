@@ -1,0 +1,7 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "wf_owner_door",
+    "metalness_emissive_roughness": "wf_owner_door_mer"
+  }
+}

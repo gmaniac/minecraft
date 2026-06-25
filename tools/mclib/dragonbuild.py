@@ -7,9 +7,50 @@ Bone naming is kept consistent across every archetype (body, head, neck*, wing_l
 leg_fl/fr/bl/br, tail*) so a single shared animation file drives all 21 dragons.
 """
 from __future__ import annotations
+import json
 import math
+import os
 from .geometry import Geometry
 from .texture import Tex, shade, hex_rgba
+
+# --- PBR / Vibrant Visuals: per-region MER (metalness, emissive, roughness) 0..255 ---
+# Used only when the player has Vibrant Visuals on; otherwise the colour texture
+# renders normally (graceful fallback).
+MER_REGION = {
+    "eye": (0, 255, 40), "light": (0, 235, 70), "flight": (0, 235, 70),
+    "glass": (20, 110, 30), "fglass": (20, 110, 30),
+    "metal": (210, 0, 60), "trim": (150, 0, 95), "fmetal": (200, 0, 65),
+    "wingbone": (90, 0, 130), "tip": (0, 130, 90), "accent": (0, 70, 130),
+}
+MER_DEFAULT = (0, 0, 190)        # matte, non-metal, fairly rough
+
+
+def paint_mer(geo, emissive_extra=()):
+    """Paint a MER texture matching the geometry's packed box-UVs."""
+    t = Tex(geo.tex_w, geo.tex_h)
+    for c in geo.all_cubes():
+        sx, sy, sz = abs(c.size[0]), abs(c.size[1]), abs(c.size[2])
+        w = max(1, math.ceil(2 * sz + 2 * sx))
+        h = max(1, math.ceil(sz + sy))
+        mer = MER_REGION.get(c.region, MER_DEFAULT)
+        if c.region in emissive_extra:               # element glow (e.g. magma cracks)
+            mer = (mer[0], 220, mer[2])
+        t.rect(c.uv[0], c.uv[1], w, h, (mer[0], mer[1], mer[2], 255))
+    return t
+
+
+def texture_set(color_short, mer_short):
+    return {"format_version": "1.16.100", "minecraft:texture_set": {
+        "color": color_short, "metalness_emissive_roughness": mer_short}}
+
+
+def save_pbr(geo, palette, style, out_dir, short, emissive_extra=()):
+    """Write color + MER + texture_set.json so the texture renders normally on the
+    standard renderer and gains glow/metalness with Vibrant Visuals on."""
+    pack_and_paint(geo, palette, style).save(os.path.join(out_dir, short + ".png"))
+    paint_mer(geo, emissive_extra).save(os.path.join(out_dir, short + "_mer.png"))
+    with open(os.path.join(out_dir, short + ".texture_set.json"), "w") as f:
+        json.dump(texture_set(short, short + "_mer"), f, indent=2)
 
 # region -> (shade factor on base color, palette key)
 REGION = {

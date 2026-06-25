@@ -11,7 +11,7 @@ import os
 from vehicles_data import VEHICLES
 from colors import HEX, ORIGINAL
 from mclib.vehiclebuild import build
-from mclib.dragonbuild import pack_and_paint
+from mclib.dragonbuild import pack_and_paint, save_pbr
 from mclib.texture import Tex, hex_rgba, shade
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -235,7 +235,7 @@ def main():
     for v in VEHICLES:
         i = v["id"]
         g = build(v)
-        pack_and_paint(g, v["palette"], "panel").save(os.path.join(tex, f"wf_{i}.png"))
+        save_pbr(g, v["palette"], "panel", tex, f"wf_{i}")
         for idx, hexc in enumerate(HEX):     # body-tinted color variants
             pack_and_paint(g, {**v["palette"], "body": hexc}, "panel").save(
                 os.path.join(tex, f"wf_{i}_c{idx}.png"))

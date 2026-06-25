@@ -1,0 +1,7 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "wf_dune_buggy",
+    "metalness_emissive_roughness": "wf_dune_buggy_mer"
+  }
+}

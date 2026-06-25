@@ -1,0 +1,7 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "wf_bone_lod",
+    "metalness_emissive_roughness": "wf_bone_lod_mer"
+  }
+}
